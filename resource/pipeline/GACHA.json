@@ -1,0 +1,356 @@
+{
+  "Gacha_HomePage": {
+    "recognition": "TemplateMatch",
+    "next": [
+      "Gacha_BackHomePage"
+    ],
+    "roi": [
+      1122,
+      646,
+      40,
+      38
+    ],
+    "template": [
+      "pin.png"
+    ],
+    "doc": "识别右下图钉-章节主页"
+  },
+  "Gacha_BackHomePage": {
+    "recognition": "TemplateMatch",
+    "action": "Click",
+    "next": [
+      "Gacha_EnterGacha"
+    ],
+    "roi": [
+      1122,
+      646,
+      40,
+      38
+    ],
+    "template": [
+      "pin.png"
+    ],
+    "target": [
+      1186,
+      46,
+      0,
+      0
+    ],
+    "doc": "找到图钉-点击返回主页"
+  },
+  "Gacha_EnterGacha": {
+    "recognition": "OCR",
+    "action": "Click",
+    "next": [
+      "Gacha_GachaPage"
+    ],
+    "roi": [
+      98,
+      656,
+      66,
+      32
+    ],
+    "expected": [
+      "抽抽乐"
+    ],
+    "target": [
+      129,
+      642,
+      0,
+      0
+    ],
+    "doc": "识别左下抽抽乐-点击抽卡"
+  },
+  "Gacha_GachaPage": {
+    "recognition": "OCR",
+    "next": [
+      "Gacha_FindFreeGacha",
+      "Gacha_Slip"
+    ],
+    "roi": [
+      957,
+      133,
+      268,
+      110
+    ],
+    "expected": [
+      "查看概率"
+    ],
+    "doc": "识别抽卡页"
+  },
+  "Gacha_Slip": {
+    "recognition": "OCR",
+    "action": "Swipe",
+    "next": [
+      "Gacha_FindFreeGacha",
+      "Gacha_NoFindFreeAndInEnd",
+      "Gacha_Slip"
+    ],
+    "on_error": [
+      "Gacha_FinGacha"
+    ],
+    "roi": [
+      1051,
+      149,
+      124,
+      50
+    ],
+    "threshold": 0.8,
+    "expected": [
+      "查看概率"
+    ],
+    "begin": [
+      210,
+      400,
+      0,
+      0
+    ],
+    "end": [
+      210,
+      250,
+      0,
+      0
+    ],
+    "duration": 800,
+    "doc": "下滑寻找免费抽卡"
+  },
+  "Gacha_NoFindFreeAndInEnd": {
+    "recognition": "TemplateMatch",
+    "action": "Click",
+    "next": [
+      "Gacha_FinGacha"
+    ],
+    "roi": [
+      104,
+      325,
+      205,
+      264
+    ],
+    "template": [
+      "Gachalistend.png"
+    ],
+    "threshold": 0.9,
+    "target_offset": [
+      -50,
+      50,
+      0,
+      0
+    ],
+    "doc": "拖动后无免费红点且识别到底部普池\\判定未完成"
+  },
+  "Gacha_FindFreeGacha": {
+    "recognition": "TemplateMatch",
+    "action": "Click",
+    "next": [
+      "Gacha_TouchGacha",
+      "Gacha_FindFreeGacha"
+    ],
+    "on_error": [
+      "Gacha_Slip"
+    ],
+    "roi": [
+      75,
+      100,
+      300,
+      580
+    ],
+    "template": [
+      "FreeGacha.png"
+    ],
+    "threshold": 0.9,
+    "target_offset": [
+      -50,
+      50,
+      0,
+      0
+    ],
+    "doc": "寻找免费抽卡"
+  },
+  "Gacha_TouchGacha": {
+    "recognition": "OCR",
+    "action": "Click",
+    "next": [
+      "Gacha_TouchGachaConfirm"
+    ],
+    "on_error": [
+      "Gacha_Slip"
+    ],
+    "roi": [
+      393,
+      390,
+      872,
+      293
+    ],
+    "expected": [
+      "免费1次"
+    ],
+    "doc": "点击右下抽卡"
+  },
+  "Gacha_TouchGachaConfirm": {
+    "recognition": "OCR",
+    "next": [
+      "Gacha_TouchGachaConfirm2"
+    ],
+    "roi": [
+      464,
+      256,
+      350,
+      227
+    ],
+    "expected": [
+      "免费1次"
+    ],
+    "doc": "确认抽卡"
+  },
+  "Gacha_TouchGachaConfirm2": {
+    "recognition": "OCR",
+    "action": "Click",
+    "next": [
+      "Gacha_5X",
+      "Gacha_5X2",
+      "Gacha_GachaResultBack"
+    ],
+    "post_delay": 5000,
+    "roi": [
+      643,
+      401,
+      137,
+      82
+    ],
+    "expected": [
+      "购买"
+    ],
+    "doc": "确认抽卡"
+  },
+  "Gacha_5X": {
+    "recognition": "OCR",
+    "action": "Click",
+    "next": [
+      "Gacha_GachaResultBack"
+    ],
+    "roi": [
+      519,
+      481,
+      248,
+      167
+    ],
+    "expected": [
+      "艾莉诺"
+    ],
+    "target": [
+      1160,
+      47,
+      0,
+      0
+    ],
+    "doc": "五星卡"
+  },
+  "Gacha_5X2": {
+    "recognition": "OCR",
+    "action": "Click",
+    "next": [
+      "Gacha_GachaResultBack"
+    ],
+    "roi": [
+      519,
+      481,
+      248,
+      167
+    ],
+    "expected": [
+      "埃伊"
+    ],
+    "target": [
+      1157,
+      50,
+      0,
+      0
+    ],
+    "doc": "五星卡2"
+  },
+  "Gacha_GachaResultBack": {
+    "recognition": "OCR",
+    "action": "Click",
+    "next": [
+      "Gacha_GachaPage"
+    ],
+    "post_delay": 2000,
+    "roi": [
+      93,
+      631,
+      178,
+      66
+    ],
+    "expected": [
+      "抽抽乐点数"
+    ],
+    "target": [
+      120,
+      35,
+      0,
+      0
+    ],
+    "doc": "抽卡结果页返回"
+  },
+  "Gacha_FinGacha": {
+    "recognition": "OCR",
+    "action": "Click",
+    "next": [
+      "Gacha_BackMapPage"
+    ],
+    "post_delay": 1000,
+    "roi": [
+      957,
+      133,
+      268,
+      110
+    ],
+    "expected": [
+      "查看概率"
+    ],
+    "target": [
+      120,
+      35,
+      0,
+      0
+    ],
+    "doc": "返回首页"
+  },
+  "Gacha_BackMapPage": {
+    "recognition": "OCR",
+    "action": "Click",
+    "next": [
+      "Gacha_FinBackMapPage"
+    ],
+    "roi": [
+      98,
+      656,
+      66,
+      32
+    ],
+    "expected": [
+      "抽抽乐"
+    ],
+    "target": [
+      135,
+      40,
+      0,
+      0
+    ],
+    "doc": "识别左下抽抽乐-返回地图页"
+  },
+  "Gacha_FinBackMapPage": {
+    "recognition": "TemplateMatch",
+    "next": [],
+    "roi": [
+      1122,
+      646,
+      40,
+      38
+    ],
+    "template": [
+      "pin.png"
+    ],
+    "doc": "识别右下图钉-章节主页"
+  }
+}

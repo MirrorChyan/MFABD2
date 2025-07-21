@@ -1,0 +1,111 @@
+{
+  "Resource": "官服",
+  "TaskItems": [
+    {
+      "name": "启动游戏",
+      "entry": "StartGame_Start",
+      "check": false
+    },
+    {
+      "name": "地图采集",
+      "entry": "Collect_StartGame_HomePage",
+      "check": false,
+      "option": [
+        {
+          "name": "采集方案",
+          "index": 0
+        }
+      ]
+    },
+    {
+      "name": "地图扫荡",
+      "entry": "Battle_StartGame_HomePage",
+      "check": false,
+      "option": [
+        {
+          "name": "狩猎场-章节图策略",
+          "index": 0
+        },
+        {
+          "name": "冒险航线-双倍图策略",
+          "index": 0
+        },
+        {
+          "name": "战斗次数分配",
+          "index": 0
+        },
+        {
+          "name": "冒险航线-圣石洞穴属性",
+          "index": 0
+        }
+      ]
+    },
+    {
+      "name": "装备制作强化分解炼制",
+      "entry": "Equip_HomePage",
+      "check": false
+    },
+    {
+      "name": "白嫖抽卡",
+      "entry": "Gacha_BackHomePage",
+      "check": false
+    },
+    {
+      "name": "竞技场",
+      "entry": "PVP_HomePage",
+      "check": false,
+      "option": [
+        {
+          "name": "竞技场战斗次数",
+          "index": 0
+        }
+      ]
+    },
+    {
+      "name": "活动图扫荡",
+      "entry": "Event_HomePage",
+      "check": false,
+      "option": [
+        {
+          "name": "活动图小游戏扫荡",
+          "index": 0
+        },
+        {
+          "name": "活动图快速战斗难度",
+          "index": 0
+        }
+      ]
+    },
+    {
+      "name": "领取日常奖励",
+      "entry": "GetReward_HomePage",
+      "check": false,
+      "option": [
+        {
+          "name": "工会奖励",
+          "index": 0
+        }
+      ]
+    },
+    {
+      "name": "领取通行证奖励",
+      "entry": "Pass_HomePage",
+      "check": false
+    },
+    {
+      "name": "领取邮件",
+      "entry": "Mail_HomePage",
+      "check": false
+    }
+  ],
+  "AdbDevice": {
+    "Name": "MuMuPlayer12",
+    "AdbPath": "C:\\Program Files\\Netease\\MuMu Player 12\\shell\\adb.exe",
+    "AdbSerial": "127.0.0.1:16416",
+    "ScreencapMethods": 18446744073709551559,
+    "InputMethods": 2,
+    "Config": "{\"extras\":{\"mumu\":{\"enable\":true,\"index\":1,\"path\":\"C:/Program Files/Netease/MuMuPlayerGlobal-12.0\"}}}"
+  },
+  "EnableEdit": true,
+  "EnableCheckVersion": false
+}

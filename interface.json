@@ -1,0 +1,408 @@
+{
+  "controller": [
+    {
+      "name": "安卓端",
+      "type": "Adb"
+    }
+  ],
+  "resource": [
+    {
+      "name": "官服",
+      "path": [
+        "{PROJECT_DIR}/resource"
+      ]
+    }
+  ],
+  "task": [
+    {
+      "name": "启动游戏",
+      "entry": "StartGame_Start"
+    },
+    {
+      "name": "地图采集",
+      "entry": "Collect_StartGame_HomePage",
+      "option": [
+        "采集方案"
+      ]
+    },
+    {
+      "name": "地图扫荡",
+      "entry": "Battle_StartGame_HomePage",
+      "option": [
+        "狩猎场-章节图策略",
+        "冒险航线-双倍图策略",
+        "战斗次数分配",
+        "冒险航线-圣石洞穴属性"
+      ]
+    },
+    {
+      "name": "装备制作强化分解炼制",
+      "entry": "Equip_HomePage"
+    },
+    {
+      "name": "白嫖抽卡",
+      "entry": "Gacha_BackHomePage"
+    },
+    {
+      "name": "竞技场",
+      "entry": "PVP_HomePage",
+      "option": [
+        "竞技场战斗次数"
+      ]
+    },
+    {
+      "name": "活动图扫荡",
+      "entry": "Event_HomePage",
+      "option": [
+        "活动图小游戏扫荡",
+        "活动图快速战斗难度"
+      ]
+    },
+    {
+      "name": "领取日常奖励",
+      "entry": "GetReward_HomePage",
+      "option": [
+        "工会奖励"
+      ]
+    },
+    {
+      "name": "领取通行证奖励",
+      "entry": "Pass_HomePage"
+    },
+    {
+      "name": "领取邮件",
+      "entry": "Mail_HomePage"
+    }
+  ],
+  "option": {
+    "采集方案": {
+      "cases": [
+        {
+          "name": "原版-第二章当前图",
+          "pipeline_override": {
+            "Collect_PerPetTask": {
+              "next": [
+                "Collect_HomePage"
+              ]
+            }
+          }
+        },
+        {
+          "name": "第九章-木材-\\尚未更新next",
+          "pipeline_override": {
+            "Collect_PerPetTask": {
+              "next": [
+                "Collect_HomePage"
+              ]
+            }
+          }
+        }
+      ]
+    },
+    "狩猎场-章节图策略": {
+      "cases": [
+        {
+          "name": "原版-章节2"
+        },
+        {
+          "name": "木材-章节9",
+          "pipeline_override": {
+            "Battle_CollectMapShouLie": {
+              "expected": [
+                "守山人休息处"
+              ]
+              }
+          },
+            "pipeline_override": {
+            "Battle_CollectMapShouLieR2": {
+              "expected": [
+                "守山人休息处"
+              ]
+            }
+          }
+        }
+      ]
+    },
+    "冒险航线-双倍图策略": {
+      "cases": [
+        {
+          "name": "强制双倍,优先经验,无双倍刷狩猎场",
+          "pipeline_override": {
+          }
+        },
+        {
+          "name": "强制双倍,优先金币,无双倍刷狩猎场",
+          "pipeline_override": {
+            "Battle_CollectMapHangXian1": {
+              "target": [
+                343,
+                560,
+                0,
+                0
+              ]
+            },
+            "Battle_CollectMapHangXian2": {
+              "target": [
+                510,
+                535,
+                0,
+                0
+              ]
+            }
+          }
+        },
+        {
+          "name": "忽视双倍,优先经验。此时狩猎应当设为x1",
+          "pipeline_override": {
+            "Battle_CollectMapHangXian1": {
+              "interrupt": [
+                "Battle_QuickBattleButton"
+              ],
+               "next": [
+                "Battle_FastBattleMAXTouchHangxian"
+                ]
+            }
+          }
+        },
+        {
+          "name": "忽视双倍,优先金币。此时狩猎应当设为x1",
+          "pipeline_override": {
+            "Battle_CollectMapHangXian1": {
+              "target": [
+                343,
+                560,
+                0,
+                0
+              ],
+              "interrupt": [
+                "Battle_QuickBattleButton"
+              ],
+               "next": [
+                "Battle_FastBattleMAXTouchHangxian"
+                ]
+            }
+          }
+        },
+        {
+          "name": "不打",
+          "pipeline_override": {
+            "Battle_FastBattleMAXTouchShouLie": {
+              "next": [
+                "Battle_CollectMapDongXue"
+              ]
+            }
+          }
+        }
+      ]
+    },
+    "战斗次数分配": {
+      "cases": [
+        {
+          "name": "狩猎场x1 / 双倍图MAX",
+          "pipeline_override": {
+            "Battle_FastBattleMAXTouchHangxian": {
+              "target": [
+                800,
+                390,
+                0,
+                0
+               ],
+            }
+          }
+        },
+        {
+          "name": "狩猎场MAX / 双倍图最多x1",
+          "pipeline_override": {
+            "Battle_FastBattleMAXTouchShouLie": {
+              "target": [
+                800,
+                390,
+                0,
+                0
+               ],
+            },
+            "Battle_CollectMap": {
+              "next": [
+                "Battle_CollectMapHangXian1"
+               ],
+            }
+          }
+        }
+      ]
+    },
+    "冒险航线-圣石洞穴属性": {
+      "cases": [
+        {
+          "name": "火",
+          "pipeline_override": {
+            "Battle_FastBattleTouch_StoneSelect": {
+              "target": [
+                230,
+                120,
+                0,
+                0
+              ]
+            }
+          }
+        },
+        {
+          "name": "水",
+          "pipeline_override": {
+            "Battle_FastBattleTouch_StoneSelect": {
+              "target": [
+                230,
+                175,
+                0,
+                0
+              ]
+            }
+          }
+        },
+        {
+          "name": "风",
+          "pipeline_override": {
+            "Battle_FastBattleTouch_StoneSelect": {
+              "target": [
+                230,
+                230,
+                0,
+                0
+              ]
+            }
+          }
+        },
+        {
+          "name": "光",
+          "pipeline_override": {
+            "Battle_FastBattleTouch_StoneSelect": {
+              "target": [
+                230,
+                290,
+                0,
+                0
+              ]
+            }
+          }
+        },
+        {
+          "name": "暗",
+          "pipeline_override": {
+            "Battle_FastBattleTouch_StoneSelect": {
+              "target": [
+                230,
+                350,
+                0,
+                0
+              ]
+            }
+          }
+        }
+      ]
+    },
+    "竞技场战斗次数": {
+      "cases": [
+        {
+          "name": "战斗一次",
+          "pipeline_override": {
+            "PVP_AutoBattleMAX": {
+              "target": [
+                425,
+                435,
+                0,
+                0
+              ]
+            }
+          }
+        },
+        {
+          "name": "Max",
+          "pipeline_override": {
+            "PVP_AutoBattleMAX": {
+              "target": [
+                865,
+                435,
+                0,
+                0
+              ]
+            }
+          }
+        }
+      ]
+    },
+    "活动图小游戏扫荡": {
+      "cases": [
+        {
+          "name": "开启",
+          "pipeline_override": {
+            "Event_NormalBattleBack2": {
+              "next": [
+                "Event_Explore"
+              ]
+            }
+          }
+        },
+        {
+          "name": "关闭",
+          "pipeline_override": {
+            "Event_NormalBattleBack2": {
+              "next": [
+                "Event_LeaveEvent"
+              ]
+            }
+          }
+        }
+      ]
+    },
+    "活动图快速战斗难度": {
+      "cases": [
+        {
+          "name": "普通",
+          "pipeline_override": {
+            "Event_EnterNormalBattle": {
+                  "expected": [
+                     "普通"
+                  ]
+            }
+          }
+        },
+        {
+          "name": "挑战",
+          "pipeline_override": {
+            "Event_EnterNormalBattle": {
+                  "expected": [
+                     "挑战"
+                  ]
+            }
+          }
+        }
+      ]
+    },
+    "工会奖励": {
+      "cases": [
+        {
+          "name": "开启",
+          "pipeline_override": {
+            "GetReward_HomePage": {
+              "next": [
+                "GetReward_BackHomePage"
+              ]
+            }
+          }
+        },
+        {
+          "name": "关闭",
+          "pipeline_override": {
+            "GetReward_HomePage": {
+              "next": [
+                "GetReward_DailyReward"
+              ]
+            }
+          }
+        }
+      ]
+    }
+  },
+  "name": "MaaBD2",
+  "url": "https://github.com/JZPPP/MaaBD2",
+  "version": "v0.3.2"
+}

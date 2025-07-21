@@ -1,0 +1,500 @@
+{
+  "StartGame_Start": {
+    "action": "StartApp",
+    "next": [
+      "StartGame_Logo",
+      "StartGame_LoadingPage"
+    ],
+    "post_delay": 15000,
+    "pre_wait_freezes": 500,
+    "package": "com.neowizgames.game.browndust2",
+    "doc": "启动游戏"
+  },
+  "StartGame_Logo": {
+    "recognition": "OCR",
+    "next": [
+      "StartGame_Logo",
+      "StartGame_LoadingPage",
+      "StartGame_TouchStart",
+      "StartGame_PayFaild"
+    ],
+    "post_delay": 5000,
+    "roi": [
+      530,
+      326,
+      159,
+      64
+    ],
+    "expected": [
+      "NEO"
+    ]
+  },
+  "StartGame_LoadingPage": {
+    "recognition": "OCR",
+    "next": [
+      "StartGame_Loading",
+      "StartGame_TouchStart",
+      "StartGame_PayFaild",
+      "StartGame_UpdateDate",
+      "StartGame_Update"
+    ],
+    "post_delay": 5000,
+    "pre_wait_freezes": 3000,
+    "roi": [
+      798,
+      262,
+      137,
+      65
+    ],
+    "expected": [
+      "尘埃"
+    ]
+  },
+  "StartGame_Update": {
+    "recognition": "OCR",
+    "next": [
+      "StartGame_UpdateCk"
+    ],
+    "post_delay": 15000,
+    "pre_wait_freezes": 5000,
+    "roi": [
+      462,
+      176,
+      356,
+      143
+    ],
+    "expected": [
+      "更新通知"
+    ],
+    "doc": "游戏版本更新"
+  },
+  "StartGame_UpdateCk": {
+    "recognition": "OCR",
+    "action": "Click",
+    "next": [
+      "StartGame_UpdateDateing"
+    ],
+    "on_error": [
+      "StartGame_UpdateCloseGame"
+    ],
+    "post_delay": 8000,
+    "roi": [
+      649,
+      416,
+      128,
+      76
+    ],
+    "expected": [
+      "确认"
+    ]
+  },
+  "StartGame_UpdateCloseGame": {
+    "action": "StopApp",
+    "next": [
+      "StartGame_UpdateStartEngShop"
+    ],
+    "package": "com.neowizgames.game.browndust2"
+  },
+  "StartGame_UpdateStartEngShop": {
+    "action": "StartApp",
+    "next": [
+      "StartGame_UpdateEngShop"
+    ],
+    "package": "com.android.vending"
+  },
+  "StartGame_UpdateEngShop": {
+    "action": "Click",
+    "next": [
+      "StartGame_Start"
+    ],
+    "post_delay": 50000,
+    "roi": [
+      884,
+      189,
+      142,
+      77
+    ],
+    "expected": [
+      "Update",
+      "更新"
+    ],
+    "target": [
+      954,
+      224,
+      0,
+      0
+    ]
+  },
+  "StartGame_UpdateDate": {
+    "recognition": "OCR",
+    "action": "Click",
+    "next": [
+      "StartGame_TouchStart"
+    ],
+    "post_delay": 20000,
+    "roi": [
+      382,
+      326,
+      455,
+      213
+    ],
+    "expected": [
+      "下载"
+    ],
+    "doc": "下载数据"
+  },
+  "StartGame_UpdateDateing": {
+    "recognition": "OCR",
+    "next": [
+      "StartGame_UpdateDateing",
+      "StartGame_PayFaild",
+      "StartGame_TouchStart"
+    ],
+    "on_error": [
+      "StartGame_UpdateCloseGame"
+    ],
+    "post_delay": 20000,
+    "roi": [
+      14,
+      564,
+      354,
+      152
+    ],
+    "expected": [
+      "正在下载"
+    ],
+    "doc": "下载数据中"
+  },
+  "StartGame_Loading": {
+    "recognition": "OCR",
+    "next": [
+      "StartGame_Loading",
+      "StartGame_PayFaild",
+      "StartGame_TouchStart"
+    ],
+    "post_delay": 15000,
+    "roi": [
+      911,
+      472,
+      144,
+      49
+    ],
+    "expected": [
+      "游戏启动中"
+    ],
+    "doc": "游戏启动中"
+  },
+  "StartGame_PayFaild": {
+    "recognition": "OCR",
+    "action": "Click",
+    "next": [
+      "StartGame_PayFaildToChick"
+    ],
+    "post_delay": 3000,
+    "roi": [
+      375,
+      207,
+      517,
+      329
+    ],
+    "expected": [
+      "支付失败"
+    ],
+    "doc": "支付方式失败点击确认"
+  },
+  "StartGame_PayFaildToChick": {
+    "recognition": "OCR",
+    "next": [
+      "StartGame_TouchStart"
+    ],
+    "roi": [
+      475,
+      374,
+      319,
+      100
+    ],
+    "expected": [
+      "确认"
+    ]
+  },
+  "StartGame_TouchStart": {
+    "recognition": "OCR",
+    "action": "Click",
+    "next": [
+      "StartGame_TouchStart",
+      "StartGame_PayFaild",
+      "StartGame_NewChar",
+      "StartGame_SeasonSet",
+      "StartGame_MapPage",
+      "StartGame_PVPSet"
+    ],
+    "pre_delay": 20000,
+    "post_delay": 10000,
+    "roi": [
+      426,
+      446,
+      531,
+      218
+    ],
+    "expected": [
+      "TOUCH"
+    ],
+    "doc": "点击进入"
+  },
+  "StartGame_NewChar": {
+    "recognition": "OCR",
+    "action": "Click",
+    "next": [
+      "StartGame_NewChar",
+      "StartGame_SeasonSet",
+      "StartGame_MapPage"
+    ],
+    "post_delay": 2000,
+    "roi": [
+      121,
+      631,
+      108,
+      41
+    ],
+    "expected": [
+      "推出全新"
+    ],
+    "doc": "推出全新新角色识别"
+  },
+  "StartGame_SeasonSet": {
+    "recognition": "OCR",
+    "action": "Click",
+    "next": [
+      "StartGame_MapPage"
+    ],
+    "post_delay": 2000,
+    "roi": [
+      813,
+      580,
+      145,
+      34
+    ],
+    "expected": [
+      "奖励已发放至背包"
+    ],
+    "doc": "赛季结算"
+  },
+  "StartGame_PVPSet": {
+    "recognition": "OCR",
+    "action": "Click",
+    "next": [
+      "StartGame_MapPage"
+    ],
+    "post_delay": 2000,
+    "roi": [
+      612,
+      642,
+      53,
+      35
+    ],
+    "expected": [
+      "确认"
+    ],
+    "doc": "段位结算，点击确认"
+  },
+  "StartGame_MapPage": {
+    "recognition": "TemplateMatch",
+    "next": [
+      "StartGame_BackHomePage"
+    ],
+    "post_delay": 2000,
+    "roi": [
+      1122,
+      646,
+      40,
+      38
+    ],
+    "template": [
+      "pin.png"
+    ],
+    "doc": "识别右下图钉-章节主页"
+  },
+  "StartGame_BackHomePage": {
+    "recognition": "TemplateMatch",
+    "action": "Click",
+    "next": [
+      "StartGame_DaliyBanner",
+      "StartGame_Banner"
+    ],
+    "on_error": [
+      "StartGame_BackMapPage"
+    ],
+    "pre_delay": 2000,
+    "post_delay": 2000,
+    "roi": [
+      1122,
+      646,
+      40,
+      38
+    ],
+    "template": [
+      "pin.png"
+    ],
+    "target": [
+      1186,
+      46,
+      0,
+      0
+    ],
+    "doc": "找到图钉-点击返回主页"
+  },
+  "StartGame_DaliyBanner": {
+    "recognition": "OCR",
+    "action": "Click",
+    "next": [
+      "StartGame_DaliyBanner2",
+      "StartGame_DaliyBanner",
+      "StartGame_Banner",
+      "StartGame_Banner2"
+    ],
+    "on_error": [
+      "StartGame_BackMapPage"
+    ],
+    "pre_delay": 2000,
+    "post_delay": 2000,
+    "roi": [
+      538,
+      167,
+      92,
+      48
+    ],
+    "expected": [
+      "签到成功"
+    ],
+    "target": [
+      10,
+      10,
+      0,
+      0
+    ],
+    "doc": "月签到第一日签到识别"
+  },
+  "StartGame_DaliyBanner2": {
+    "recognition": "OCR",
+    "action": "Click",
+    "next": [
+      "StartGame_DaliyBanner",
+      "StartGame_Banner",
+      "StartGame_Banner2"
+    ],
+    "on_error": [
+      "StartGame_BackMapPage"
+    ],
+    "pre_delay": 2000,
+    "post_delay": 2000,
+    "roi": [
+      571,
+      209,
+      84,
+      30
+    ],
+    "expected": [
+      "签到成功"
+    ],
+    "target": [
+      1035,
+      175,
+      0,
+      0
+    ],
+    "doc": "每日签到第一日签到识别"
+  },
+  "StartGame_Banner": {
+    "recognition": "OCR",
+    "action": "Click",
+    "next": [
+      "StartGame_Banner",
+      "StartGame_Banner2"
+    ],
+    "on_error": [
+      "StartGame_BackMapPage"
+    ],
+    "pre_delay": 2000,
+    "post_delay": 2000,
+    "roi": [
+      916,
+      102,
+      143,
+      38
+    ],
+    "expected": [
+      "不再"
+    ],
+    "target": [
+      1130,
+      500,
+      0,
+      0
+    ],
+    "doc": "商城推广礼包，点击关闭"
+  },
+  "StartGame_Banner2": {
+    "recognition": "TemplateMatch",
+    "action": "Click",
+    "next": [
+      "StartGame_BackMapPage"
+    ],
+    "pre_delay": 2000,
+    "post_delay": 2000,
+    "roi": [
+      625,
+      107,
+      28,
+      34
+    ],
+    "template": [
+      "banner2.png"
+    ],
+    "target": [
+      1130,
+      500,
+      0,
+      0
+    ],
+    "doc": "公告弹窗"
+  },
+  "StartGame_BackMapPage": {
+    "recognition": "OCR",
+    "action": "Click",
+    "next": [
+      "StartGame_FinBackMapPage",
+      "StartGame_BackMapPage"
+    ],
+    "post_delay": 2000,
+    "roi": [
+      98,
+      656,
+      66,
+      32
+    ],
+    "expected": [
+      "抽抽乐"
+    ],
+    "target": [
+      135,
+      40,
+      0,
+      0
+    ],
+    "doc": "识别左下抽抽乐-返回地图页"
+  },
+  "StartGame_FinBackMapPage": {
+    "recognition": "TemplateMatch",
+    "next": [],
+    "roi": [
+      1122,
+      646,
+      40,
+      38
+    ],
+    "template": [
+      "pin.png"
+    ],
+    "doc": "识别右下图钉-章节主页"
+  }
+}
