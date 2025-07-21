@@ -22,6 +22,9 @@
     "next": [
       "Collect_PVEChapterIden2#"
     ],
+    "interrupt": [
+      "Collect_HomePageSwipeInitialize_BackHomePage"
+    ],
     "post_delay": 5000,
     "roi": [
       866,
@@ -33,6 +36,29 @@
       "PetTask.png"
     ],
     "doc": "宠物派遣"
+  },
+  "Collect_BackHomePage": {
+    "recognition": "TemplateMatch",
+    "action": "Click",
+    "next": [
+      "Collect_PVEChapterIden2#"
+    ],
+    "roi": [
+      1122,
+      646,
+      40,
+      38
+    ],
+    "template": [
+      "pin.png"
+    ],
+    "target": [
+      1186,
+      46,
+      0,
+      0
+    ],
+    "doc": "找到图钉-点击返回主页（暂时不用）"
   },
   "Collect_PVEChapterIden2#": {
     "recognition": "TemplateMatch",
@@ -230,6 +256,9 @@
     "next": [
       "Collect_ChapterSelection2"
     ],
+    "interrupt": [
+      "Collect_OperationsMain_Sandplay"
+    ],
     "post_delay": 5000,
     "roi": [
       109,
@@ -248,6 +277,9 @@
     "next": [
       "Collect_ChapterSelection3"
     ],
+    "interrupt": [
+      "Collect_OperationsMain_Sandplay"
+    ],
     "post_delay": 5000,
     "roi": [
       109,
@@ -256,13 +288,33 @@
       210
     ],
     "expected": [
-      "pve9.png"
+      "pve7.png"
     ],
     "doc": "章节选择顺序，2"
   },
   "Collect_ChapterSelection3": {
     "recognition": "TemplateMatch",
     "action": "Click",
+    "next": [
+      "Collect_ChapterSelectionEnd"
+    ],
+    "interrupt": [
+      "Collect_OperationsMain_Sandplay"
+    ],
+    "post_delay": 5000,
+    "roi": [
+      109,
+      124,
+      1113,
+      210
+    ],
+    "expected": [
+      "pve8.png"
+    ],
+    "doc": "章节选择顺序，3"
+  },
+  "Collect_ChapterSelectionEnd": {
+    "recognition": "TemplateMatch",
     "next": [
       "Collect_OperationsMain_Sandplay"
     ],
@@ -274,7 +326,7 @@
       210
     ],
     "expected": [
-      "pve9.png"
+      "pve11.png"
     ],
     "doc": "章节选择顺序，3"
   },
@@ -299,8 +351,8 @@
     "doc": "中断：章节内主要操作开始。找到图钉，确认进入箱庭"
   },
   "Collect_OperationsMain_ToAreaMap": {
-    "recognition": "TemplateMatch",
-    "action": "Click",
+    "recognition": "OCR",
+    "action": "DoNothing",
     "next": [
       "Collect_TargetMap1"
     ],
@@ -308,19 +360,13 @@
       "Collect_MapLift"
     ],
     "roi": [
-      1122,
-      646,
-      40,
-      38
+      128,
+      13,
+      329,
+      55
     ],
     "template": [
-      "pin.png"
-    ],
-    "target": [
-      160,
-      135,
-      0,
-      0
+      "移动魔法阵"
     ],
     "doc": "找到图钉，进入区域地图"
   },
@@ -349,10 +395,10 @@
       "Collect_ClickBackOnSecureMap"
     ],
     "roi": [
-      171,
-      12,
-      538,
-      54
+      408,
+      622,
+      466,
+      47
     ],
     "expected": [
       "达普雷镇",
@@ -371,10 +417,10 @@
       "Collect_ClickTeleporCircleMap"
     ],
     "roi": [
-      171,
-      12,
-      538,
-      54
+      408,
+      622,
+      466,
+      47
     ],
     "expected": [
       "战斗I",
@@ -395,10 +441,10 @@
       "Collect_ClickTeleporCircleMap"
     ],
     "roi": [
-      171,
-      12,
-      538,
-      54
+      408,
+      622,
+      466,
+      47
     ],
     "expected": [
       "战斗II",
@@ -422,10 +468,10 @@
       "Collect_HomePageSwipeInitialize_BackHomePage"
     ],
     "roi": [
-      171,
-      12,
-      538,
-      54
+      408,
+      622,
+      466,
+      47
     ],
     "expected": [
       "达雷普旅馆",
@@ -442,8 +488,8 @@
   },
   "Collect_OperationsMain_PVEChapterIden2#": {
     "recognition": "TemplateMatch",
-    "interrupt": [
-      "Collect_HomePageSwipe_mini"
+    "next": [
+      "Collect_HomePageSwipe_precise"
     ],
     "roi": [
       405,
@@ -640,22 +686,22 @@
     "action": "Click",
     "post_delay": 5000,
     "roi": [
-      781,
-      300,
-      486,
-      90
+      838,
+      311,
+      418,
+      63
     ],
-    "green_mask": false,
+    "green_mask": true,
     "expected": [
-      "MapRight.png"
+      "TpMapRight.png"
     ],
     "doc": "详细地图内右图标，目的右移动1格"
   },
   "Collect_FinBackMapPage": {
     "recognition": "TemplateMatch",
-    "action": "Click",
+
     "next": [
-      "Collect_HomePageSwipeInitialize1"
+      "Collect_FindTeleporCircle"
     ],
     "roi": [
       1122,
@@ -665,12 +711,6 @@
     ],
     "template": [
       "pin.png"
-    ],
-    "target": [
-      1186,
-      46,
-      0,
-      0
     ],
     "doc": "找到图钉了-点击返回主页"
   },
@@ -748,14 +788,14 @@
     "recognition": "TemplateMatch",
     "action": "Click",
     "roi": [
-      53,
-      316,
-      335,
-      64
+      270,
+      317,
+      68,
+      54
     ],
-    "green_mask": false,
+    "green_mask": true,
     "expected": [
-      "MapLeft.png"
+      "TpMapLeft.png"
     ],
     "doc": "详细地图内左图标，目的移动到最左"
   }
