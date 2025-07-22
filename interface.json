@@ -78,22 +78,15 @@
     "采集方案": {
       "cases": [
         {
-          "name": "原版-第二章当前图",
-          "pipeline_override": {
-            "Collect_PerPetTask": {
-              "next": [
-                "Collect_HomePage"
-              ]
-            }
-          }
+          "name": "木&金-章节9+7+8"
         },
         {
-          "name": "第九章-木材-\\尚未更新next",
+          "name": "低练度-章节2",
           "pipeline_override": {
             "Collect_PerPetTask": {
               "next": [
-                "Collect_HomePage"
-              ]
+              	"Collect_ForceTeleporCircleClick3"
+                ]
             }
           }
         }
@@ -110,14 +103,24 @@
             "Battle_CollectMapShouLie": {
               "expected": [
                 "守山人休息处"
-              ]
-              }
-          },
-            "pipeline_override": {
+              ],
+              "roi": [
+                998,
+                76,
+                165,
+                95
+                ]
+            },
             "Battle_CollectMapShouLieR2": {
               "expected": [
                 "守山人休息处"
-              ]
+              ],
+              "roi": [
+                998,
+                76,
+                165,
+                95
+                ]
             }
           }
         }

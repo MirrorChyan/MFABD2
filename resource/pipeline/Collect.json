@@ -2,7 +2,8 @@
   "Collect_StartGame_HomePage": {
     "recognition": "TemplateMatch",
     "next": [
-      "Collect_PerPetTask"
+      "Collect_PerPetTask",
+      "Collect_StartGameType2"
     ],
     "post_delay": 5000,
     "roi": [
@@ -37,11 +38,13 @@
     ],
     "doc": "宠物派遣"
   },
-  "Collect_BackHomePage": {
+  "Collect_StartGameType2": {
     "recognition": "TemplateMatch",
-    "action": "Click",
     "next": [
       "Collect_PVEChapterIden2#"
+    ],
+    "interrupt": [
+      "Collect_HomePageSwipeInitialize_BackHomePage"
     ],
     "roi": [
       1122,
@@ -63,11 +66,9 @@
   "Collect_PVEChapterIden2#": {
     "recognition": "TemplateMatch",
     "next": [
-      "Collect_ChapterSelection1"
-    ],
-    "interrupt": [
       "Collect_HomePageSwipe_mini"
     ],
+    "timeout": 10000,
     "roi": [
       405,
       157,
@@ -83,7 +84,7 @@
     "recognition": "TemplateMatch",
     "action": "Click",
     "next": [
-      "Collect_HomePageSwipeInitialize1"
+      "Collect_HomePageSwipeInitialize0.5"
     ],
     "roi": [
       1122,
@@ -101,6 +102,30 @@
       0
     ],
     "doc": "找到图钉了-点击返回主页"
+  },
+  "Collect_HomePageSwipeInitialize0.5": {
+    "recognition": "OCR",
+    "action": "Click",
+    "next": [
+      "Collect_HomePageSwipeInitialize1"
+    ],
+    "pre_delay": 1000,
+    "roi": [
+      98,
+      656,
+      66,
+      32
+    ],
+    "expected": [
+      "抽抽乐"
+    ],
+    "target": [
+      1111,
+      650,
+      0,
+      0
+    ],
+    "doc": "进入卡带界面"
   },
   "Collect_HomePageSwipeInitialize1": {
     "recognition": "OCR",
@@ -120,13 +145,13 @@
     ],
     "begin": [
       70,
-      640,
+      270,
       0,
       0
     ],
     "end": [
       70,
-      270,
+      640,
       0,
       0
     ],
@@ -140,7 +165,8 @@
       "Collect_HomePageSwipeInitializeEnd",
       "Collect_HomePageSwipeInitialize2"
     ],
-    "pre_delay": 1000,
+    "post_delay": 2000,
+    "post_wait_freezes": 800,
     "roi": [
       99,
       78,
@@ -167,37 +193,24 @@
   },
   "Collect_HomePageSwipeInitializeEnd": {
     "recognition": "TemplateMatch",
-    "action": "Swipe",
     "roi": [
-      332,
-      129,
-      213,
-      184
+      108,
+      128,
+      696,
+      174
     ],
     "template": [
-      "pve9.png"
-    ],
-    "expected": [
-      "pve2.png"
-    ],
-    "begin": [
-      970,
-      200,
-      0,
-      0
-    ],
-    "end": [
-      530,
-      200,
-      0,
-      0
+      "pve2b.png"
     ],
     "doc": "判定已复位到最左"
   },
   "Collect_HomePageSwipe_mini": {
     "recognition": "OCR",
     "action": "Swipe",
-    "pre_delay": 1000,
+    "next": [
+      "Collect_ChapterSelection1"
+    ],
+    "post_wait_freezes": 5000,
     "roi": [
       99,
       78,
@@ -208,7 +221,7 @@
       "角色游戏卡"
     ],
     "begin": [
-      1200,
+      1100,
       200,
       0,
       0
@@ -219,7 +232,7 @@
       0,
       0
     ],
-    "duration": 500,
+    "duration": 1500,
     "doc": "主线卡带界面拖动，稍微向右"
   },
   "Collect_HomePageSwipe_precise": {
@@ -260,11 +273,12 @@
       "Collect_OperationsMain_Sandplay"
     ],
     "post_delay": 5000,
+    "pre_wait_freezes": 500,
     "roi": [
-      109,
-      124,
-      1113,
-      210
+      34,
+      218,
+      1146,
+      53
     ],
     "expected": [
       "pve9.png"
@@ -656,28 +670,21 @@
     "doc": "PVE点击技能3"
   },
   "Collect_OperationsMain_OperationsEnd": {
-    "recognition": "TemplateMatch",
-    "action": "Click",
+    "recognition": "OCR",
     "next": [
       "Collect_MapRight"
     ],
     "interrupt": [
-      "Collect_FinBackMapPage"
+      "Collect_FindTeleporCircle"
     ],
     "roi": [
-      1122,
-      646,
-      40,
-      38
+      128,
+      13,
+      329,
+      55
     ],
     "template": [
-      "pin.png"
-    ],
-    "target": [
-      160,
-      135,
-      0,
-      0
+      "移动魔法阵"
     ],
     "doc": "找到图钉 ，进入区域地图"
   },
@@ -699,10 +706,6 @@
   },
   "Collect_FinBackMapPage": {
     "recognition": "TemplateMatch",
-
-    "next": [
-      "Collect_FindTeleporCircle"
-    ],
     "roi": [
       1122,
       646,

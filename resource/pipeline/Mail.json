@@ -1,153 +1,220 @@
 {
-    "Mail_HomePage": {
-        "doc": "识别右下图钉-章节主页",
-        "recognition": "TemplateMatch",
-        "roi": [
-            1122,
-            646,
-            40,
-            38
-        ],
-        "template": [
-            "pin.png"
-        ],
-        "next": [
-            "Mail_BackHomePage"
-        ]
-    },
-    "Mail_BackHomePage": {
-        "doc": "找到图钉-点击返回主页",
-        "recognition": "TemplateMatch",
-        "roi": [
-            1122,
-            646,
-            40,
-            38
-        ],
-        "template": [
-            "pin.png"
-        ],
-        "action": "Click",
-        "post_delay": 1000,
-        "target": [
-            1186,
-            46,
-            0,
-            0
-        ],
-        "next": [
-            "Mail_EnterMail"
-        ]
-    },
-    "Mail_EnterMail": {
-        "doc": "识别左下抽抽乐-点击邮件",
-        "recognition": "OCR",
-        "roi": [
-            98,
-            656,
-            66,
-            32
-        ],
-        "expected": "抽抽乐",
-        "action": "Click",
-        "post_delay": 1000,
-        "target": [
-            1030,
-            45,
-            0,
-            0
-        ],
-        "next": [
-            "Mail_GetAll"
-        ]
-    },
-    "Mail_GetAll": {
-        "doc": "全部领取",
-        "recognition": "OCR",
-        "roi": [
-            1048,
-            641,
-            87,
-            35
-        ],
-        "expected": "全部领取",
-        "post_delay": 2000,
-        "action": "Click",
-        "next": [
-            "Mail_GetAllBack"
-        ]
-    },
-    "Mail_GetAllBack": {
-        "doc": "点击画面即可返回",
-        "recognition": "OCR",
-        "roi": [
-            556,
-            628,
-            148,
-            36
-        ],
-        "expected": "点击画面即可返回",
-        "action": "Click",
-        "post_delay": 1000,
-        "next": [
-            "Mail_BackHomePage2"
-        ]
-    },
-    "Mail_BackHomePage2": {
-        "doc": "普通信箱,返回",
-        "recognition": "OCR",
-        "roi": [
-            215,
-            20,
-            119,
-            42
-        ],
-        "expected": "普通信箱",
-        "action": "Click",
-        "post_delay": 1000,
-        "target": [
-            135,
-            40,
-            0,
-            0
-        ],
-        "next": [
-            "Mail_BackMapPage"
-        ]
-    },
-    "Mail_BackMapPage": {
-        "doc": "识别左下抽抽乐-返回地图页",
-        "recognition": "OCR",
-        "roi": [
-            98,
-            656,
-            66,
-            32
-        ],
-        "expected": "抽抽乐",
-        "action": "Click",
-        "target": [
-            135,
-            40,
-            0,
-            0
-        ],
-        "next": [
-            "Mail_FinBackMapPage"
-        ]
-    },
-    "Mail_FinBackMapPage": {
-        "doc": "识别右下图钉-章节主页",
-        "recognition": "TemplateMatch",
-        "roi": [
-            1122,
-            646,
-            40,
-            38
-        ],
-        "template": [
-            "pin.png"
-        ],
-        "next": []
-    }
+  "Mail_HomePage": {
+    "recognition": "TemplateMatch",
+    "next": [
+      "Mail_BackHomePage"
+    ],
+    "roi": [
+      1122,
+      646,
+      40,
+      38
+    ],
+    "template": [
+      "pin.png"
+    ],
+    "doc": "识别右下图钉-章节主页"
+  },
+  "Mail_BackHomePage": {
+    "recognition": "TemplateMatch",
+    "action": "Click",
+    "next": [
+      "Mail_EnterMail"
+    ],
+    "post_delay": 1000,
+    "roi": [
+      1122,
+      646,
+      40,
+      38
+    ],
+    "template": [
+      "pin.png"
+    ],
+    "target": [
+      1186,
+      46,
+      0,
+      0
+    ],
+    "doc": "找到图钉-点击返回主页"
+  },
+  "Mail_EnterMail": {
+    "recognition": "OCR",
+    "action": "Click",
+    "next": [
+      "Mail_GetAll"
+    ],
+    "post_delay": 1000,
+    "roi": [
+      98,
+      656,
+      66,
+      32
+    ],
+    "expected": [
+      "抽抽乐"
+    ],
+    "target": [
+      1030,
+      45,
+      0,
+      0
+    ],
+    "doc": "识别左下抽抽乐-点击邮件"
+  },
+  "Mail_GetAll": {
+    "recognition": "OCR",
+    "action": "Click",
+    "next": [
+      "Mail_GetAllBack",
+      "Mail_TabBus"
+    ],
+    "post_delay": 2000,
+    "roi": [
+      1048,
+      641,
+      87,
+      35
+    ],
+    "expected": [
+      "全部领取"
+    ],
+    "doc": "全部领取"
+  },
+  "Mail_GetAllBack": {
+    "recognition": "OCR",
+    "action": "Click",
+    "next": [
+      "Mail_TabBus",
+      "Mail_BackMapPage"
+    ],
+    "post_delay": 1000,
+    "roi": [
+      556,
+      628,
+      148,
+      36
+    ],
+    "expected": [
+      "点击画面即可返回"
+    ],
+    "doc": "点击画面即可返回"
+  },
+  "Mail_TabBus": {
+    "recognition": "OCR",
+    "action": "Click",
+    "next": [
+      "Mail_GetBusAll",
+      "Mail_BackMapPage"
+    ],
+    "post_delay": 2000,
+    "roi": [
+      171,
+      100,
+      141,
+      194
+    ],
+    "expected": [
+      "商品信箱"
+    ],
+    "doc": "切换to月卡信箱"
+  },
+  "Mail_GetBusAll": {
+    "recognition": "OCR",
+    "action": "Click",
+    "next": [
+      "Mail_GetBusAllBack"
+    ],
+    "post_delay": 2000,
+    "roi": [
+      1048,
+      641,
+      87,
+      35
+    ],
+    "expected": [
+      "全部领取"
+    ],
+    "doc": "全部领取"
+  },
+  "Mail_GetBusAllBack": {
+    "recognition": "OCR",
+    "action": "Click",
+    "next": [
+      "Mail_BackHomePage2"
+    ],
+    "post_delay": 1000,
+    "roi": [
+      556,
+      628,
+      148,
+      36
+    ],
+    "expected": [
+      "点击画面即可返回"
+    ],
+    "doc": "点击画面即可返回"
+  },
+  "Mail_BackHomePage2": {
+    "recognition": "OCR",
+    "action": "Click",
+    "next": [
+      "Mail_BackMapPage"
+    ],
+    "post_delay": 1000,
+    "roi": [
+      215,
+      20,
+      119,
+      42
+    ],
+    "expected": [
+      "信箱"
+    ],
+    "target": [
+      135,
+      40,
+      0,
+      0
+    ],
+    "doc": "普通信箱,返回"
+  },
+  "Mail_BackMapPage": {
+    "recognition": "OCR",
+    "action": "Click",
+    "next": [
+      "Mail_FinBackMapPage"
+    ],
+    "roi": [
+      98,
+      656,
+      66,
+      32
+    ],
+    "expected": [
+      "抽抽乐"
+    ],
+    "target": [
+      135,
+      40,
+      0,
+      0
+    ],
+    "doc": "识别左下抽抽乐-返回地图页"
+  },
+  "Mail_FinBackMapPage": {
+    "recognition": "TemplateMatch",
+    "next": [],
+    "roi": [
+      1122,
+      646,
+      40,
+      38
+    ],
+    "template": [
+      "pin.png"
+    ],
+    "doc": "识别右下图钉-章节主页"
+  }
 }

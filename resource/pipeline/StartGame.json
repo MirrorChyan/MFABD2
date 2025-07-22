@@ -212,7 +212,6 @@
   },
   "StartGame_PayFaild": {
     "recognition": "OCR",
-    "action": "Click",
     "next": [
       "StartGame_PayFaildToChick"
     ],
@@ -230,6 +229,7 @@
   },
   "StartGame_PayFaildToChick": {
     "recognition": "OCR",
+    "action": "Click",
     "next": [
       "StartGame_TouchStart"
     ],
@@ -251,8 +251,8 @@
     "recognition": "OCR",
     "action": "Click",
     "next": [
-      "StartGame_TouchStart",
       "StartGame_PayFaild",
+      "StartGame_TouchStart",
       "StartGame_NewChar",
       "StartGame_SeasonSet",
       "StartGame_MapPage",

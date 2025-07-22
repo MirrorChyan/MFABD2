@@ -274,6 +274,7 @@
     "next": [
       "Gacha_GachaPage"
     ],
+    "pre_delay": 1000,
     "post_delay": 2000,
     "roi": [
       93,

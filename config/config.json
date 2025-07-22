@@ -24,7 +24,7 @@
       "option": [
         {
           "name": "狩猎场-章节图策略",
-          "index": 0
+          "index": 1
         },
         {
           "name": "冒险航线-双倍图策略",
@@ -36,7 +36,7 @@
         },
         {
           "name": "冒险航线-圣石洞穴属性",
-          "index": 0
+          "index": 3
         }
       ]
     },
@@ -57,7 +57,7 @@
       "option": [
         {
           "name": "竞技场战斗次数",
-          "index": 0
+          "index": 1
         }
       ]
     },
@@ -95,7 +95,7 @@
     {
       "name": "领取邮件",
       "entry": "Mail_HomePage",
-      "check": false
+      "check": true
     }
   ],
   "AdbDevice": {
