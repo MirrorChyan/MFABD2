@@ -496,6 +496,146 @@
     "doc": "公告弹窗"
   },
   "StartGame_BackMapPage": {
+    "action": "Click",
+    "next": [
+      "StartGame_BackMapPage1"
+    ],
+    "post_delay": 1000,
+    "target": [
+      60,
+      460,
+      0,
+      0
+    ],
+    "doc": "开始暴力解决广告，左侧点击10次"
+  },
+  "StartGame_BackMapPage1": {
+    "action": "Click",
+    "next": [
+      "StartGame_BackMapPage2"
+    ],
+    "post_delay": 1000,
+    "target": [
+      60,
+      460,
+      0,
+      0
+    ],
+    "doc": "开始暴力解决广告，左侧点击10次"
+  },
+  "StartGame_BackMapPage2": {
+    "action": "Click",
+    "next": [
+      "StartGame_BackMapPage3"
+    ],
+    "post_delay": 1000,
+    "target": [
+      60,
+      460,
+      0,
+      0
+    ],
+    "doc": "开始暴力解决广告，左侧点击10次"
+  },
+  "StartGame_BackMapPage3": {
+    "action": "Click",
+    "next": [
+      "StartGame_BackMapPage4"
+    ],
+    "post_delay": 1000,
+    "target": [
+      60,
+      460,
+      0,
+      0
+    ],
+    "doc": "开始暴力解决广告，左侧点击10次"
+  },
+  "StartGame_BackMapPage4": {
+    "action": "Click",
+    "next": [
+      "StartGame_BackMapPage5"
+    ],
+    "post_delay": 1000,
+    "target": [
+      60,
+      460,
+      0,
+      0
+    ],
+    "doc": "开始暴力解决广告，左侧点击10次"
+  },
+  "StartGame_BackMapPage5": {
+    "action": "Click",
+    "next": [
+      "StartGame_BackMapPage6"
+    ],
+    "post_delay": 1000,
+    "target": [
+      60,
+      460,
+      0,
+      0
+    ],
+    "doc": "开始暴力解决广告，左侧点击10次"
+  },
+  "StartGame_BackMapPage6": {
+    "action": "Click",
+    "next": [
+      "StartGame_BackMapPage7"
+    ],
+    "post_delay": 1000,
+    "target": [
+      60,
+      460,
+      0,
+      0
+    ],
+    "doc": "开始暴力解决广告，左侧点击10次"
+  },
+  "StartGame_BackMapPage7": {
+    "action": "Click",
+    "next": [
+      "StartGame_BackMapPage8"
+    ],
+    "post_delay": 1000,
+    "target": [
+      60,
+      460,
+      0,
+      0
+    ],
+    "doc": "开始暴力解决广告，左侧点击10次"
+  },
+  "StartGame_BackMapPage8": {
+    "action": "Click",
+    "next": [
+      "StartGame_BackMapPage9"
+    ],
+    "post_delay": 1000,
+    "target": [
+      60,
+      460,
+      0,
+      0
+    ],
+    "doc": "开始暴力解决广告，左侧点击10次"
+  },
+  "StartGame_BackMapPage9": {
+    "action": "Click",
+    "next": [
+      "StartGame_BackMapPageOG"
+    ],
+    "post_delay": 1000,
+    "target": [
+      60,
+      460,
+      0,
+      0
+    ],
+    "doc": "开始暴力解决广告，左侧点击10次"
+  },
+  "StartGame_BackMapPageOG": {
     "recognition": "OCR",
     "action": "Click",
     "next": [
@@ -513,12 +653,12 @@
       "抽抽乐"
     ],
     "target": [
-      135,
-      40,
+      120,
+      35,
       0,
       0
     ],
-    "doc": "识别左下抽抽乐-返回地图页"
+    "doc": "识别左下抽抽乐-返回地图页(原版)"
   },
   "StartGame_FinBackMapPage": {
     "recognition": "TemplateMatch",

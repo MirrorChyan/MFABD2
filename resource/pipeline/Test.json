@@ -1,0 +1,17 @@
+{
+  "Test_HomePage": {
+    "recognition": "TemplateMatch",
+    "action": "Click",
+    "roi": [
+      89,
+      131,
+      1166,
+      198
+    ],
+    "template": [
+      "pve7.png"
+    ],
+    "threshold": 0.85,
+    "doc": "识别右下图钉-章节主页"
+  }
+}

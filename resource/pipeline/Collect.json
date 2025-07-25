@@ -264,21 +264,18 @@
     "doc": "主线卡带界面拖动，稍微向右"
   },
   "Collect_ChapterSelection1": {
-    "recognition": "TemplateMatch",
+    "recognition": "FeatureMatch",
     "action": "Click",
     "next": [
       "Collect_ChapterSelection2"
     ],
-    "interrupt": [
-      "Collect_OperationsMain_Sandplay"
-    ],
     "post_delay": 5000,
-    "pre_wait_freezes": 500,
+    "pre_wait_freezes": 5000,
     "roi": [
-      34,
-      218,
-      1146,
-      53
+      242,
+      198,
+      865,
+      131
     ],
     "expected": [
       "pve9.png"

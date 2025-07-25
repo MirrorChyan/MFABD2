@@ -139,7 +139,7 @@
     "doc": "A-2.选择冒险航线，首选"
   },
   "Battle_CollectMapHangXianDoubleCk1": {
-  	"recognition": "TemplateMatch",
+    "recognition": "TemplateMatch",
     "action": "Click",
     "next": [
       "Battle_FastBattleMAXTouchHangxian"
@@ -163,7 +163,7 @@
     ]
   },
   "Battle_CollectMapHangXianDoubleCk1No": {
-  	"recognition": "TemplateMatch",
+    "recognition": "TemplateMatch",
     "next": [
       "Battle_CollectMapHangXian2"
     ],
@@ -174,14 +174,13 @@
       110
     ],
     "template": [
-      "DoubleExp.png",
+      "DoubleNoExp.png",
       "DoubleNoGold.png"
     ],
     "threshold": 0.8
   },
   "Battle_CollectMapHangXian2": {
     "action": "Click",
-    "doc": "A-2.选择冒险航线，次选",
     "next": [
       "Battle_CollectMapHangXianDoubleCk2",
       "Battle_CollectMapHangXianDoubleCk2No"
@@ -191,10 +190,11 @@
       560,
       0,
       0
-    ]
+    ],
+    "doc": "A-2.选择冒险航线，次选"
   },
   "Battle_CollectMapHangXianDoubleCk2": {
-  	"recognition": "TemplateMatch",
+    "recognition": "TemplateMatch",
     "action": "Click",
     "next": [
       "Battle_FastBattleMAXTouchHangxian"
@@ -218,7 +218,7 @@
     ]
   },
   "Battle_CollectMapHangXianDoubleCk2No": {
-  	"recognition": "TemplateMatch",
+    "recognition": "TemplateMatch",
     "next": [
       "Battle_CollectMapShouLieR2"
     ],
@@ -229,7 +229,7 @@
       110
     ],
     "template": [
-      "DoubleExp.png",
+      "DoubleNoExp.png",
       "DoubleNoGold.png"
     ],
     "threshold": 0.8

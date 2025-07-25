@@ -72,6 +72,10 @@
     {
       "name": "领取邮件",
       "entry": "Mail_HomePage"
+    },
+    {
+      "name": "Test",
+      "entry": "Test_HomePage"
     }
   ],
   "option": {

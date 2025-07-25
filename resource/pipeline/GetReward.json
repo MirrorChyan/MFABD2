@@ -51,7 +51,7 @@
       111
     ],
     "expected": [
-      "工会"
+      "公会"
     ],
     "doc": "点击工会"
   },
@@ -104,7 +104,7 @@
   "GetReward_UnionBack2": {
     "action": "Click",
     "next": [
-      "GetReward_DailyReward"
+      "GetReward_BusinReward"
     ],
     "post_delay": 3000,
     "roi": [
@@ -120,6 +120,69 @@
       0
     ],
     "doc": "工会返回主页"
+  },
+  "GetReward_BusinReward": {
+    "recognition": "OCR",
+    "action": "Click",
+    "next": [
+      "GetReward_GetBusinReward"
+    ],
+    "on_error": [
+      "GetReward_DailyReward"
+    ],
+    "post_delay": 1000,
+    "roi": [
+      85,
+      228,
+      98,
+      34
+    ],
+    "expected": [
+      "餐馆"
+    ],
+    "doc": "识别点击餐馆"
+  },
+  "GetReward_GetBusinReward": {
+    "recognition": "OCR",
+    "action": "Click",
+    "next": [
+      "GetReward_GetBusinRewardBack"
+    ],
+    "post_delay": 2000,
+    "roi": [
+      551,
+      478,
+      163,
+      126
+    ],
+    "expected": [
+      "结算"
+    ],
+    "doc": "点击结算"
+  },
+  "GetReward_GetBusinRewardBack": {
+    "recognition": "OCR",
+    "action": "Click",
+    "next": [
+      "GetReward_DailyReward"
+    ],
+    "interrupt": [
+      "GetReward_ClickOnce"
+    ],
+    "on_error": [
+      "GetReward_GetDailyReward"
+    ],
+    "post_delay": 3000,
+    "roi": [
+      534,
+      622,
+      219,
+      40
+    ],
+    "expected": [
+      "点击画面"
+    ],
+    "doc": "点击领取全部返回"
   },
   "GetReward_DailyReward": {
     "recognition": "OCR",
@@ -144,6 +207,9 @@
     "action": "Click",
     "next": [
       "GetReward_GetDailyRewardBack"
+    ],
+    "on_error": [
+      "GetReward_TabWeeklyReward"
     ],
     "post_delay": 3000,
     "roi": [
@@ -178,6 +244,9 @@
   },
   "GetReward_TabWeeklyReward": {
     "action": "Click",
+    "next": [
+      "GetReward_GetWeeklyReward"
+    ],
     "roi": [
       180,
       154,
@@ -193,6 +262,9 @@
     "action": "Click",
     "next": [
       "GetReward_GetWeeklyRewardBack"
+    ],
+    "on_error": [
+      "GetReward_BackHomePage2"
     ],
     "post_delay": 3000,
     "roi": [
@@ -229,7 +301,7 @@
     "recognition": "OCR",
     "action": "Click",
     "next": [
-      "GetReward_BusinReward"
+      "GetReward_FinGetReward"
     ],
     "post_delay": 3000,
     "roi": [
@@ -246,60 +318,6 @@
       35,
       0,
       0
-    ],
-    "doc": "点击领取全部返回"
-  },
-  "GetReward_BusinReward": {
-    "recognition": "OCR",
-    "action": "Click",
-    "next": [
-      "GetReward_GetBusinReward"
-    ],
-    "post_delay": 1000,
-    "roi": [
-      85,
-      228,
-      98,
-      34
-    ],
-    "expected": [
-      "餐馆"
-    ],
-    "doc": "识别点击餐馆"
-  },
-  "GetReward_GetBusinReward": {
-    "recognition": "OCR",
-    "action": "Click",
-    "next": [
-      "GetReward_GetBusinRewardBack"
-    ],
-    "post_delay": 1000,
-    "roi": [
-      551,
-      478,
-      163,
-      126
-    ],
-    "expected": [
-      "结算"
-    ],
-    "doc": "点击结算"
-  },
-  "GetReward_GetBusinRewardBack": {
-    "recognition": "OCR",
-    "action": "Click",
-    "next": [
-      "GetReward_FinGetReward"
-    ],
-    "post_delay": 3000,
-    "roi": [
-      552,
-      627,
-      165,
-      42
-    ],
-    "expected": [
-      "点击画面"
     ],
     "doc": "点击领取全部返回"
   },
@@ -355,5 +373,14 @@
       "pin.png"
     ],
     "doc": "识别右下图钉-章节主页"
+  },
+  "GetReward_ClickOnce": {
+    "action": "Click",
+    "target": [
+      60,
+      360,
+      0,
+      0
+    ]
   }
 }
