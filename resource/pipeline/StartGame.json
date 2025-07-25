@@ -662,7 +662,9 @@
   },
   "StartGame_FinBackMapPage": {
     "recognition": "TemplateMatch",
-    "next": [],
+    "next": [
+    	"StartGame_PerPetTask"
+    	],
     "roi": [
       1122,
       646,
@@ -673,5 +675,21 @@
       "pin.png"
     ],
     "doc": "识别右下图钉-章节主页"
-  }
+  },
+  "StartGame_PerPetTask": {
+    "recognition": "TemplateMatch",
+    "action": "Click",
+    "next": [],
+    "post_delay": 1000,
+    "roi": [
+      866,
+      550,
+      28,
+      28
+    ],
+    "template": [
+      "PetTask.png"
+    ],
+    "doc": "宠物派遣。此时已因其他步骤充分延时，时机更合适。"
+  },
 }

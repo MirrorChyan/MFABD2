@@ -228,10 +228,28 @@
                 0
                ],
             },
+            "Battle_FastBattleMAXTouchShouLieR2": {
+              "target": [
+                800,
+                390,
+                0,
+                0
+               ],
+            },
             "Battle_CollectMap": {
               "next": [
                 "Battle_CollectMapHangXian1"
                ],
+            },
+            "Battle_FastBattleMAXTouchHangxian": {
+              "next": [
+                "Battle_CollectMapShouLie"
+               ],
+            },
+            "Battle_FastBattleMAXTouchShouLie": {
+              "next": [
+                "Battle_CollectMapDongXue"
+               ]
             }
           }
         }

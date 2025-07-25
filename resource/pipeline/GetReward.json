@@ -243,6 +243,7 @@
     "doc": "点击领取全部返回"
   },
   "GetReward_TabWeeklyReward": {
+  	"recognition": "OCR",
     "action": "Click",
     "next": [
       "GetReward_GetWeeklyReward"
