@@ -383,7 +383,8 @@
       35,
       0,
       0
-    ]
+    ],
+    "doc": "防止影响后续流程，将卡带页面结束"
   },
   "Collect_OperationsMain_Sandplay": {
     "recognition": "TemplateMatch",
@@ -826,7 +827,7 @@
     "action": "Click",
     "next": [
       "Collect_ForceTeleporCircleClick2.1",
-      "Collect_ForceTeleporCircleClick2.2"
+      "Collect_ForceTeleporCircleClick2.15"
     ],
     "post_delay": 2000,
     "roi": [
@@ -840,6 +841,23 @@
     ],
     "green_mask": true,
     "doc": "存在左键就不停点击，否则下一步找传送门"
+  },
+  "Collect_ForceTeleporCircleClick2.15": {
+    "recognition": "OCR",
+    "action": "Click",
+    "next": [
+      "Collect_ForceTeleporCircleClick2.2"
+    ],
+    "post_delay": 5000,
+    "roi": [
+      666,
+      427,
+      122,
+      36
+    ],
+    "expected": [
+      "生成"
+    ]
   },
   "Collect_ForceTeleporCircleClick2.2": {
     "action": "Click",
