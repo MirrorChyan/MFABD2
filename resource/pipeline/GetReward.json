@@ -243,7 +243,7 @@
     "doc": "点击领取全部返回"
   },
   "GetReward_TabWeeklyReward": {
-  	"recognition": "OCR",
+    "recognition": "OCR",
     "action": "Click",
     "next": [
       "GetReward_GetWeeklyReward"
@@ -262,9 +262,7 @@
     "recognition": "TemplateMatch",
     "action": "Click",
     "next": [
-      "GetReward_GetWeeklyRewardBack"
-    ],
-    "on_error": [
+      "GetReward_GetWeeklyRewardBack",
       "GetReward_BackHomePage2"
     ],
     "post_delay": 3000,
@@ -299,7 +297,6 @@
     "doc": "点击领取全部返回"
   },
   "GetReward_BackHomePage2": {
-    "recognition": "OCR",
     "action": "Click",
     "next": [
       "GetReward_FinGetReward"
@@ -310,9 +307,6 @@
       19,
       122,
       42
-    ],
-    "expected": [
-      "每日任务"
     ],
     "target": [
       120,
