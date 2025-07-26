@@ -228,14 +228,6 @@
                 0
                ],
             },
-            "Battle_FastBattleMAXTouchShouLieR2": {
-              "target": [
-                800,
-                390,
-                0,
-                0
-               ],
-            },
             "Battle_CollectMap": {
               "next": [
                 "Battle_CollectMapHangXian1"
