@@ -4,7 +4,7 @@
     {
       "name": "启动游戏",
       "entry": "StartGame_Start",
-      "check": true
+      "check": false
     },
     {
       "name": "地图采集",
@@ -20,7 +20,7 @@
     {
       "name": "地图扫荡",
       "entry": "Battle_StartGame_HomePage",
-      "check": true,
+      "check": false,
       "option": [
         {
           "name": "狩猎场-章节图策略",
@@ -43,12 +43,12 @@
     {
       "name": "装备制作强化分解炼制",
       "entry": "Equip_HomePage",
-      "check": true
+      "check": false
     },
     {
       "name": "白嫖抽卡",
       "entry": "Gacha_BackHomePage",
-      "check": true
+      "check": false
     },
     {
       "name": "竞技场",
@@ -109,8 +109,11 @@
     "AdbSerial": "127.0.0.1:16416",
     "ScreencapMethods": 18446744073709551559,
     "InputMethods": 2,
-    "Config": "{\"extras\":{\"mumu\":{\"enable\":true,\"index\":1,\"path\":\"C:/Program Files/Netease/MuMuPlayerGlobal-12.0\"}}}"
+    "Config": "{\"extras\":{\"mumu\":{\"enable\":true,\"index\":0,\"path\":\"C:/Program Files/Netease/MuMuPlayerGlobal-12.0\"}}}"
   },
   "EnableEdit": true,
-  "EnableCheckVersion": false
+  "EnableCheckVersion": false,
+  "RetryOnDisconnected": true,
+  "AllowAdbRestart": false,
+  "AllowAdbHardRestart": false
 }
