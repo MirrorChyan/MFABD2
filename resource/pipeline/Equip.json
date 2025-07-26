@@ -411,7 +411,7 @@
     "recognition": "TemplateMatch",
     "action": "Click",
     "next": [
-      "Equip_filterON"
+      "Equip_filter+9"
     ],
     "post_delay": 1000,
     "roi": [
@@ -425,6 +425,22 @@
     ],
     "threshold": 0.99,
     "doc": "点击筛选"
+  },
+  "Equip_filter+9": {
+    "action": "Click",
+    "next": [
+      "Equip_filterON"
+    ],
+    "post_delay": 1000,
+    "roi": [
+      899,
+      280,
+      135,
+      96
+    ],
+    "template": [
+      "+9.png"
+    ]
   },
   "Equip_filterON": {
     "recognition": "OCR",
