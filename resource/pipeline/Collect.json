@@ -286,6 +286,9 @@
     "interrupt": [
       "Collect_OperationsMain_Sandplay"
     ],
+    "on_error": [
+      "Collect_ChapterSelectionError"
+    ],
     "post_delay": 5000,
     "roi": [
       89,
@@ -307,6 +310,9 @@
     ],
     "interrupt": [
       "Collect_OperationsMain_Sandplay"
+    ],
+    "on_error": [
+      "Collect_ChapterSelectionError"
     ],
     "post_delay": 5000,
     "roi": [
@@ -330,6 +336,9 @@
     "interrupt": [
       "Collect_OperationsMain_Sandplay"
     ],
+    "on_error": [
+      "Collect_ChapterSelectionError"
+    ],
     "post_delay": 5000,
     "roi": [
       89,
@@ -345,6 +354,10 @@
   },
   "Collect_ChapterSelectionEnd": {
     "recognition": "TemplateMatch",
+    "action": "Click",
+    "on_error": [
+      "Collect_ChapterSelectionError"
+    ],
     "post_delay": 5000,
     "roi": [
       109,
@@ -353,9 +366,24 @@
       210
     ],
     "template": [
-      "pve11.png"
+      "pve10.png"
+    ],
+    "target": [
+      120,
+      35,
+      0,
+      0
     ],
     "doc": "章节选择顺序，3"
+  },
+  "Collect_ChapterSelectionError": {
+    "action": "Click",
+    "target": [
+      120,
+      35,
+      0,
+      0
+    ]
   },
   "Collect_OperationsMain_Sandplay": {
     "recognition": "TemplateMatch",
