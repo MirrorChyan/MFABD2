@@ -231,16 +231,11 @@
             "Battle_CollectMap": {
               "next": [
                 "Battle_CollectMapHangXian1"
-               ],
+               ]
             },
             "Battle_FastBattleMAXTouchHangxian": {
               "next": [
-                "Battle_CollectMapShouLie"
-               ],
-            },
-            "Battle_FastBattleMAXTouchShouLie": {
-              "next": [
-                "Battle_CollectMapDongXue"
+                "Battle_CollectMapShouLieR2"
                ]
             }
           }
