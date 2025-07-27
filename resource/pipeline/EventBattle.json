@@ -259,7 +259,7 @@
     "next": [
       "Event_FastExploreRewardBack"
     ],
-    "post_delay": 1000,
+    "post_delay": 5000,
     "roi": [
       697,
       516,
@@ -272,7 +272,6 @@
     "doc": "快速战斗-确认"
   },
   "Event_FastExploreRewardBack": {
-    "recognition": "OCR",
     "action": "Click",
     "next": [
       "Event_FastExploreBack"
@@ -284,8 +283,11 @@
       347,
       135
     ],
-    "expected": [
-      "点击画面即可返回"
+    "target": [
+      135,
+      20,
+      0,
+      0
     ],
     "doc": "奖励返回"
   },
@@ -295,7 +297,7 @@
     "next": [
       "Event_LeaveEvent"
     ],
-    "post_delay": 1000,
+    "post_delay": 5000,
     "roi": [
       215,
       16,
@@ -319,7 +321,7 @@
     "next": [
       "Even_BackMapPage"
     ],
-    "post_delay": 1000,
+    "post_delay": 5000,
     "roi": [
       202,
       579,
