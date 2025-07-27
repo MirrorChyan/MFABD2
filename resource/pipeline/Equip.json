@@ -396,10 +396,10 @@
     ],
     "post_delay": 1000,
     "roi": [
-      1089,
-      59,
-      44,
-      42
+      1082,
+      53,
+      51,
+      53
     ],
     "template": [
       "filter.png"
@@ -415,18 +415,19 @@
     ],
     "post_delay": 1000,
     "roi": [
-      430,
-      384,
-      115,
-      66
+      243,
+      381,
+      390,
+      69
     ],
     "template": [
       "filterSR.png"
     ],
-    "threshold": 0.99,
+    "threshold": 0.8,
     "doc": "点击筛选"
   },
   "Equip_filter+9": {
+    "recognition": "TemplateMatch",
     "action": "Click",
     "next": [
       "Equip_filterON"
