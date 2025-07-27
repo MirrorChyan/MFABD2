@@ -378,6 +378,10 @@
   },
   "Collect_ChapterSelectionError": {
     "action": "Click",
+    "next": [
+      "Collect_ChapterSelectionError2"
+    ],
+    "post_delay": 3000,
     "target": [
       120,
       35,
@@ -385,6 +389,17 @@
       0
     ],
     "doc": "防止影响后续流程，将卡带页面结束"
+  },
+  "Collect_ChapterSelectionError2": {
+    "action": "Click",
+    "post_delay": 3000,
+    "target": [
+      120,
+      35,
+      0,
+      0
+    ],
+    "doc": "防止影响后续流程，将主页面结束"
   },
   "Collect_OperationsMain_Sandplay": {
     "recognition": "TemplateMatch",
