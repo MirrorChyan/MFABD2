@@ -158,9 +158,9 @@
     "recognition": "OCR",
     "action": "Click",
     "next": [
-      "Event_NormalBattleBack"
+      "Event_NormalBattleBack2"
     ],
-    "post_delay": 5000,
+    "post_delay": 8000,
     "roi": [
       647,
       572,
@@ -211,7 +211,7 @@
     ],
     "target": [
       120,
-      35,
+      400,
       0,
       0
     ],
