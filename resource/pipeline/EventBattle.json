@@ -44,7 +44,7 @@
     "next": [
       "Event_EnterNormalBattle"
     ],
-    "post_delay": 5000,
+    "post_delay": 8000,
     "roi": [
       98,
       656,
@@ -276,7 +276,7 @@
     "next": [
       "Event_FastExploreBack"
     ],
-    "post_delay": 1000,
+    "post_delay": 2000,
     "roi": [
       451,
       572,
@@ -297,7 +297,7 @@
     "next": [
       "Event_LeaveEvent"
     ],
-    "post_delay": 5000,
+    "post_delay": 8000,
     "roi": [
       215,
       16,
@@ -321,7 +321,7 @@
     "next": [
       "Even_BackMapPage"
     ],
-    "post_delay": 5000,
+    "post_delay": 8000,
     "roi": [
       202,
       579,
