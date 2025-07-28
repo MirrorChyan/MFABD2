@@ -663,8 +663,8 @@
   "StartGame_FinBackMapPage": {
     "recognition": "TemplateMatch",
     "next": [
-    	"StartGame_PerPetTask"
-    	],
+      "StartGame_PerPetTask"
+    ],
     "roi": [
       1122,
       646,
@@ -680,6 +680,7 @@
     "recognition": "TemplateMatch",
     "action": "Click",
     "next": [],
+    "enabled": false,
     "post_delay": 1000,
     "roi": [
       866,
@@ -691,5 +692,5 @@
       "PetTask.png"
     ],
     "doc": "宠物派遣。此时已因其他步骤充分延时，时机更合适。"
-  },
+  }
 }
