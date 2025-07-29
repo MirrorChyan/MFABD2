@@ -165,8 +165,8 @@
       "Collect_HomePageSwipeInitializeEnd",
       "Collect_HomePageSwipeInitialize2"
     ],
-    "post_delay": 2000,
-    "post_wait_freezes": 800,
+    "post_delay": 5000,
+    "post_wait_freezes": 2000,
     "roi": [
       99,
       78,
