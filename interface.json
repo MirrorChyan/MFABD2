@@ -346,11 +346,6 @@
         {
           "name": "开启",
           "pipeline_override": {
-            "Event_NormalBattleBack2": {
-              "next": [
-                "Event_Explore"
-              ]
-            }
           }
         },
         {
@@ -358,7 +353,7 @@
           "pipeline_override": {
             "Event_NormalBattleBack2": {
               "next": [
-                "Event_LeaveEvent"
+               "Event_LeaveEvent2"
               ]
             }
           }

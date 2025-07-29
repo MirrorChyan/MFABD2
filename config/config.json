@@ -68,7 +68,7 @@
       "option": [
         {
           "name": "活动图小游戏扫荡",
-          "index": 0
+          "index": 1
         },
         {
           "name": "活动图快速战斗难度",
@@ -79,7 +79,7 @@
     {
       "name": "领取日常奖励",
       "entry": "GetReward_HomePage",
-      "check": false,
+      "check": true,
       "option": [
         {
           "name": "工会奖励",
