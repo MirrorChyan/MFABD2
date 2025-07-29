@@ -158,7 +158,8 @@
     "recognition": "OCR",
     "action": "Click",
     "next": [
-      "Event_NormalBattleBack2"
+      "Event_NormalBattleBack2",
+      "Event_NormalBattleBack"
     ],
     "post_delay": 8000,
     "roi": [
@@ -316,6 +317,30 @@
     "doc": "战场探索-返回"
   },
   "Event_LeaveEvent": {
+    "recognition": "OCR",
+    "action": "Click",
+    "next": [
+      "Even_BackMapPage"
+    ],
+    "post_delay": 8000,
+    "roi": [
+      202,
+      579,
+      284,
+      117
+    ],
+    "expected": [
+      "普通"
+    ],
+    "target": [
+      120,
+      35,
+      0,
+      0
+    ],
+    "doc": "普通战斗-离开活动页"
+  },
+  "Event_LeaveEvent2": {
     "recognition": "OCR",
     "action": "Click",
     "next": [

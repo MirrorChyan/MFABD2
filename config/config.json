@@ -64,7 +64,7 @@
     {
       "name": "活动图扫荡",
       "entry": "Event_HomePage",
-      "check": false,
+      "check": true,
       "option": [
         {
           "name": "活动图小游戏扫荡",
@@ -79,10 +79,10 @@
     {
       "name": "领取日常奖励",
       "entry": "GetReward_HomePage",
-      "check": true,
+      "check": false,
       "option": [
         {
-          "name": "工会奖励",
+          "name": "公会奖励",
           "index": 0
         }
       ]

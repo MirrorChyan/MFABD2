@@ -62,7 +62,7 @@
       "name": "领取日常奖励",
       "entry": "GetReward_HomePage",
       "option": [
-        "工会奖励"
+        "公会奖励"
       ]
     },
     {
@@ -344,14 +344,19 @@
     "活动图小游戏扫荡": {
       "cases": [
         {
-          "name": "开启",
+          "name": "小游戏开",
           "pipeline_override": {
           }
         },
         {
-          "name": "关闭",
+          "name": "小游戏关",
           "pipeline_override": {
             "Event_NormalBattleBack2": {
+              "next": [
+               "Event_LeaveEvent2"
+              ]
+            },
+            "Event_NormalBattleBack": {
               "next": [
                "Event_LeaveEvent2"
               ]
@@ -384,10 +389,10 @@
         }
       ]
     },
-    "工会奖励": {
+    "公会奖励": {
       "cases": [
         {
-          "name": "开启",
+          "name": "公会开",
           "pipeline_override": {
             "GetReward_HomePage": {
               "next": [
@@ -397,9 +402,9 @@
           }
         },
         {
-          "name": "关闭",
+          "name": "公会关",
           "pipeline_override": {
-            "GetReward_HomePage": {
+            "GetReward_BackHomePage": {
               "next": [
                 "GetReward_DailyReward"
               ]
