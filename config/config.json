@@ -21,7 +21,7 @@
         },
         {
           "name": "战斗次数分配",
-          "index": 1
+          "index": 0
         },
         {
           "name": "冒险航线-圣石洞穴属性",
@@ -32,7 +32,7 @@
     {
       "name": "地图采集",
       "entry": "Collect_StartGame_HomePage",
-      "check": true,
+      "check": false,
       "option": [
         {
           "name": "采集方案",

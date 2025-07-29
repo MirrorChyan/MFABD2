@@ -186,6 +186,7 @@
     "next": [
       "Mail_FinBackMapPage"
     ],
+    "pre_delay": 1000,
     "roi": [
       98,
       656,
@@ -206,6 +207,7 @@
   "Mail_FinBackMapPage": {
     "recognition": "TemplateMatch",
     "next": [],
+    "pre_delay": 1000,
     "roi": [
       1122,
       646,
