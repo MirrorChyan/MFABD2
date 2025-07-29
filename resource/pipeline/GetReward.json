@@ -164,7 +164,7 @@
     "recognition": "OCR",
     "action": "Click",
     "next": [
-      "GetReward_DailyReward"
+      "GetReward_Busin_In"
     ],
     "interrupt": [
       "GetReward_ClickOnce"
@@ -183,6 +183,69 @@
       "点击画面"
     ],
     "doc": "点击领取全部返回"
+  },
+  "GetReward_Busin_In": {
+    "recognition": "OCR",
+    "action": "Click",
+    "next": [
+      "GetReward_Busin_InBusin"
+    ],
+    "roi": [
+      72,
+      179,
+      122,
+      96
+    ],
+    "expected": [
+      "餐馆"
+    ],
+    "doc": "流程：进入餐馆。领取每日常客水晶。"
+  },
+  "GetReward_Busin_InBusin": {
+    "recognition": "OCR",
+    "action": "Click",
+    "next": [
+      "GetReward_Busin_GiftGet"
+    ],
+    "post_delay": 8000,
+    "roi": [
+      512,
+      185,
+      265,
+      73
+    ],
+    "expected": [
+      "立刻前往餐厅"
+    ],
+    "doc": "餐馆结算页，进入餐馆"
+  },
+  "GetReward_Busin_GiftGet": {
+    "action": "Click",
+    "next": [
+      "GetReward_Busin_Back"
+    ],
+    "post_delay": 3000,
+    "target": [
+      135,
+      220,
+      0,
+      0
+    ],
+    "doc": "直接点击常客位置，获取水晶。不设置判定。"
+  },
+  "GetReward_Busin_Back": {
+    "action": "Click",
+    "next": [
+      "GetReward_DailyReward"
+    ],
+    "post_delay": 5000,
+    "target": [
+      1180,
+      45,
+      0,
+      0
+    ],
+    "doc": "返回主页面，之后流程结束。"
   },
   "GetReward_DailyReward": {
     "recognition": "OCR",
