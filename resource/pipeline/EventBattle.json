@@ -152,6 +152,12 @@
     "expected": [
       "MAX"
     ],
+    "target": [
+      800,
+      390,
+      0,
+      0
+    ],
     "doc": "快速战斗MAX"
   },
   "Event_TouchNormalBattle": {
@@ -189,6 +195,12 @@
     "expected": [
       "点击画面即可返回"
     ],
+    "target": [
+      40,
+      560,
+      0,
+      0
+    ],
     "doc": "奖励返回"
   },
   "Event_NormalBattleBack2": {
@@ -211,8 +223,8 @@
       "伙伴"
     ],
     "target": [
-      120,
-      400,
+      40,
+      560,
       0,
       0
     ],

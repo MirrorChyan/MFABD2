@@ -161,7 +161,6 @@
     "doc": "点击结算"
   },
   "GetReward_GetBusinRewardBack": {
-    "recognition": "OCR",
     "action": "Click",
     "next": [
       "GetReward_Busin_In"
@@ -179,8 +178,11 @@
       219,
       40
     ],
-    "expected": [
-      "点击画面"
+    "target": [
+      45,
+      563,
+      0,
+      0
     ],
     "doc": "点击领取全部返回"
   },
@@ -209,10 +211,10 @@
     ],
     "post_delay": 8000,
     "roi": [
-      512,
-      185,
-      265,
-      73
+      583,
+      203,
+      143,
+      36
     ],
     "expected": [
       "立刻前往餐厅"
@@ -236,7 +238,7 @@
   "GetReward_Busin_Back": {
     "action": "Click",
     "next": [
-      "GetReward_DailyReward"
+      "GetReward_Busin_ChapterMenu"
     ],
     "post_delay": 5000,
     "target": [
@@ -246,6 +248,76 @@
       0
     ],
     "doc": "返回主页面，之后流程结束。"
+  },
+  "GetReward_Busin_ChapterMenu": {
+    "recognition": "OCR",
+    "action": "Click",
+    "next": [
+      "GetReward_Busin_ToPvp"
+    ],
+    "post_delay": 3000,
+    "post_wait_freezes": 1000,
+    "roi": [
+      98,
+      656,
+      66,
+      32
+    ],
+    "expected": [
+      "抽抽乐"
+    ],
+    "target": [
+      1111,
+      650,
+      0,
+      0
+    ]
+  },
+  "GetReward_Busin_ToPvp": {
+    "recognition": "OCR",
+    "action": "Click",
+    "next": [
+      "GetReward_Busin_BackHomePage"
+    ],
+    "post_delay": 6000,
+    "roi": [
+      75,
+      315,
+      259,
+      202
+    ],
+    "expected": [
+      "PvP"
+    ],
+    "target_offset": [
+      -10,
+      -100,
+      0,
+      0
+    ]
+  },
+  "GetReward_Busin_BackHomePage": {
+    "recognition": "TemplateMatch",
+    "action": "Click",
+    "next": [
+      "GetReward_DailyReward"
+    ],
+    "roi": [
+      1122,
+      646,
+      40,
+      38
+    ],
+    "template": [
+      "pin.png"
+    ],
+    "target": [
+      1186,
+      46,
+      0,
+      0
+    ],
+    "doc": "找到图钉-点击返回主页"
   },
   "GetReward_DailyReward": {
     "recognition": "OCR",

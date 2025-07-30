@@ -45,6 +45,7 @@
     "next": [
       "Equip_EquipSelect"
     ],
+    "post_wait_freezes": 1000,
     "roi": [
       1018,
       641,
@@ -69,6 +70,7 @@
       "Equip_EquipMake"
     ],
     "post_delay": 1000,
+    "post_wait_freezes": 1000,
     "roi": [
       602,
       558,
@@ -87,6 +89,7 @@
       "Equip_EquipMakeClose"
     ],
     "post_delay": 5000,
+    "post_wait_freezes": 1000,
     "roi": [
       943,
       600,
@@ -105,6 +108,7 @@
       "Equip_EquipMakeBack"
     ],
     "post_delay": 1000,
+    "post_wait_freezes": 1000,
     "roi": [
       995,
       174,
@@ -163,6 +167,7 @@
     "next": [
       "Equip_EquipUp"
     ],
+    "post_wait_freezes": 1000,
     "roi": [
       880,
       645,
