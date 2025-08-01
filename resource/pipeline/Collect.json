@@ -7,15 +7,16 @@
     ],
     "post_delay": 5000,
     "roi": [
-      1122,
-      646,
-      40,
-      38
+      1047,
+      516,
+      107,
+      110
     ],
+    "green_mask": true,
     "template": [
-      "pin.png"
+      "Run.png"
     ],
-    "doc": "识别右下图钉-章节主页"
+    "doc": "识别右下run-章节主页"
   },
   "Collect_PerPetTask": {
     "recognition": "TemplateMatch",
@@ -47,13 +48,14 @@
       "Collect_HomePageSwipeInitialize_BackHomePage"
     ],
     "roi": [
-      1122,
-      646,
-      40,
-      38
+      1047,
+      516,
+      107,
+      110
     ],
+    "green_mask": true,
     "template": [
-      "pin.png"
+      "Run.png"
     ],
     "target": [
       1186,
@@ -61,7 +63,7 @@
       0,
       0
     ],
-    "doc": "找到图钉-点击返回主页（暂时不用）"
+    "doc": "找到run-点击返回主页（暂时不用）"
   },
   "Collect_PVEChapterIden2#": {
     "recognition": "TemplateMatch",
@@ -87,13 +89,14 @@
       "Collect_HomePageSwipeInitialize0.5"
     ],
     "roi": [
-      1122,
-      646,
-      40,
-      38
+      1047,
+      516,
+      107,
+      110
     ],
+    "green_mask": true,
     "template": [
-      "pin.png"
+      "Run.png"
     ],
     "target": [
       1186,
@@ -101,7 +104,7 @@
       0,
       0
     ],
-    "doc": "找到图钉了-点击返回主页"
+    "doc": "找到run了-点击返回主页"
   },
   "Collect_HomePageSwipeInitialize0.5": {
     "recognition": "OCR",
