@@ -124,7 +124,8 @@
     "recognition": "OCR",
     "action": "Click",
     "next": [
-      "Mail_GetBusAllBack"
+      "Mail_GetBusAllBack",
+      "Mail_BackHomePage2"
     ],
     "post_delay": 2000,
     "roi": [
