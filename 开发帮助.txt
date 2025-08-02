@@ -42,6 +42,7 @@
   实现商店程序更新，不包括翻墙
   510,535,0,0 经验本 462,496,100,72 经验本按钮范围
   343,560,0,0 金钱本 305,521,74,66 金钱本按钮范围
+  1047,516,107,110 Run.png "green_mask": true,
   狩猎场选择有两处：Battle_CollectMapShouLie、Battle_CollectMapShouLieR2。
   
   区域略图请探测完
