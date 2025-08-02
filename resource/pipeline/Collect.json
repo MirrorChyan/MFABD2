@@ -12,10 +12,10 @@
       107,
       110
     ],
-    "green_mask": true,
     "template": [
       "Run.png"
     ],
+    "green_mask": true,
     "doc": "识别右下run-章节主页"
   },
   "Collect_PerPetTask": {
@@ -29,10 +29,10 @@
     ],
     "post_delay": 5000,
     "roi": [
-      866,
-      550,
-      28,
-      28
+      404,
+      224,
+      710,
+      425
     ],
     "template": [
       "PetTask.png"
@@ -53,10 +53,10 @@
       107,
       110
     ],
-    "green_mask": true,
     "template": [
       "Run.png"
     ],
+    "green_mask": true,
     "target": [
       1186,
       46,
@@ -94,10 +94,10 @@
       107,
       110
     ],
-    "green_mask": true,
     "template": [
       "Run.png"
     ],
+    "green_mask": true,
     "target": [
       1186,
       46,
