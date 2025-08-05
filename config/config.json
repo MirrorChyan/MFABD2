@@ -32,7 +32,7 @@
     {
       "name": "地图采集",
       "entry": "Collect_StartGame_HomePage",
-      "check": true,
+      "check": false,
       "option": [
         {
           "name": "采集方案",
@@ -79,7 +79,7 @@
     {
       "name": "领取日常奖励",
       "entry": "GetReward_HomePage",
-      "check": true,
+      "check": false,
       "option": [
         {
           "name": "公会奖励",
@@ -90,12 +90,12 @@
     {
       "name": "领取通行证奖励",
       "entry": "Pass_HomePage",
-      "check": true
+      "check": false
     },
     {
       "name": "领取邮件",
       "entry": "Mail_HomePage",
-      "check": true
+      "check": false
     },
     {
       "name": "Test",
@@ -116,5 +116,5 @@
   "RetryOnDisconnected": true,
   "AllowAdbRestart": false,
   "AllowAdbHardRestart": false,
-  "AfterTask": "CloseEmulator"
+  "AfterTask": "None"
 }

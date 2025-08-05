@@ -35,8 +35,10 @@
       401
     ],
     "template": [
-      "PetTask.png"
+      "tanhaoGE.png"
     ],
+    "threshold": 0.95,
+    "green_mask": true,
     "doc": "宠物派遣"
   },
   "Collect_StartGameType2": {

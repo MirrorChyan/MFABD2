@@ -87,10 +87,13 @@
         {
           "name": "低练度-章节2",
           "pipeline_override": {
-            "Collect_PerPetTask": {
+            "Collect_ChapterSelection1": {
               "next": [
-              	"Collect_ForceTeleporCircleClick3"
-                ]
+              	"Collect_ChapterSelectionEnd"
+                ],
+              "template": [
+                   "pve2b.png"
+                ],
             }
           }
         }
