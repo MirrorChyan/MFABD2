@@ -21,11 +21,11 @@
         },
         {
           "name": "战斗次数分配",
-          "index": 0
+          "index": 1
         },
         {
           "name": "冒险航线-圣石洞穴属性",
-          "index": 3
+          "index": 4
         }
       ]
     },
@@ -95,6 +95,11 @@
     {
       "name": "领取邮件",
       "entry": "Mail_HomePage",
+      "check": false
+    },
+    {
+      "name": "结束游戏",
+      "entry": "Close_HomePage",
       "check": false
     },
     {

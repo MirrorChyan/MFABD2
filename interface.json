@@ -74,6 +74,10 @@
       "entry": "Mail_HomePage"
     },
     {
+      "name": "结束游戏",
+      "entry": "Close_HomePage"
+    },
+    {
       "name": "Test",
       "entry": "Test_HomePage"
     }
