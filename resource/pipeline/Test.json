@@ -1,8 +1,8 @@
 {
   "Test_HomePage": {
-    "recognition": "TemplateMatch",
     "action": "Click",
     "post_delay": 5000,
+    "focus": "测试",
     "roi": [
       973,
       81,
