@@ -1,6 +1,7 @@
 {
   "Event_HomePage": {
     "recognition": "TemplateMatch",
+    "focus": "EM.箱庭地图已确认",
     "next": [
       "Event_BackHomePage"
     ],
@@ -41,6 +42,7 @@
   "Event_EnterEvent": {
     "recognition": "OCR",
     "action": "Click",
+    "focus": "EM.从主页面进入活动",
     "next": [
       "Event_EnterNormalBattle"
     ],
@@ -65,6 +67,7 @@
   "Event_EnterNormalBattle": {
     "recognition": "OCR",
     "action": "Click",
+    "focus": "EM.活动.选难度",
     "next": [
       "Event_FastNormalBattle"
     ],
@@ -86,6 +89,7 @@
   "Event_FastNormalBattle": {
     "recognition": "OCR",
     "action": "Click",
+    "focus": "EM.活动.快速战斗",
     "next": [
       "Event_NormalBattleMAX",
       "Event_NoHaveAP"
@@ -104,6 +108,7 @@
   },
   "Event_NoHaveAP": {
     "recognition": "OCR",
+    "focus": "EM.活动.AP不足",
     "action": "Click",
     "next": [
       "Event_NoHaveAPBackEventIndex"
@@ -158,6 +163,7 @@
       0,
       0
     ],
+    "focus": "EM.活动.快速战斗MAX",
     "doc": "快速战斗MAX"
   },
   "Event_TouchNormalBattle": {
@@ -192,6 +198,7 @@
       144,
       38
     ],
+    "focus": "EM.活动.战斗结算",
     "expected": [
       "点击画面即可返回"
     ],
@@ -206,6 +213,7 @@
   "Event_NormalBattleBack2": {
     "recognition": "OCR",
     "action": "Click",
+    "focus": "EM.活动.战斗结算(无对象)",
     "next": [
       "Event_Explore"
     ],
@@ -230,6 +238,7 @@
   "Event_Explore": {
     "recognition": "OCR",
     "action": "Click",
+    "focus": "EM.活动.小游戏模块启动",
     "next": [
       "Event_FastExplore"
     ],
@@ -323,10 +332,12 @@
       0,
       0
     ],
+    "focus": "EM.活动.小游戏模块结束",
     "doc": "战场探索-返回"
   },
   "Event_LeaveEvent": {
     "recognition": "OCR",
+    "focus": "EM.活动.打完活动关卡页面位置ck",
     "action": "Click",
     "next": [
       "Event_LeaveEvent2",
@@ -353,6 +364,7 @@
   "Event_LeaveEvent2": {
     "recognition": "OCR",
     "action": "Click",
+    "focus": "EM.活动.回到活动主页面",
     "next": [
       "Even_BackMapPage",
       "Event_LeaveEvent2"
@@ -377,6 +389,7 @@
   },
   "Even_BackMapPage": {
     "recognition": "OCR",
+    "focus": "EM.活动.回到主页面",
     "action": "Click",
     "roi": [
       98,

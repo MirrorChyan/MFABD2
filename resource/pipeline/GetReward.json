@@ -40,6 +40,7 @@
   },
   "GetReward_EnterUnion": {
     "recognition": "OCR",
+    "focus": "GM.公会签到",
     "next": [
       "GetReward_UnionGUI"
     ],
@@ -124,6 +125,7 @@
   "GetReward_BusinReward": {
     "recognition": "OCR",
     "action": "Click",
+    "focus": "GM.餐馆结算",
     "next": [
       "GetReward_GetBusinReward"
     ],
@@ -188,6 +190,7 @@
   },
   "GetReward_Busin_In": {
     "recognition": "OCR",
+    "focus": "GM.餐馆常客属性石",
     "action": "Click",
     "next": [
       "GetReward_Busin_InBusin"
@@ -237,6 +240,7 @@
   },
   "GetReward_Busin_Back": {
     "action": "Click",
+    "focus": "GM.离开餐馆卡带",
     "next": [
       "GetReward_Busin_ChapterMenu"
     ],
@@ -252,6 +256,7 @@
   "GetReward_Busin_ChapterMenu": {
     "recognition": "OCR",
     "action": "Click",
+    "focus": "GM.主页面",
     "next": [
       "GetReward_Busin_ToPvp"
     ],
@@ -276,6 +281,7 @@
   "GetReward_Busin_ToPvp": {
     "recognition": "OCR",
     "action": "Click",
+    "focus": "GM.进入PVP卡带",
     "next": [
       "GetReward_Busin_BackHomePage"
     ],
@@ -299,6 +305,7 @@
   "GetReward_Busin_BackHomePage": {
     "recognition": "TemplateMatch",
     "action": "Click",
+    "focus": "GM.卡带复位成功",
     "next": [
       "GetReward_DailyReward"
     ],
@@ -321,6 +328,7 @@
   },
   "GetReward_DailyReward": {
     "recognition": "OCR",
+    "focus": "GM.‘任务’奖励领取",
     "action": "Click",
     "next": [
       "GetReward_GetDailyReward"
@@ -453,6 +461,7 @@
   },
   "GetReward_FinGetReward": {
     "recognition": "OCR",
+    "focus": "GM.‘任务’返回主页面",
     "next": [
       "GetReward_BackMapPage"
     ],
@@ -506,6 +515,7 @@
   },
   "GetReward_ClickOnce": {
     "action": "Click",
+    "focus": "GM.流程结束~",
     "target": [
       60,
       360,

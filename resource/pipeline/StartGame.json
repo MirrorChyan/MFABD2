@@ -25,6 +25,7 @@
       159,
       64
     ],
+    "focus": "NEO",
     "expected": [
       "NEO"
     ]
@@ -46,6 +47,7 @@
       137,
       65
     ],
+    "focus": "SM.main",
     "expected": [
       "尘埃"
     ]
@@ -66,6 +68,7 @@
     "expected": [
       "更新通知"
     ],
+    "focus": "更新通知",
     "doc": "游戏版本更新"
   },
   "StartGame_UpdateCk": {
@@ -97,6 +100,7 @@
   },
   "StartGame_UpdateStartEngShop": {
     "action": "StartApp",
+    "focus": "程序更新模块str",
     "next": [
       "StartGame_UpdateEngShop"
     ],
@@ -154,6 +158,7 @@
       "StartGame_UpdateDateing",
       "StartGame_TouchStart"
     ],
+    "focus": "SM.数据下载",
     "post_delay": 20000,
     "roi": [
       623,
@@ -168,6 +173,7 @@
   },
   "StartGame_UpdateDateing": {
     "recognition": "OCR",
+    "focus": "SM.数据下载循环",
     "next": [
       "StartGame_UpdateDateing",
       "StartGame_PayFaild",
@@ -208,6 +214,7 @@
       "游戏启动中",
       "正在确认下载"
     ],
+    "focus": "SM.ORC游戏启动中",
     "doc": "游戏启动中"
   },
   "StartGame_PayFaild": {
@@ -225,6 +232,7 @@
     "expected": [
       "支付失败"
     ],
+    "focus": "SM.支付失败弹窗",
     "doc": "支付方式失败点击确认"
   },
   "StartGame_PayFaildToChick": {
@@ -266,6 +274,7 @@
       420,
       187
     ],
+    "focus": "SM.TO Touch",
     "expected": [
       "TO"
     ],
@@ -649,6 +658,7 @@
     "expected": [
       "抽抽乐"
     ],
+    "focus": "SM.返回箱庭",
     "target": [
       120,
       35,
@@ -659,6 +669,7 @@
   },
   "StartGame_FinBackMapPage": {
     "recognition": "TemplateMatch",
+    "focus": "SM.返回箱庭成功",
     "next": [
       "StartGame_PerPetTask"
     ],
@@ -676,6 +687,7 @@
   },
   "StartGame_PerPetTask": {
     "recognition": "TemplateMatch",
+    "focus": "SM.宠物派遣",
     "action": "Click",
     "next": [],
     "post_delay": 1000,

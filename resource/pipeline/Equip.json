@@ -1,6 +1,7 @@
 {
   "Equip_HomePage": {
     "recognition": "TemplateMatch",
+    "focus": "EM.锻造开始",
     "next": [
       "Equip_Skill4"
     ],
@@ -41,6 +42,7 @@
   },
   "Equip_EquipMakeGui": {
     "recognition": "OCR",
+    "focus": "EM.装备制作.开始",
     "action": "Click",
     "next": [
       "Equip_EquipSelect",
@@ -67,6 +69,7 @@
   },
   "Equip_EquipSelect": {
     "recognition": "TemplateMatch",
+    "focus": "EM.装备制作.决定选垃圾",
     "action": "Click",
     "next": [
       "Equip_EquipMake",
@@ -88,6 +91,7 @@
   "Equip_EquipMake": {
     "recognition": "OCR",
     "action": "Click",
+    "focus": "EM.装备制作.敲敲敲~",
     "next": [
       "Equip_EquipMakeClose",
       "Equip_EquipMake"
@@ -108,6 +112,7 @@
   "Equip_EquipMakeClose": {
     "recognition": "TemplateMatch",
     "action": "Click",
+    "focus": "EM.装备制作.完毕页面x找到",
     "next": [
       "Equip_EquipMakeBack",
       "Equip_EquipMakeClose"
@@ -128,6 +133,7 @@
   "Equip_EquipMakeBack": {
     "recognition": "OCR",
     "action": "Click",
+    "focus": "EM.装备制作.返回",
     "next": [
       "Equip_ToEquipGui"
     ],
@@ -151,6 +157,7 @@
   },
   "Equip_ToEquipGui": {
     "recognition": "OCR",
+    "focus": "EM.前往武器库存",
     "action": "Click",
     "next": [
       "Equip_EquipGui",
@@ -170,6 +177,7 @@
   },
   "Equip_EquipGui": {
     "recognition": "OCR",
+    "focus": "EM.装备强化",
     "action": "Click",
     "next": [
       "Equip_EquipUp",
@@ -292,6 +300,7 @@
   "Equip_EquipDec": {
     "recognition": "OCR",
     "action": "Click",
+    "focus": "EM.装备分解",
     "next": [
       "Equip_EquipDec2",
       "Equip_EquipDec"
@@ -411,6 +420,7 @@
   },
   "Equip_filter": {
     "recognition": "TemplateMatch",
+    "focus": "EM.装备精炼",
     "action": "Click",
     "next": [
       "Equip_filterSR"
@@ -431,6 +441,7 @@
   "Equip_filterSR": {
     "recognition": "TemplateMatch",
     "action": "Click",
+    "focus": "EM.装备精炼.稀有度",
     "next": [
       "Equip_filter+9"
     ],
@@ -449,6 +460,7 @@
   },
   "Equip_filter+9": {
     "recognition": "TemplateMatch",
+    "focus": "EM.装备精炼.+9",
     "action": "Click",
     "next": [
       "Equip_filterON"
@@ -466,6 +478,7 @@
   },
   "Equip_filterON": {
     "recognition": "OCR",
+    "focus": "EM.装备精炼.筛选...",
     "action": "Click",
     "next": [
       "Equip_FindRefining",
@@ -500,6 +513,7 @@
   },
   "Equip_Refining": {
     "recognition": "OCR",
+    "focus": "EM.装备精炼.精炼",
     "action": "Click",
     "next": [
       "Equip_TouchRefining",
@@ -519,6 +533,7 @@
   },
   "Equip_TouchRefining": {
     "recognition": "OCR",
+    "focus": "EM.装备精炼.再确认精炼",
     "action": "Click",
     "next": [
       "Equip_TouchRefiningBack"

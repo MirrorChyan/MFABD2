@@ -1,6 +1,7 @@
 {
   "Battle_StartGame_HomePage": {
     "recognition": "TemplateMatch",
+    "focus": "BM.箱庭地图已确认",
     "next": [
       "Battle_TouchCollect"
     ],
@@ -42,6 +43,7 @@
   },
   "Battle_CollectMap": {
     "recognition": "OCR",
+    "focus": "BM.快速狩猎地图已确认",
     "action": "Click",
     "next": [
       "Battle_CollectMapShouLie"
@@ -90,6 +92,7 @@
   },
   "Battle_FastBattleMAXTouchShouLie": {
     "recognition": "OCR",
+    "focus": "BM.狩猎场R1",
     "action": "Click",
     "next": [
       "Battle_CollectMapHangXian1"
@@ -116,6 +119,7 @@
   },
   "Battle_CollectMapHangXian1": {
     "recognition": "OCR",
+    "focus": "BM.航线-首选",
     "action": "Click",
     "next": [
       "Battle_CollectMapHangXianDoubleCk1",
@@ -142,6 +146,7 @@
   },
   "Battle_CollectMapHangXianDoubleCk1": {
     "recognition": "TemplateMatch",
+    "focus": "BM.航线-首选-双倍ck",
     "action": "Click",
     "next": [
       "Battle_FastBattleMAXTouchHangxian"
@@ -166,6 +171,7 @@
   },
   "Battle_CollectMapHangXianDoubleCk1No": {
     "recognition": "TemplateMatch",
+    "focus": "BM.航线-首选-双倍No",
     "next": [
       "Battle_CollectMapHangXian2"
     ],
@@ -183,6 +189,7 @@
   },
   "Battle_CollectMapHangXian2": {
     "action": "Click",
+    "focus": "BM.航线-备选",
     "next": [
       "Battle_CollectMapHangXianDoubleCk2",
       "Battle_CollectMapHangXianDoubleCk2No"
@@ -197,6 +204,7 @@
   },
   "Battle_CollectMapHangXianDoubleCk2": {
     "recognition": "TemplateMatch",
+    "focus": "BM.航线-备选-双倍ck",
     "action": "Click",
     "next": [
       "Battle_FastBattleMAXTouchHangxian"
@@ -221,6 +229,7 @@
   },
   "Battle_CollectMapHangXianDoubleCk2No": {
     "recognition": "TemplateMatch",
+    "focus": "BM.航线-备选-双倍No",
     "next": [
       "Battle_CollectMapShouLieR2"
     ],
@@ -238,6 +247,7 @@
   },
   "Battle_CollectMapShouLieR2": {
     "recognition": "OCR",
+    "focus": "BM.狩猎场R2",
     "action": "Click",
     "next": [
       "Battle_FastBattleMAXTouchShouLieR2"
@@ -313,6 +323,7 @@
   },
   "Battle_CollectMapDongXue": {
     "recognition": "OCR",
+    "focus": "BM.圣石洞穴",
     "action": "Click",
     "next": [
       "Battle_FastBattleTouch_StoneSelect"
@@ -385,6 +396,7 @@
   },
   "Battle_QuickBattleButton": {
     "recognition": "OCR",
+    "focus": "BB.快速狩猎-启动！",
     "action": "Click",
     "roi": [
       1006,
@@ -399,6 +411,7 @@
   },
   "Battle_FastBattleStart": {
     "recognition": "OCR",
+    "focus": "BB.快速狩猎-进入结算",
     "action": "Click",
     "next": [
       "Battle_FastBattleReward"
@@ -417,6 +430,7 @@
   },
   "Battle_FastBattleReward": {
     "recognition": "OCR",
+    "focus": "BB.快速狩猎-进入结算-战利品页面返回",
     "action": "Click",
     "next": [
       "Battle_CollectMapInitialize"
@@ -435,6 +449,7 @@
   },
   "Battle_CollectMapInitialize": {
     "action": "Click",
+    "focus": "BB.快速狩猎-进入结算-点击狩猎场序列图标",
     "post_delay": 3000,
     "target": [
       140,
@@ -445,6 +460,7 @@
   },
   "Battle_BackHomePage": {
     "recognition": "OCR",
+    "focus": "BM.流程可以结束",
     "action": "Click",
     "next": [
       "Battle_FinBackMapPage"
@@ -468,6 +484,7 @@
   },
   "Battle_FinBackMapPage": {
     "recognition": "TemplateMatch",
+    "focus": "BM.流程结束成功",
     "next": [],
     "roi": [
       1047,

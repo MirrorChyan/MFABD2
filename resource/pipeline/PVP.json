@@ -5,6 +5,7 @@
       "PVP_PVPStart",
       "PVP_BackHomePage"
     ],
+    "focus": "PM.箱庭确认Old",
     "roi": [
       1122,
       646,
@@ -47,6 +48,7 @@
       "PVP_PVPBook",
       "PVP_HomePageSwipe"
     ],
+    "focus": "PM.主页面",
     "roi": [
       98,
       656,
@@ -66,6 +68,7 @@
   },
   "PVP_HomePageSwipe": {
     "recognition": "OCR",
+    "focus": "PM.卡带界面垂直复位(一次性)",
     "action": "Swipe",
     "next": [
       "PVP_PVPBook"
@@ -97,6 +100,7 @@
   "PVP_PVPBook": {
     "recognition": "OCR",
     "action": "Click",
+    "focus": "PM.PVP卡带",
     "next": [
       "PVP_PVPStart",
       "PVP_PVPMes",
@@ -124,6 +128,7 @@
   "PVP_PVPMes": {
     "recognition": "OCR",
     "action": "Click",
+    "focus": "PM.PVP.防守分结算",
     "next": [
       "PVP_PVPMes2",
       "PVP_PVPStart"
@@ -160,6 +165,7 @@
   "PVP_PVPStart": {
     "recognition": "TemplateMatch",
     "action": "Click",
+    "focus": "PM.PVP.点击舞台物件",
     "next": [
       "PVP_PerPetTask",
       "PVP_AutoBattle"
@@ -185,6 +191,7 @@
   "PVP_PerPetTask": {
     "recognition": "TemplateMatch",
     "action": "Click",
+    "focus": "PM.宠物派遣",
     "next": [
       "PVP_PVPStart"
     ],
@@ -203,6 +210,7 @@
   "PVP_AutoBattle": {
     "recognition": "OCR",
     "action": "Click",
+    "focus": "PM.PVP.自动战斗点击(关键节点)",
     "next": [
       "PVP_JustUseFree"
     ],
@@ -251,6 +259,7 @@
     "doc": "点击按钮开关1"
   },
   "PVP_JustUseFree": {
+  	"focus": "PM.PVP.战前汇集节点",
     "next": [
       "PVP_JustUseFreeOK",
       "PVP_JustUseFreeNO"
@@ -258,6 +267,7 @@
   },
   "PVP_JustUseFreeOK": {
     "recognition": "ColorMatch",
+    "focus": "PM.PVP.免费AP确认",
     "next": [
       "PVP_AutoBattleMAX"
     ],
@@ -285,6 +295,7 @@
   "PVP_JustUseFreeNO": {
     "recognition": "ColorMatch",
     "action": "Click",
+    "focus": "PM.PVP.免费AP未勾选！",
     "next": [
       "PVP_JustUseFreeOK"
     ],
@@ -350,6 +361,7 @@
   },
   "PVP_JustUseFree2": {
     "recognition": "OCR",
+    "focus": "PE.PVP.终止.免费AP确认异常",
     "action": "Click",
     "next": [
       "PVP_JustUseFree3"
@@ -396,6 +408,7 @@
   },
   "PVP_AutoBattleMAX": {
     "recognition": "OCR",
+    "focus": "PM.PVP.场次确认",
     "action": "Click",
     "next": [
       "PVP_AutoBattleStart"
@@ -420,6 +433,7 @@
   },
   "PVP_AutoBattleStart": {
     "recognition": "OCR",
+    "focus": "PM.PVP.PVP战斗开始",
     "action": "Click",
     "next": [
       "PVP_AutoBattle2"
@@ -438,6 +452,7 @@
   },
   "PVP_AutoBattle2": {
     "recognition": "OCR",
+    "focus": "PM.PVP.PVP战斗进行中...",
     "next": [
       "PVP_AutoBattle2",
       "PVP_BattleResult"
@@ -456,6 +471,7 @@
   },
   "PVP_BattleResult": {
     "recognition": "OCR",
+    "focus": "PM.PVP.PVP战斗结算~",
     "action": "Click",
     "next": [
       "PVP_BattleLeave",
@@ -482,6 +498,7 @@
   "PVP_BattleLeave": {
     "recognition": "OCR",
     "action": "Click",
+    "focus": "PM.PVP.正常离开",
     "next": [
       "PVP_PVPMes_Back",
       "PVP_BackPVEPage"
@@ -500,6 +517,7 @@
   },
   "PVP_BattleFaildLeave": {
     "recognition": "OCR",
+    "focus": "PM.PVP.失败离开",
     "action": "Click",
     "next": [
       "PVP_PVPMes_Back",
@@ -536,6 +554,7 @@
   },
   "PVP_BackPVEPage": {
     "recognition": "TemplateMatch",
+    "focus": "PM.开始离开PVP卡带",
     "action": "Click",
     "next": [
       "PVP_BackHomePage2"
@@ -611,6 +630,7 @@
   },
   "PVP_TouchPVEBook": {
     "recognition": "TemplateMatch",
+    "focus": "PM.复位用卡带已找到",
     "action": "Click",
     "next": [
       "PVP_FinBackMapPage"
@@ -629,6 +649,7 @@
   },
   "PVP_FinBackMapPage": {
     "recognition": "TemplateMatch",
+    "focus": "PM.PVP复位完成，结束~",
     "next": [],
     "roi": [
       1122,
