@@ -6,13 +6,13 @@
       "Collect_StartGameType2"
     ],
     "post_delay": 5000,
+    "focus": "CM.箱庭确认",
     "roi": [
       1047,
       516,
       107,
       110
     ],
-    "focus": "CM.箱庭确认",
     "template": [
       "Run.png"
     ],
@@ -29,6 +29,7 @@
       "Collect_HomePageSwipeInitialize_BackHomePage"
     ],
     "post_delay": 5000,
+    "focus": "CM.宠物派遣",
     "roi": [
       345,
       124,
@@ -40,7 +41,6 @@
     ],
     "threshold": 0.95,
     "green_mask": true,
-    "focus": "CM.宠物派遣",
     "doc": "宠物派遣"
   },
   "Collect_StartGameType2": {
@@ -89,10 +89,10 @@
   "Collect_HomePageSwipeInitialize_BackHomePage": {
     "recognition": "TemplateMatch",
     "action": "Click",
-    "focus": "CB.进入卡带，复位",
     "next": [
       "Collect_HomePageSwipeInitialize0.5"
     ],
+    "focus": "CB.进入卡带，复位",
     "roi": [
       1047,
       516,
@@ -322,7 +322,6 @@
   "Collect_ChapterSelection1": {
     "recognition": "TemplateMatch",
     "action": "Click",
-    "focus": "CM.目标图1",
     "next": [
       "Collect_ChapterSelection2"
     ],
@@ -333,6 +332,7 @@
       "Collect_ChapterSelectionError"
     ],
     "post_delay": 5000,
+    "focus": "CM.目标图1",
     "roi": [
       89,
       131,
@@ -348,7 +348,6 @@
   "Collect_ChapterSelection2": {
     "recognition": "TemplateMatch",
     "action": "Click",
-    "focus": "CM.目标图1",
     "next": [
       "Collect_ChapterSelection3"
     ],
@@ -359,6 +358,7 @@
       "Collect_ChapterSelectionError"
     ],
     "post_delay": 5000,
+    "focus": "CM.目标图1",
     "roi": [
       89,
       131,
@@ -374,7 +374,6 @@
   "Collect_ChapterSelection3": {
     "recognition": "TemplateMatch",
     "action": "Click",
-    "focus": "CM.目标图1",
     "next": [
       "Collect_ChapterSelectionEnd"
     ],
@@ -385,6 +384,7 @@
       "Collect_ChapterSelectionError"
     ],
     "post_delay": 5000,
+    "focus": "CM.目标图1",
     "roi": [
       89,
       131,
@@ -400,7 +400,6 @@
   "Collect_ChapterSelectionEnd": {
     "recognition": "TemplateMatch",
     "action": "Click",
-    "focus": "CM.目标图END",
     "next": [
       "Collect_ChapterSelectionError2"
     ],
@@ -408,6 +407,7 @@
       "Collect_ChapterSelectionError"
     ],
     "post_delay": 5000,
+    "focus": "CM.目标图END",
     "roi": [
       109,
       124,
@@ -430,8 +430,8 @@
     "next": [
       "Collect_ChapterSelectionError2"
     ],
-    "focus": "CM.非正常退出卡带标记",
     "post_delay": 5000,
+    "focus": "CM.非正常退出卡带标记",
     "target": [
       120,
       35,
@@ -453,7 +453,6 @@
   },
   "Collect_OperationsMain_Sandplay": {
     "recognition": "TemplateMatch",
-    "focus": "CB.箱庭模块启动",
     "next": [
       "Collect_OperationsMain_ToAreaMap"
     ],
@@ -463,6 +462,7 @@
       "Collect_ForceTeleporCircle"
     ],
     "post_delay": 1000,
+    "focus": "CB.箱庭模块启动",
     "roi": [
       1122,
       646,
@@ -584,7 +584,6 @@
   },
   "Collect_TargetMapEnd": {
     "recognition": "OCR",
-    "focus": "CB.卡带内流程进入END环节",
     "action": "Click",
     "next": [
       "Collect_OperationsMain_PVEChapterIden2#"
@@ -592,6 +591,7 @@
     "interrupt": [
       "Collect_HomePageSwipeInitialize_BackHomePage"
     ],
+    "focus": "CB.卡带内流程进入END环节",
     "roi": [
       408,
       622,
@@ -629,12 +629,12 @@
   },
   "Collect_ClickTeleporCircleMap": {
     "recognition": "TemplateMatch",
-    "focus": "CB.区域地图.tp1.找到传送阵图标",
     "action": "Click",
     "next": [
       "Collect_Skill1"
     ],
     "post_delay": 5000,
+    "focus": "CB.区域地图.tp1.找到传送阵图标",
     "roi": [
       100,
       71,
@@ -651,11 +651,11 @@
   },
   "Collect_ClickBackOnSecureMap": {
     "recognition": "OCR",
-    "focus": "CB.区域地图.tp1.已正确",
     "action": "Click",
     "next": [
       "Collect_Skill1"
     ],
+    "focus": "CB.区域地图.tp1.已正确",
     "roi": [
       408,
       622,
@@ -824,8 +824,8 @@
   },
   "Collect_FindTeleporCircle0.9": {
     "recognition": "TemplateMatch",
-    "focus": "CB.箱庭地图内找到传送阵-按钮标",
     "action": "Click",
+    "focus": "CB.箱庭地图内找到传送阵-按钮标",
     "template": [
       "IcoHand.png"
     ],
@@ -833,9 +833,9 @@
   },
   "Collect_FindTeleporCircle": {
     "recognition": "TemplateMatch",
-    "focus": "CB.箱庭地图内找到传送阵-物件",
     "action": "Click",
     "post_delay": 5000,
+    "focus": "CB.箱庭地图内找到传送阵-物件",
     "roi": [
       0,
       0,
@@ -851,11 +851,11 @@
   },
   "Collect_ForceTeleporCircle": {
     "recognition": "TemplateMatch",
-    "focus": "CB.技能传送门.进入流程",
     "next": [
       "Collect_ForceTeleporCircleClick1"
     ],
     "post_delay": 5000,
+    "focus": "CB.技能传送门.进入流程",
     "roi": [
       1122,
       646,

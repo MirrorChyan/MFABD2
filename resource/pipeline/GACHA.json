@@ -63,11 +63,11 @@
   },
   "Gacha_GachaPage": {
     "recognition": "OCR",
-    "focus": "GA.进入抽抽乐页面",
     "next": [
       "Gacha_FindFreeGacha",
       "Gacha_Slip"
     ],
+    "focus": "GA.进入抽抽乐页面",
     "roi": [
       957,
       133,
@@ -81,7 +81,6 @@
   },
   "Gacha_Slip": {
     "recognition": "OCR",
-    "focus": "GA.滑动寻找卡池",
     "action": "Swipe",
     "next": [
       "Gacha_FindFreeGacha",
@@ -91,6 +90,7 @@
     "on_error": [
       "Gacha_FinGacha"
     ],
+    "focus": "GA.滑动寻找卡池",
     "roi": [
       1051,
       149,
@@ -118,10 +118,10 @@
   },
   "Gacha_NoFindFreeAndInEnd": {
     "recognition": "TemplateMatch",
-    "focus": "GA.卡池列表见底",
     "next": [
       "Gacha_FinGacha"
     ],
+    "focus": "GA.卡池列表见底",
     "roi": [
       104,
       325,
@@ -170,7 +170,6 @@
   },
   "Gacha_TouchGacha": {
     "recognition": "OCR",
-    "focus": "GA.免费抽 (^_−)☆",
     "action": "Click",
     "next": [
       "Gacha_TouchGachaConfirm"
@@ -178,6 +177,7 @@
     "on_error": [
       "Gacha_Slip"
     ],
+    "focus": "GA.免费抽 (^_−)☆",
     "roi": [
       393,
       390,
@@ -227,11 +227,11 @@
   },
   "Gacha_5X": {
     "recognition": "OCR",
-    "focus": "GA.5☆角色！(✧◡✧)",
     "action": "Click",
     "next": [
       "Gacha_GachaResultBack"
     ],
+    "focus": "GA.5☆角色！(✧◡✧)",
     "roi": [
       519,
       481,
@@ -251,11 +251,11 @@
   },
   "Gacha_5X2": {
     "recognition": "OCR",
-    "focus": "GA.5☆UR武器！(✧◡✧)",
     "action": "Click",
     "next": [
       "Gacha_GachaResultBack"
     ],
+    "focus": "GA.5☆UR武器！(✧◡✧)",
     "roi": [
       519,
       481,
@@ -301,11 +301,11 @@
   "Gacha_FinGacha": {
     "recognition": "OCR",
     "action": "Click",
-    "focus": "GA.退出抽卡",
     "next": [
       "Gacha_BackMapPage"
     ],
     "post_delay": 1000,
+    "focus": "GA.退出抽卡",
     "roi": [
       957,
       133,
@@ -348,8 +348,8 @@
   },
   "Gacha_FinBackMapPage": {
     "recognition": "TemplateMatch",
-    "focus": "GA.退出抽卡成功",
     "next": [],
+    "focus": "GA.退出抽卡成功",
     "roi": [
       1122,
       646,

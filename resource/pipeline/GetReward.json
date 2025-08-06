@@ -40,11 +40,11 @@
   },
   "GetReward_EnterUnion": {
     "recognition": "OCR",
-    "focus": "GM.公会签到",
     "next": [
       "GetReward_UnionGUI"
     ],
     "post_delay": 1000,
+    "focus": "GM.公会签到",
     "roi": [
       256,
       84,
@@ -125,7 +125,6 @@
   "GetReward_BusinReward": {
     "recognition": "OCR",
     "action": "Click",
-    "focus": "GM.餐馆结算",
     "next": [
       "GetReward_GetBusinReward"
     ],
@@ -133,6 +132,7 @@
       "GetReward_DailyReward"
     ],
     "post_delay": 1000,
+    "focus": "GM.餐馆结算",
     "roi": [
       85,
       228,
@@ -190,11 +190,11 @@
   },
   "GetReward_Busin_In": {
     "recognition": "OCR",
-    "focus": "GM.餐馆常客属性石",
     "action": "Click",
     "next": [
       "GetReward_Busin_InBusin"
     ],
+    "focus": "GM.餐馆常客属性石",
     "roi": [
       72,
       179,
@@ -240,11 +240,11 @@
   },
   "GetReward_Busin_Back": {
     "action": "Click",
-    "focus": "GM.离开餐馆卡带",
     "next": [
       "GetReward_Busin_ChapterMenu"
     ],
     "post_delay": 5000,
+    "focus": "GM.离开餐馆卡带",
     "target": [
       1180,
       45,
@@ -256,12 +256,12 @@
   "GetReward_Busin_ChapterMenu": {
     "recognition": "OCR",
     "action": "Click",
-    "focus": "GM.主页面",
     "next": [
       "GetReward_Busin_ToPvp"
     ],
     "post_delay": 3000,
     "post_wait_freezes": 1000,
+    "focus": "GM.主页面",
     "roi": [
       98,
       656,
@@ -281,11 +281,11 @@
   "GetReward_Busin_ToPvp": {
     "recognition": "OCR",
     "action": "Click",
-    "focus": "GM.进入PVP卡带",
     "next": [
       "GetReward_Busin_BackHomePage"
     ],
     "post_delay": 6000,
+    "focus": "GM.进入PVP卡带",
     "roi": [
       75,
       315,
@@ -305,10 +305,10 @@
   "GetReward_Busin_BackHomePage": {
     "recognition": "TemplateMatch",
     "action": "Click",
-    "focus": "GM.卡带复位成功",
     "next": [
       "GetReward_DailyReward"
     ],
+    "focus": "GM.卡带复位成功",
     "roi": [
       1122,
       646,
@@ -328,12 +328,12 @@
   },
   "GetReward_DailyReward": {
     "recognition": "OCR",
-    "focus": "GM.‘任务’奖励领取",
     "action": "Click",
     "next": [
       "GetReward_GetDailyReward"
     ],
     "post_delay": 1000,
+    "focus": "GM.‘任务’奖励领取",
     "roi": [
       536,
       615,
@@ -461,10 +461,10 @@
   },
   "GetReward_FinGetReward": {
     "recognition": "OCR",
-    "focus": "GM.‘任务’返回主页面",
     "next": [
       "GetReward_BackMapPage"
     ],
+    "focus": "GM.‘任务’返回主页面",
     "roi": [
       98,
       656,

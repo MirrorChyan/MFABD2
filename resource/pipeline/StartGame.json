@@ -19,13 +19,13 @@
       "StartGame_PayFaild"
     ],
     "post_delay": 5000,
+    "focus": "NEO",
     "roi": [
       530,
       326,
       159,
       64
     ],
-    "focus": "NEO",
     "expected": [
       "NEO"
     ]
@@ -41,13 +41,13 @@
     ],
     "post_delay": 5000,
     "pre_wait_freezes": 3000,
+    "focus": "SM.main",
     "roi": [
       798,
       262,
       137,
       65
     ],
-    "focus": "SM.main",
     "expected": [
       "尘埃"
     ]
@@ -59,6 +59,7 @@
     ],
     "post_delay": 15000,
     "pre_wait_freezes": 5000,
+    "focus": "更新通知",
     "roi": [
       462,
       176,
@@ -68,7 +69,6 @@
     "expected": [
       "更新通知"
     ],
-    "focus": "更新通知",
     "doc": "游戏版本更新"
   },
   "StartGame_UpdateCk": {
@@ -100,10 +100,10 @@
   },
   "StartGame_UpdateStartEngShop": {
     "action": "StartApp",
-    "focus": "程序更新模块str",
     "next": [
       "StartGame_UpdateEngShop"
     ],
+    "focus": "程序更新模块str",
     "package": "com.android.vending"
   },
   "StartGame_UpdateEngShop": {
@@ -158,8 +158,8 @@
       "StartGame_UpdateDateing",
       "StartGame_TouchStart"
     ],
-    "focus": "SM.数据下载",
     "post_delay": 20000,
+    "focus": "SM.数据下载",
     "roi": [
       623,
       459,
@@ -173,7 +173,6 @@
   },
   "StartGame_UpdateDateing": {
     "recognition": "OCR",
-    "focus": "SM.数据下载循环",
     "next": [
       "StartGame_UpdateDateing",
       "StartGame_PayFaild",
@@ -183,6 +182,7 @@
       "StartGame_UpdateCloseGame"
     ],
     "post_delay": 30000,
+    "focus": "SM.数据下载循环",
     "roi": [
       14,
       564,
@@ -204,6 +204,7 @@
       "StartGame_LoadingPage"
     ],
     "post_delay": 5000,
+    "focus": "SM.ORC游戏启动中",
     "roi": [
       820,
       464,
@@ -214,7 +215,6 @@
       "游戏启动中",
       "正在确认下载"
     ],
-    "focus": "SM.ORC游戏启动中",
     "doc": "游戏启动中"
   },
   "StartGame_PayFaild": {
@@ -223,6 +223,7 @@
       "StartGame_PayFaildToChick"
     ],
     "post_delay": 3000,
+    "focus": "SM.支付失败弹窗",
     "roi": [
       375,
       207,
@@ -232,7 +233,6 @@
     "expected": [
       "支付失败"
     ],
-    "focus": "SM.支付失败弹窗",
     "doc": "支付方式失败点击确认"
   },
   "StartGame_PayFaildToChick": {
@@ -268,13 +268,13 @@
     "pre_delay": 20000,
     "post_delay": 10000,
     "post_wait_freezes": 2000,
+    "focus": "SM.TO Touch",
     "roi": [
       780,
       394,
       420,
       187
     ],
-    "focus": "SM.TO Touch",
     "expected": [
       "TO"
     ],
@@ -649,6 +649,7 @@
       "StartGame_BackMapPage"
     ],
     "post_delay": 2000,
+    "focus": "SM.返回箱庭",
     "roi": [
       98,
       656,
@@ -658,7 +659,6 @@
     "expected": [
       "抽抽乐"
     ],
-    "focus": "SM.返回箱庭",
     "target": [
       120,
       35,
@@ -669,10 +669,10 @@
   },
   "StartGame_FinBackMapPage": {
     "recognition": "TemplateMatch",
-    "focus": "SM.返回箱庭成功",
     "next": [
       "StartGame_PerPetTask"
     ],
+    "focus": "SM.返回箱庭成功",
     "roi": [
       1047,
       516,
@@ -687,10 +687,10 @@
   },
   "StartGame_PerPetTask": {
     "recognition": "TemplateMatch",
-    "focus": "SM.宠物派遣",
     "action": "Click",
     "next": [],
     "post_delay": 1000,
+    "focus": "SM.宠物派遣",
     "roi": [
       866,
       550,

@@ -1,10 +1,10 @@
 {
   "Equip_HomePage": {
     "recognition": "TemplateMatch",
-    "focus": "EM.锻造开始",
     "next": [
       "Equip_Skill4"
     ],
+    "focus": "EM.锻造开始",
     "roi": [
       1122,
       646,
@@ -42,7 +42,6 @@
   },
   "Equip_EquipMakeGui": {
     "recognition": "OCR",
-    "focus": "EM.装备制作.开始",
     "action": "Click",
     "next": [
       "Equip_EquipSelect",
@@ -50,6 +49,7 @@
     ],
     "post_delay": 1000,
     "post_wait_freezes": 1000,
+    "focus": "EM.装备制作.开始",
     "roi": [
       1018,
       641,
@@ -69,7 +69,6 @@
   },
   "Equip_EquipSelect": {
     "recognition": "TemplateMatch",
-    "focus": "EM.装备制作.决定选垃圾",
     "action": "Click",
     "next": [
       "Equip_EquipMake",
@@ -77,6 +76,7 @@
     ],
     "post_delay": 1000,
     "post_wait_freezes": 1000,
+    "focus": "EM.装备制作.决定选垃圾",
     "roi": [
       602,
       558,
@@ -91,13 +91,13 @@
   "Equip_EquipMake": {
     "recognition": "OCR",
     "action": "Click",
-    "focus": "EM.装备制作.敲敲敲~",
     "next": [
       "Equip_EquipMakeClose",
       "Equip_EquipMake"
     ],
     "post_delay": 5000,
     "post_wait_freezes": 1000,
+    "focus": "EM.装备制作.敲敲敲~",
     "roi": [
       943,
       600,
@@ -112,13 +112,13 @@
   "Equip_EquipMakeClose": {
     "recognition": "TemplateMatch",
     "action": "Click",
-    "focus": "EM.装备制作.完毕页面x找到",
     "next": [
       "Equip_EquipMakeBack",
       "Equip_EquipMakeClose"
     ],
     "post_delay": 1000,
     "post_wait_freezes": 1000,
+    "focus": "EM.装备制作.完毕页面x找到",
     "roi": [
       995,
       174,
@@ -133,11 +133,11 @@
   "Equip_EquipMakeBack": {
     "recognition": "OCR",
     "action": "Click",
-    "focus": "EM.装备制作.返回",
     "next": [
       "Equip_ToEquipGui"
     ],
     "post_delay": 1000,
+    "focus": "EM.装备制作.返回",
     "roi": [
       943,
       600,
@@ -157,13 +157,13 @@
   },
   "Equip_ToEquipGui": {
     "recognition": "OCR",
-    "focus": "EM.前往武器库存",
     "action": "Click",
     "next": [
       "Equip_EquipGui",
       "Equip_ToEquipGui"
     ],
     "post_delay": 1500,
+    "focus": "EM.前往武器库存",
     "roi": [
       1019,
       647,
@@ -177,7 +177,6 @@
   },
   "Equip_EquipGui": {
     "recognition": "OCR",
-    "focus": "EM.装备强化",
     "action": "Click",
     "next": [
       "Equip_EquipUp",
@@ -185,6 +184,7 @@
     ],
     "post_delay": 1000,
     "post_wait_freezes": 1000,
+    "focus": "EM.装备强化",
     "roi": [
       880,
       645,
@@ -300,12 +300,12 @@
   "Equip_EquipDec": {
     "recognition": "OCR",
     "action": "Click",
-    "focus": "EM.装备分解",
     "next": [
       "Equip_EquipDec2",
       "Equip_EquipDec"
     ],
     "post_delay": 1000,
+    "focus": "EM.装备分解",
     "roi": [
       1059,
       644,
@@ -420,12 +420,12 @@
   },
   "Equip_filter": {
     "recognition": "TemplateMatch",
-    "focus": "EM.装备精炼",
     "action": "Click",
     "next": [
       "Equip_filterSR"
     ],
     "post_delay": 1000,
+    "focus": "EM.装备精炼",
     "roi": [
       1096,
       62,
@@ -441,11 +441,11 @@
   "Equip_filterSR": {
     "recognition": "TemplateMatch",
     "action": "Click",
-    "focus": "EM.装备精炼.稀有度",
     "next": [
       "Equip_filter+9"
     ],
     "post_delay": 1000,
+    "focus": "EM.装备精炼.稀有度",
     "roi": [
       243,
       381,
@@ -460,12 +460,12 @@
   },
   "Equip_filter+9": {
     "recognition": "TemplateMatch",
-    "focus": "EM.装备精炼.+9",
     "action": "Click",
     "next": [
       "Equip_filterON"
     ],
     "post_delay": 1000,
+    "focus": "EM.装备精炼.+9",
     "roi": [
       899,
       280,
@@ -478,13 +478,13 @@
   },
   "Equip_filterON": {
     "recognition": "OCR",
-    "focus": "EM.装备精炼.筛选...",
     "action": "Click",
     "next": [
       "Equip_FindRefining",
       "Equip_filterON"
     ],
     "post_delay": 1000,
+    "focus": "EM.装备精炼.筛选...",
     "roi": [
       842,
       554,
@@ -513,13 +513,13 @@
   },
   "Equip_Refining": {
     "recognition": "OCR",
-    "focus": "EM.装备精炼.精炼",
     "action": "Click",
     "next": [
       "Equip_TouchRefining",
       "Equip_Refining"
     ],
     "post_delay": 1000,
+    "focus": "EM.装备精炼.精炼",
     "roi": [
       935,
       503,
@@ -533,12 +533,12 @@
   },
   "Equip_TouchRefining": {
     "recognition": "OCR",
-    "focus": "EM.装备精炼.再确认精炼",
     "action": "Click",
     "next": [
       "Equip_TouchRefiningBack"
     ],
     "post_delay": 3000,
+    "focus": "EM.装备精炼.再确认精炼",
     "roi": [
       961,
       644,

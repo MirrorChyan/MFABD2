@@ -1,10 +1,10 @@
 {
   "Event_HomePage": {
     "recognition": "TemplateMatch",
-    "focus": "EM.箱庭地图已确认",
     "next": [
       "Event_BackHomePage"
     ],
+    "focus": "EM.箱庭地图已确认",
     "roi": [
       1122,
       646,
@@ -42,11 +42,11 @@
   "Event_EnterEvent": {
     "recognition": "OCR",
     "action": "Click",
-    "focus": "EM.从主页面进入活动",
     "next": [
       "Event_EnterNormalBattle"
     ],
     "post_delay": 8000,
+    "focus": "EM.从主页面进入活动",
     "roi": [
       98,
       656,
@@ -67,7 +67,6 @@
   "Event_EnterNormalBattle": {
     "recognition": "OCR",
     "action": "Click",
-    "focus": "EM.活动.选难度",
     "next": [
       "Event_FastNormalBattle"
     ],
@@ -75,6 +74,7 @@
       "Event_NormalBattleBack2"
     ],
     "post_delay": 3000,
+    "focus": "EM.活动.选难度",
     "roi": [
       155,
       483,
@@ -89,12 +89,12 @@
   "Event_FastNormalBattle": {
     "recognition": "OCR",
     "action": "Click",
-    "focus": "EM.活动.快速战斗",
     "next": [
       "Event_NormalBattleMAX",
       "Event_NoHaveAP"
     ],
     "post_delay": 1000,
+    "focus": "EM.活动.快速战斗",
     "roi": [
       143,
       519,
@@ -108,11 +108,11 @@
   },
   "Event_NoHaveAP": {
     "recognition": "OCR",
-    "focus": "EM.活动.AP不足",
     "action": "Click",
     "next": [
       "Event_NoHaveAPBackEventIndex"
     ],
+    "focus": "EM.活动.AP不足",
     "roi": [
       545,
       209,
@@ -148,6 +148,7 @@
       "Event_TouchNormalBattle"
     ],
     "post_delay": 1000,
+    "focus": "EM.活动.快速战斗MAX",
     "roi": [
       636,
       227,
@@ -163,7 +164,6 @@
       0,
       0
     ],
-    "focus": "EM.活动.快速战斗MAX",
     "doc": "快速战斗MAX"
   },
   "Event_TouchNormalBattle": {
@@ -192,13 +192,13 @@
       "Event_NormalBattleBack2"
     ],
     "post_delay": 1000,
+    "focus": "EM.活动.战斗结算",
     "roi": [
       558,
       627,
       144,
       38
     ],
-    "focus": "EM.活动.战斗结算",
     "expected": [
       "点击画面即可返回"
     ],
@@ -213,7 +213,6 @@
   "Event_NormalBattleBack2": {
     "recognition": "OCR",
     "action": "Click",
-    "focus": "EM.活动.战斗结算(无对象)",
     "next": [
       "Event_Explore"
     ],
@@ -221,6 +220,7 @@
       "Event_LeaveEvent"
     ],
     "post_delay": 1000,
+    "focus": "EM.活动.战斗结算(无对象)",
     "roi": [
       518,
       544,
@@ -238,11 +238,11 @@
   "Event_Explore": {
     "recognition": "OCR",
     "action": "Click",
-    "focus": "EM.活动.小游戏模块启动",
     "next": [
       "Event_FastExplore"
     ],
     "post_delay": 1000,
+    "focus": "EM.活动.小游戏模块启动",
     "roi": [
       598,
       617,
@@ -317,6 +317,7 @@
       "Event_LeaveEvent"
     ],
     "post_delay": 8000,
+    "focus": "EM.活动.小游戏模块结束",
     "roi": [
       215,
       16,
@@ -332,18 +333,17 @@
       0,
       0
     ],
-    "focus": "EM.活动.小游戏模块结束",
     "doc": "战场探索-返回"
   },
   "Event_LeaveEvent": {
     "recognition": "OCR",
-    "focus": "EM.活动.打完活动关卡页面位置ck",
     "action": "Click",
     "next": [
       "Event_LeaveEvent2",
       "Event_LeaveEvent"
     ],
     "post_delay": 8000,
+    "focus": "EM.活动.打完活动关卡页面位置ck",
     "roi": [
       626,
       235,
@@ -364,12 +364,12 @@
   "Event_LeaveEvent2": {
     "recognition": "OCR",
     "action": "Click",
-    "focus": "EM.活动.回到活动主页面",
     "next": [
       "Even_BackMapPage",
       "Event_LeaveEvent2"
     ],
     "post_delay": 8000,
+    "focus": "EM.活动.回到活动主页面",
     "roi": [
       359,
       619,
@@ -389,8 +389,8 @@
   },
   "Even_BackMapPage": {
     "recognition": "OCR",
-    "focus": "EM.活动.回到主页面",
     "action": "Click",
+    "focus": "EM.活动.回到主页面",
     "roi": [
       98,
       656,
