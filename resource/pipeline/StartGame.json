@@ -678,7 +678,6 @@
     "recognition": "TemplateMatch",
     "action": "Click",
     "next": [],
-    "enabled": false,
     "post_delay": 1000,
     "roi": [
       866,

@@ -219,9 +219,6 @@
       691,
       166
     ],
-    "expected": [
-      "伙伴"
-    ],
     "target": [
       40,
       560,
@@ -332,17 +329,18 @@
     "recognition": "OCR",
     "action": "Click",
     "next": [
-      "Even_BackMapPage"
+      "Event_LeaveEvent2",
+      "Event_LeaveEvent"
     ],
     "post_delay": 8000,
     "roi": [
-      202,
-      579,
-      284,
-      117
+      626,
+      235,
+      189,
+      54
     ],
     "expected": [
-      "普通"
+      "在战斗中获胜"
     ],
     "target": [
       120,
@@ -356,21 +354,22 @@
     "recognition": "OCR",
     "action": "Click",
     "next": [
-      "Even_BackMapPage"
+      "Even_BackMapPage",
+      "Event_LeaveEvent2"
     ],
     "post_delay": 8000,
     "roi": [
-      202,
-      579,
-      284,
-      117
+      359,
+      619,
+      127,
+      63
     ],
     "expected": [
       "普通"
     ],
     "target": [
-      120,
-      35,
+      135,
+      40,
       0,
       0
     ],
