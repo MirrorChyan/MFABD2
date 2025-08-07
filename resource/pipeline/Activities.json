@@ -1,0 +1,308 @@
+﻿{
+  "Activities_HomePage": {
+    "recognition": "TemplateMatch",
+    "action": "Click",
+    "next": [
+      "Activities_InIndex",
+      "Activities_BackMapPage"
+    ],
+    "post_delay": 2000,
+    "roi": [
+      1122,
+      646,
+      40,
+      38
+    ],
+    "template": [
+      "pin.png"
+    ],
+    "target": [
+      1186,
+      46,
+      0,
+      0
+    ],
+    "doc": "找到图钉-点击返回主页"
+  },
+  "Activities_InIndex": {
+    "recognition": "TemplateMatch",
+    "focus": "AA.有可关注活动",
+    "action": "Click",
+    "next": [
+      "Activities_Index"
+    ],
+    "roi": [
+      747,
+      611,
+      31,
+      36
+    ],
+    "template": [
+      "ActiveGe.png"
+    ],
+    "green_mask": true,
+    "target_offset": [
+      -3,
+      3,
+      0,
+      0
+    ]
+  },
+  "Activities_Index": {
+    "recognition": "OCR",
+    "next": [
+      "Activities_FindActive",
+      "Activities_Slip"
+    ],
+    "focus": "AA.进入活动",
+    "roi": [
+      108,
+      110,
+      529,
+      483
+    ],
+    "expected": [
+      "活动任务"
+    ],
+    "doc": "识别抽卡页"
+  },
+  "Activities_FindActive": {
+    "recognition": "TemplateMatch",
+    "action": "Click",
+    "next": [
+      "Activities_GetAll"
+    ],
+    "on_error": [
+      "Activities_Slip"
+    ],
+    "roi": [
+      229,
+      131,
+      70,
+      472
+    ],
+    "template": [
+      "ActivePeerGe.png"
+    ],
+    "threshold": 0.9,
+    "green_mask": true,
+    "target_offset": [
+      -50,
+      20,
+      0,
+      0
+    ],
+    "doc": "寻找可关注活动"
+  },
+  "Activities_GetAll": {
+    "recognition": "OCR",
+    "action": "Click",
+    "next": [
+      "Activities_GetAllRe"
+    ],
+    "on_error": [
+      "Activities_Slip"
+    ],
+    "focus": "GA.发现活动",
+    "roi": [
+      544,
+      527,
+      595,
+      37
+    ],
+    "expected": [
+      "全部领取"
+    ],
+    "doc": "点击右下抽卡"
+  },
+  "Activities_GetAllRe": {
+    "recognition": "OCR",
+    "action": "Click",
+    "next": [
+      "Activities_ResultBack"
+    ],
+    "roi": [
+      527,
+      618,
+      205,
+      58
+    ],
+    "expected": [
+      "点击画面即可返回"
+    ],
+    "doc": "确认抽卡"
+  },
+  "Activities_ResultBack": {
+    "recognition": "OCR",
+    "action": "Click",
+    "next": [
+      "Activities_Index"
+    ],
+    "pre_delay": 1000,
+    "post_delay": 2000,
+    "roi": [
+      313,
+      139,
+      334,
+      441
+    ],
+    "expected": [
+      "活动"
+    ],
+    "target": [
+      120,
+      35,
+      0,
+      0
+    ],
+    "doc": "抽卡结果页返回"
+  },
+  "Activities_Slip": {
+    "recognition": "OCR",
+    "action": "Swipe",
+    "next": [
+      "Activities_FindActive",
+      "Activities_NoFindAndInEnd",
+      "Activities_Slip"
+    ],
+    "on_error": [
+      "Activities_Fin"
+    ],
+    "focus": "GA.滑动寻找活动",
+    "roi": [
+      172,
+      12,
+      143,
+      63
+    ],
+    "threshold": 0.8,
+    "expected": [
+      "活动"
+    ],
+    "begin": [
+      210,
+      300,
+      0,
+      0
+    ],
+    "end": [
+      210,
+      220,
+      0,
+      0
+    ],
+    "duration": 700,
+    "doc": "下滑寻找免费抽卡"
+  },
+  "Activities_NoFindAndInEnd": {
+    "recognition": "OCR",
+    "next": [
+      "Activities_Fin"
+    ],
+    "focus": "GA.活动列表见底",
+    "roi": [
+      125,
+      508,
+      174,
+      102
+    ],
+    "threshold": 0.9,
+    "expected": [
+      "登录加成",
+      "登录活动"
+    ],
+    "target_offset": [
+      -50,
+      50,
+      0,
+      0
+    ],
+    "doc": "拖动后无免费红点且识别到底部普池\\判定未完成"
+  },
+  "Activities_Fin": {
+    "recognition": "OCR",
+    "action": "Click",
+    "next": [
+      "Activities_BackHomePage"
+    ],
+    "post_delay": 1000,
+    "focus": "GA.退出活动",
+    "roi": [
+      957,
+      133,
+      268,
+      110
+    ],
+    "expected": [
+      "查看概率"
+    ],
+    "target": [
+      120,
+      35,
+      0,
+      0
+    ],
+    "doc": "返回首页"
+  },
+  "Activities_BackHomePage": {
+    "recognition": "TemplateMatch",
+    "action": "Click",
+    "next": [
+      "Activities_BackMapPage"
+    ],
+    "roi": [
+      1122,
+      646,
+      40,
+      38
+    ],
+    "template": [
+      "pin.png"
+    ],
+    "target": [
+      1186,
+      46,
+      0,
+      0
+    ],
+    "doc": "找到图钉-点击返回主页"
+  },
+  "Activities_BackMapPage": {
+    "recognition": "OCR",
+    "action": "Click",
+    "next": [
+      "Activities_FinBackMapPage"
+    ],
+    "roi": [
+      95,
+      643,
+      74,
+      49
+    ],
+    "expected": [
+      "抽抽乐"
+    ],
+    "target": [
+      135,
+      40,
+      0,
+      0
+    ],
+    "doc": "识别左下抽抽乐-返回地图页"
+  },
+  "Activities_FinBackMapPage": {
+    "recognition": "TemplateMatch",
+    "next": [],
+    "focus": "GA.退出活动成功",
+    "roi": [
+      1122,
+      646,
+      40,
+      38
+    ],
+    "template": [
+      "pin.png"
+    ],
+    "doc": "识别右下图钉-章节主页"
+  }
+}

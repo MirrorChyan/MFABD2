@@ -3,6 +3,7 @@
     "action": "StartApp",
     "next": [
       "StartGame_Logo",
+      "StartGame_LinkError",
       "StartGame_LoadingPage"
     ],
     "post_delay": 8000,
@@ -265,8 +266,8 @@
       "StartGame_PVPSet",
       "StartGame_BackMapPage"
     ],
-    "pre_delay": 20000,
-    "post_delay": 10000,
+    "pre_delay": 5000,
+    "post_delay": 20000,
     "post_wait_freezes": 2000,
     "focus": "SM.TO Touch",
     "roi": [
@@ -331,6 +332,7 @@
       "StartGame_MapPage"
     ],
     "post_delay": 2000,
+    "focus": "SM.进入游戏-PVP结算",
     "roi": [
       612,
       642,
@@ -348,6 +350,7 @@
       "StartGame_BackHomePage"
     ],
     "post_delay": 2000,
+    "focus": "SM.进入游戏-箱庭",
     "roi": [
       1047,
       516,
@@ -504,23 +507,36 @@
   "StartGame_BackMapPage": {
     "action": "Click",
     "next": [
+      "StartGame_MapPage",
       "StartGame_BackMapPage1"
     ],
-    "post_delay": 1000,
+    "post_delay": 5000,
+    "focus": "SM.弹窗消除-无对象",
     "target": [
       60,
       460,
       0,
       0
     ],
-    "doc": "开始暴力解决广告，左侧点击10次"
+    "doc": "包里解决启动弹窗。注意新魔兽，新卡池、正常"
   },
   "StartGame_BackMapPage1": {
+    "recognition": "OCR",
     "action": "Click",
     "next": [
       "StartGame_BackMapPage2"
     ],
     "post_delay": 1000,
+    "focus": "SM.弹窗连续消除-主页面ck",
+    "roi": [
+      98,
+      656,
+      66,
+      32
+    ],
+    "expected": [
+      "抽抽乐"
+    ],
     "target": [
       60,
       460,
@@ -702,5 +718,37 @@
     ],
     "green_mask": true,
     "doc": "宠物派遣。此时已因其他步骤充分延时，时机更合适。"
+  },
+  "StartGame_LinkError": {
+    "recognition": "OCR",
+    "next": [
+      "StartGame_LinkError2"
+    ],
+    "roi": [
+      490,
+      327,
+      259,
+      48
+    ],
+    "expected": [
+      "与服务器断开连接"
+    ]
+  },
+  "StartGame_LinkError2": {
+    "recognition": "OCR",
+    "action": "Click",
+    "next": [
+      "StartGame_LoadingPage"
+    ],
+    "post_delay": 8000,
+    "roi": [
+      585,
+      404,
+      105,
+      25
+    ],
+    "expected": [
+      "确认"
+    ]
   }
 }

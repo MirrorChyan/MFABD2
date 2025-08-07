@@ -1,23 +1,6 @@
 {
   "Test_HomePage": {
-    "action": "Click",
-    "post_delay": 5000,
     "focus": "测试",
-    "roi": [
-      973,
-      81,
-      37,
-      342
-    ],
-    "template": [
-      "todaytask.png"
-    ],
-    "target": [
-      1012,
-      648,
-      0,
-      0
-    ],
     "doc": "PVE点击技能1。next暴力修改：因无物品可吸取不会消耗次数，故两个吸取技能连续使用；且缩减延迟。"
   }
 }

@@ -66,6 +66,10 @@
       ]
     },
     {
+      "name": "领取常规活动奖励",
+      "entry": "Activities_HomePage"
+    },
+    {
       "name": "领取通行证奖励",
       "entry": "Pass_HomePage"
     },
@@ -358,14 +362,14 @@
         {
           "name": "小游戏关",
           "pipeline_override": {
-            "Event_NormalBattleBack2": {
-              "next": [
-               "Event_LeaveEvent"
-              ]
-            },
             "Event_NormalBattleBack": {
               "next": [
-               "Event_LeaveEvent"
+               "Event_LeaveEventDub"
+              ]
+            },
+            "Event_NormalBattleBack2": {
+              "next": [
+               "Event_LeaveEventDub"
               ]
             }
           }

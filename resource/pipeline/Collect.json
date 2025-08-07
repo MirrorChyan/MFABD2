@@ -235,6 +235,7 @@
   },
   "Collect_HomePageSwipeInitializeEnd": {
     "recognition": "TemplateMatch",
+    "focus": "CB.卡带已复位",
     "roi": [
       108,
       128,
@@ -248,6 +249,7 @@
   },
   "Collect_HomePageSwipe_mini": {
     "recognition": "OCR",
+    "focus": "CB.卡带向目标拖动mini",
     "action": "Swipe",
     "next": [
       "Collect_ChapterSelection1"
@@ -292,6 +294,7 @@
   },
   "Collect_HomePageSwipe_precise": {
     "recognition": "OCR",
+    "focus": "CB.卡带向目标拖动-精确1",
     "action": "Swipe",
     "timeout": 20000,
     "post_delay": 8000,
@@ -358,7 +361,7 @@
       "Collect_ChapterSelectionError"
     ],
     "post_delay": 5000,
-    "focus": "CM.目标图1",
+    "focus": "CM.目标图2",
     "roi": [
       89,
       131,
@@ -384,7 +387,7 @@
       "Collect_ChapterSelectionError"
     ],
     "post_delay": 5000,
-    "focus": "CM.目标图1",
+    "focus": "CM.目标图3",
     "roi": [
       89,
       131,

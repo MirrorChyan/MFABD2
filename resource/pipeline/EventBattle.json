@@ -335,6 +335,32 @@
     ],
     "doc": "战场探索-返回"
   },
+  "Event_LeaveEventDub": {
+    "recognition": "OCR",
+    "action": "Click",
+    "next": [
+      "Event_LeaveEvent2",
+      "Event_LeaveEvent"
+    ],
+    "post_delay": 8000,
+    "focus": "EM.活动.打完活动关卡页面位置Dubck",
+    "roi": [
+      626,
+      235,
+      189,
+      54
+    ],
+    "expected": [
+      "在战斗中获胜"
+    ],
+    "target": [
+      120,
+      35,
+      0,
+      0
+    ],
+    "doc": "离开活动页，Dub与LeaveEvent相同且不可删除，上一步error与Inf重复next，会出错且不报错"
+  },
   "Event_LeaveEvent": {
     "recognition": "OCR",
     "action": "Click",
