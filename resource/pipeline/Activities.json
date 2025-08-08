@@ -1,4 +1,4 @@
-﻿{
+{
   "Activities_HomePage": {
     "recognition": "TemplateMatch",
     "action": "Click",
@@ -26,7 +26,6 @@
   },
   "Activities_InIndex": {
     "recognition": "TemplateMatch",
-    "focus": "AA.有可关注活动",
     "action": "Click",
     "next": [
       "Activities_Index"
@@ -70,7 +69,8 @@
     "recognition": "TemplateMatch",
     "action": "Click",
     "next": [
-      "Activities_GetAll"
+      "Activities_GetAll",
+      "Activities_GetRoll"
     ],
     "on_error": [
       "Activities_Slip"
@@ -82,9 +82,9 @@
       472
     ],
     "template": [
-      "ActivePeerGe.png"
+      "ActivePeerGe.png",
+      "ActiveGe.png"
     ],
-    "threshold": 0.9,
     "green_mask": true,
     "target_offset": [
       -50,
@@ -103,6 +103,7 @@
     "on_error": [
       "Activities_Slip"
     ],
+    "post_delay": 1000,
     "focus": "GA.发现活动",
     "roi": [
       544,
@@ -122,15 +123,77 @@
       "Activities_ResultBack"
     ],
     "roi": [
-      527,
-      618,
-      205,
-      58
+      457,
+      607,
+      413,
+      97
     ],
     "expected": [
       "点击画面即可返回"
     ],
     "doc": "确认抽卡"
+  },
+  "Activities_GetRoll": {
+    "recognition": "OCR",
+    "next": [
+      "Activities_GetRoll_AutoOff",
+      "Activities_GetRoll_AutoOn"
+    ],
+    "on_error": [
+      "Activities_Slip"
+    ],
+    "focus": "GA.发现活动",
+    "roi": [
+      544,
+      527,
+      595,
+      37
+    ],
+    "expected": [
+      "掷骰子"
+    ],
+    "doc": "点击右下抽卡"
+  },
+  "Activities_GetRoll_AutoOff": {
+    "recognition": "TemplateMatch",
+    "action": "Click",
+    "next": [
+      "Activities_GetRoll_AutoOn",
+      "Activities_Slip"
+    ],
+    "post_delay": 1500,
+    "roi": [
+      945,
+      497,
+      224,
+      81
+    ],
+    "template": [
+      "ActiveRollOffGe.png"
+    ],
+    "target_offset": [
+      10,
+      4,
+      0,
+      0
+    ]
+  },
+  "Activities_GetRoll_AutoOn": {
+    "recognition": "TemplateMatch",
+    "next": [
+      "Activities_Index"
+    ],
+    "post_delay": 15000,
+    "roi": [
+      945,
+      497,
+      224,
+      81
+    ],
+    "template": [
+      "ActiveRollOnGe.png"
+    ],
+    "green_mask": true
   },
   "Activities_ResultBack": {
     "recognition": "OCR",
@@ -223,18 +286,19 @@
     "recognition": "OCR",
     "action": "Click",
     "next": [
-      "Activities_BackHomePage"
+      "Activities_BackHomePage",
+      "Activities_Fin"
     ],
     "post_delay": 1000,
     "focus": "GA.退出活动",
     "roi": [
-      957,
-      133,
-      268,
-      110
+      170,
+      10,
+      124,
+      60
     ],
     "expected": [
-      "查看概率"
+      "活动"
     ],
     "target": [
       120,
@@ -245,25 +309,19 @@
     "doc": "返回首页"
   },
   "Activities_BackHomePage": {
-    "recognition": "TemplateMatch",
-    "action": "Click",
+    "recognition": "OCR",
     "next": [
+      "Activities_InIndex",
       "Activities_BackMapPage"
     ],
     "roi": [
-      1122,
-      646,
-      40,
-      38
+      95,
+      643,
+      74,
+      49
     ],
-    "template": [
-      "pin.png"
-    ],
-    "target": [
-      1186,
-      46,
-      0,
-      0
+    "expected": [
+      "抽抽乐"
     ],
     "doc": "找到图钉-点击返回主页"
   },
@@ -283,8 +341,8 @@
       "抽抽乐"
     ],
     "target": [
-      135,
-      40,
+      120,
+      35,
       0,
       0
     ],

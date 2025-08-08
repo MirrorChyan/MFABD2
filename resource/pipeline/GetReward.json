@@ -103,16 +103,21 @@
     "doc": "工会返回主页"
   },
   "GetReward_UnionBack2": {
+    "recognition": "OCR",
     "action": "Click",
     "next": [
-      "GetReward_BusinReward"
+      "GetReward_BusinReward",
+      "GetReward_UnionBack2"
     ],
     "post_delay": 3000,
     "roi": [
-      219,
-      21,
-      65,
-      41
+      180,
+      6,
+      151,
+      65
+    ],
+    "expected": [
+      "公会"
     ],
     "target": [
       120,

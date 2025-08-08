@@ -37,7 +37,7 @@
       401
     ],
     "template": [
-      "tanhaoGE.png"
+      "PetMidGe.png"
     ],
     "threshold": 0.95,
     "green_mask": true,
