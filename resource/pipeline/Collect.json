@@ -23,10 +23,7 @@
     "recognition": "TemplateMatch",
     "action": "Click",
     "next": [
-      "Collect_PVEChapterIden2#"
-    ],
-    "interrupt": [
-      "Collect_HomePageSwipeInitialize_BackHomePage"
+      "Collect_StartGameType2"
     ],
     "post_delay": 5000,
     "focus": "CM.宠物派遣",
@@ -51,6 +48,7 @@
     "interrupt": [
       "Collect_HomePageSwipeInitialize_BackHomePage"
     ],
+    "focus": "CM.StartGameType2",
     "roi": [
       1047,
       516,
@@ -90,7 +88,8 @@
     "recognition": "TemplateMatch",
     "action": "Click",
     "next": [
-      "Collect_HomePageSwipeInitialize0.5"
+      "Collect_HomePageSwipeInitialize0.5",
+      "Collect_HomePageSwipeInitialize_BackHomePage"
     ],
     "focus": "CB.进入卡带，复位",
     "roi": [
@@ -115,7 +114,8 @@
     "recognition": "OCR",
     "action": "Click",
     "next": [
-      "Collect_HomePageSwipeInitialize1"
+      "Collect_HomePageSwipeInitialize1",
+      "Collect_HomePageSwipeInitialize0.5"
     ],
     "pre_delay": 1000,
     "roi": [
@@ -249,13 +249,13 @@
   },
   "Collect_HomePageSwipe_mini": {
     "recognition": "OCR",
-    "focus": "CB.卡带向目标拖动mini",
     "action": "Swipe",
     "next": [
       "Collect_ChapterSelection1"
     ],
     "timeout": 20000,
     "post_delay": 8000,
+    "focus": "CB.卡带向目标拖动mini",
     "roi": [
       99,
       78,
@@ -294,10 +294,10 @@
   },
   "Collect_HomePageSwipe_precise": {
     "recognition": "OCR",
-    "focus": "CB.卡带向目标拖动-精确1",
     "action": "Swipe",
     "timeout": 20000,
     "post_delay": 8000,
+    "focus": "CB.卡带向目标拖动-精确1",
     "roi": [
       99,
       78,
