@@ -28,7 +28,8 @@
     "recognition": "TemplateMatch",
     "action": "Click",
     "next": [
-      "Activities_Index"
+      "Activities_Index",
+      "Activities_InIndex"
     ],
     "focus": "AA.有可关注活动",
     "roi": [
