@@ -100,7 +100,8 @@
     "recognition": "OCR",
     "action": "Click",
     "next": [
-      "Activities_GetAllRe"
+      "Activities_GetAllRe",
+      "Activities_FindActive"
     ],
     "on_error": [
       "Activities_Slip"
@@ -331,7 +332,8 @@
     "recognition": "OCR",
     "action": "Click",
     "next": [
-      "Activities_FinBackMapPage"
+      "Activities_FinBackMapPage",
+      "Activities_BackMapPage"
     ],
     "roi": [
       95,

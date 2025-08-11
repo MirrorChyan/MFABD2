@@ -19,8 +19,10 @@
     "recognition": "TemplateMatch",
     "action": "Click",
     "next": [
-      "Gacha_EnterGacha"
+      "Gacha_EnterGacha",
+      "Gacha_BackHomePage"
     ],
+    "post_delay": 1000,
     "roi": [
       1122,
       646,
@@ -42,8 +44,10 @@
     "recognition": "OCR",
     "action": "Click",
     "next": [
-      "Gacha_GachaPage"
+      "Gacha_GachaPage",
+      "Gacha_EnterGacha"
     ],
+    "post_delay": 1000,
     "roi": [
       98,
       656,
@@ -172,7 +176,8 @@
     "recognition": "OCR",
     "action": "Click",
     "next": [
-      "Gacha_TouchGachaConfirm"
+      "Gacha_TouchGachaConfirm",
+      "Gacha_TouchGacha"
     ],
     "on_error": [
       "Gacha_Slip"
@@ -192,7 +197,8 @@
   "Gacha_TouchGachaConfirm": {
     "recognition": "OCR",
     "next": [
-      "Gacha_TouchGachaConfirm2"
+      "Gacha_TouchGachaConfirm2",
+      "Gacha_TouchGachaConfirm"
     ],
     "roi": [
       464,
@@ -211,7 +217,8 @@
     "next": [
       "Gacha_5X",
       "Gacha_5X2",
-      "Gacha_GachaResultBack"
+      "Gacha_GachaResultBack",
+      "Gacha_TouchGachaConfirm2"
     ],
     "post_delay": 5000,
     "roi": [
@@ -229,7 +236,8 @@
     "recognition": "OCR",
     "action": "Click",
     "next": [
-      "Gacha_GachaResultBack"
+      "Gacha_GachaResultBack",
+      "Gacha_5X"
     ],
     "focus": "GA.5☆角色！(✧◡✧)",
     "roi": [
@@ -253,7 +261,8 @@
     "recognition": "OCR",
     "action": "Click",
     "next": [
-      "Gacha_GachaResultBack"
+      "Gacha_GachaResultBack",
+      "Gacha_5X2"
     ],
     "focus": "GA.5☆UR武器！(✧◡✧)",
     "roi": [
@@ -302,7 +311,8 @@
     "recognition": "OCR",
     "action": "Click",
     "next": [
-      "Gacha_BackMapPage"
+      "Gacha_BackMapPage",
+      "Gacha_FinGacha"
     ],
     "post_delay": 1000,
     "focus": "GA.退出抽卡",
@@ -327,8 +337,10 @@
     "recognition": "OCR",
     "action": "Click",
     "next": [
-      "Gacha_FinBackMapPage"
+      "Gacha_FinBackMapPage",
+      "Gacha_BackMapPage"
     ],
+    "post_delay": 500,
     "roi": [
       98,
       656,

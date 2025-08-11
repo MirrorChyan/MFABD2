@@ -708,13 +708,14 @@
     "post_delay": 1000,
     "focus": "SM.宠物派遣",
     "roi": [
-      866,
-      550,
-      28,
-      28
+      234,
+      217,
+      714,
+      412
     ],
     "template": [
-      "PetMidGe.png"
+      "PetMidGe.png",
+      "tanhaoGE.png"
     ],
     "green_mask": true,
     "doc": "宠物派遣。此时已因其他步骤充分延时，时机更合适。"
