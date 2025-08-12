@@ -420,8 +420,8 @@
     ],
     "post_delay": 5000,
     "focus": {
-    "start": "BB.快速狩猎，菜单"
-},
+      "start": "BB.快速狩猎，菜单"
+    },
     "roi": [
       643,
       532,
@@ -465,11 +465,11 @@
   },
   "Battle_CollectMapInitializeE": {
     "action": "Click",
-    "post_delay": 3000,
-    "focus": "BB.快速狩猎-异常",
     "next": [
       "Battle_CollectMapInitialize"
     ],
+    "post_delay": 3000,
+    "focus": "BB.快速狩猎-异常",
     "target": [
       140,
       120,
@@ -481,8 +481,10 @@
     "recognition": "OCR",
     "action": "Click",
     "next": [
-      "Battle_FinBackMapPage"
+      "Battle_FinBackMapPage",
+      "Battle_BackHomePage"
     ],
+    "post_delay": 1000,
     "focus": "BM.流程可以结束",
     "roi": [
       400,
