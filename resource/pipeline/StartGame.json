@@ -19,7 +19,7 @@
       "StartGame_TouchStart",
       "StartGame_PayFaild"
     ],
-    "post_delay": 5000,
+    "post_delay": 50000,
     "focus": "NEO",
     "roi": [
       530,
@@ -35,12 +35,12 @@
     "recognition": "OCR",
     "next": [
       "StartGame_Loading",
-      "StartGame_TouchStart",
-      "StartGame_PayFaild",
+      "StartGame_Update",
       "StartGame_UpdateDate",
-      "StartGame_Update"
+      "StartGame_PayFaild",
+      "StartGame_TouchStart"
     ],
-    "post_delay": 5000,
+    "post_delay": 50000,
     "pre_wait_freezes": 3000,
     "focus": "SM.main",
     "roi": [
@@ -82,11 +82,12 @@
       "StartGame_UpdateCloseGame"
     ],
     "post_delay": 8000,
+    "focus": "更新确定按钮",
     "roi": [
-      649,
-      416,
-      128,
-      76
+      574,
+      435,
+      127,
+      30
     ],
     "expected": [
       "确认"
@@ -113,8 +114,11 @@
     "next": [
       "StartGame_UpdateShopEnd"
     ],
+    "interrupt": [
+      "StartGame_UpdateEngShopnothink"
+    ],
     "timeout": 50000,
-    "post_delay": 10000,
+    "post_delay": 60000,
     "roi": [
       884,
       189,
@@ -130,6 +134,21 @@
       224,
       0,
       0
+    ]
+  },
+  "StartGame_UpdateEngShopnothink": {
+    "recognition": "OCR",
+    "action": "Click",
+    "post_delay": 10000,
+    "roi": [
+      200,
+      349,
+      1048,
+      304
+    ],
+    "expected": [
+      "Think",
+      "No"
     ]
   },
   "StartGame_UpdateShopEnd": {
@@ -156,16 +175,36 @@
     "recognition": "OCR",
     "action": "Click",
     "next": [
+      "StartGame_UpdateDate2",
+      "StartGame_UpdateDate"
+    ],
+    "post_delay": 20000,
+    "focus": "SM.数据下载",
+    "roi": [
+      403,
+      169,
+      466,
+      126
+    ],
+    "expected": [
+      "将下载游戏"
+    ],
+    "doc": "下载数据"
+  },
+  "StartGame_UpdateDate2": {
+    "recognition": "OCR",
+    "action": "Click",
+    "next": [
       "StartGame_UpdateDateing",
       "StartGame_TouchStart"
     ],
     "post_delay": 20000,
     "focus": "SM.数据下载",
     "roi": [
-      623,
-      459,
-      248,
-      187
+      658,
+      530,
+      96,
+      34
     ],
     "expected": [
       "下载"
@@ -199,12 +238,13 @@
     "recognition": "OCR",
     "next": [
       "StartGame_Loading",
+      "StartGame_Update",
       "StartGame_UpdateDate",
       "StartGame_PayFaild",
       "StartGame_TouchStart",
       "StartGame_LoadingPage"
     ],
-    "post_delay": 5000,
+    "post_delay": 50000,
     "focus": "SM.ORC游戏启动中",
     "roi": [
       820,
@@ -213,8 +253,7 @@
       72
     ],
     "expected": [
-      "游戏启动中",
-      "正在确认下载"
+      "游戏启动中"
     ],
     "doc": "游戏启动中"
   },
@@ -508,7 +547,8 @@
     "action": "Click",
     "next": [
       "StartGame_MapPage",
-      "StartGame_BackMapPage1"
+      "StartGame_BackMapPage1",
+      "StartGame_BackMapPage"
     ],
     "post_delay": 5000,
     "focus": "SM.弹窗消除-无对象",

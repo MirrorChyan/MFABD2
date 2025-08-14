@@ -333,6 +333,7 @@
     "interrupt": [
       "Collect_OperationsMain_Sandplay"
     ],
+    "timeout": 30000,
     "on_error": [
       "Collect_ChapterSelectionError"
     ],
@@ -359,6 +360,7 @@
     "interrupt": [
       "Collect_OperationsMain_Sandplay"
     ],
+    "timeout": 30000,
     "on_error": [
       "Collect_ChapterSelectionError"
     ],
@@ -385,6 +387,7 @@
     "interrupt": [
       "Collect_OperationsMain_Sandplay"
     ],
+    "timeout": 30000,
     "on_error": [
       "Collect_ChapterSelectionError"
     ],

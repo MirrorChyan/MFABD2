@@ -33,18 +33,18 @@
     ],
     "focus": "AA.有可关注活动",
     "roi": [
-      747,
+      694,
       611,
-      31,
-      36
+      54,
+      56
     ],
     "template": [
       "ActiveGe.png"
     ],
     "green_mask": true,
     "target_offset": [
-      -3,
-      3,
+      -5,
+      5,
       0,
       0
     ]
@@ -72,7 +72,9 @@
     "action": "Click",
     "next": [
       "Activities_GetAll",
-      "Activities_GetRoll"
+      "Activities_GetBorn",
+      "Activities_GetRoll",
+      "Activities_NoFindAndInEnd"
     ],
     "on_error": [
       "Activities_Slip"
@@ -90,7 +92,7 @@
     "green_mask": true,
     "target_offset": [
       -50,
-      20,
+      10,
       0,
       0
     ],
@@ -123,7 +125,7 @@
     "recognition": "OCR",
     "action": "Click",
     "next": [
-      "Activities_ResultBack"
+      "Activities_FindActive"
     ],
     "roi": [
       457,
@@ -197,6 +199,52 @@
       "ActiveRollOnGe.png"
     ],
     "green_mask": true
+  },
+  "Activities_GetBorn": {
+    "recognition": "OCR",
+    "action": "Click",
+    "next": [
+      "Activities_GetBorn2",
+      "Activities_FindActive"
+    ],
+    "on_error": [
+      "Activities_Slip"
+    ],
+    "post_delay": 1000,
+    "focus": "GA.发现活动",
+    "roi": [
+      531,
+      515,
+      114,
+      33
+    ],
+    "expected": [
+      "兑换"
+    ],
+    "doc": "点击右下抽卡"
+  },
+  "Activities_GetBorn2": {
+    "recognition": "OCR",
+    "action": "Click",
+    "next": [
+      "Activities_GetAllRe",
+      "Activities_FindActive"
+    ],
+    "on_error": [
+      "Activities_Slip"
+    ],
+    "post_delay": 1000,
+    "focus": "GA.发现活动",
+    "roi": [
+      665,
+      403,
+      85,
+      29
+    ],
+    "expected": [
+      "确认"
+    ],
+    "doc": "点击右下抽卡"
   },
   "Activities_ResultBack": {
     "recognition": "OCR",
