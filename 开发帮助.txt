@@ -1,32 +1,59 @@
-﻿  "PVP_HomePageSwipe": {
-    "recognition": "OCR",
-    "action": "Swipe",
+﻿"Gacha_HomePage": {
+    "recognition": "TemplateMatch",
     "next": [
-      "PVP_PVPBook"
+      "Gacha_HomePageHub2",
+      "Gacha_HomePageHub"
     ],
-    "pre_delay": 1000,
+    "doc": "识别右下图钉-章节主页"
+  },
+  "Gacha_HomePageHub": {
+    "recognition": "TemplateMatch",
+    "action": "Click",
+    "next": [
+      "Gacha_EnterGacha",
+      "Gacha_HomePageHub"
+    ],
+    "post_delay": 2000,
+    "focus": "G=0.页面预期内，普通启动",
     "roi": [
-      99,
-      78,
-      212,
-      630
+      1122,
+      646,
+      40,
+      38
     ],
-    "expected": [
-      "角色游戏卡"
+    "template": [
+      "pin.png"
     ],
-    "begin": [
-      70,
-      640,
+    "target": [
+      1186,
+      46,
       0,
       0
     ],
-    "end": [
-      70,
-      270,
-      0,
-      0
+    "doc": "找到图钉-点击返回主页"
+  },
+  "Gacha_HomePageHub2": {
+    "recognition": "TemplateMatch",
+    "action": "Click",
+    "next": [
+      "Gacha_HomePageHub",
+      "Gacha_HomePageHub2"
     ],
-    "duration": 500
+    "post_delay": 2000,
+    "focus": "G=1.页面非预期，点击返回按钮",
+    "roi": [
+      1,
+      1,
+      231,
+      124
+    ],
+    "template": [
+      "BackButGe.png",
+      "BackButGe2.png"
+    ],
+    "green_mask": true,
+    "replace": [],
+    "doc": "其他页面，返回按钮"
   },
   
   Collect_ChapterSelection1

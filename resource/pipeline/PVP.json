@@ -1,22 +1,60 @@
 {
   "PVP_HomePage": {
+    "next": [
+      "PVP_HomePageHub",
+      "PVP_HomePageHub2"
+    ]
+  },
+  "PVP_HomePageHub": {
     "recognition": "TemplateMatch",
+    "action": "Click",
     "next": [
       "PVP_PVPStart",
       "PVP_BackHomePage",
-      "PVP_HomePage"
+      "PVP_HomePageHub"
     ],
-    "focus": "PM.箱庭确认Old",
+    "post_delay": 2000,
+    "focus": "G=0.页面预期内，普通启动",
     "roi": [
-      1122,
-      646,
-      40,
-      38
+      1047,
+      516,
+      107,
+      110
     ],
     "template": [
-      "pin.png"
+      "Run.png"
     ],
-    "doc": "识别右下图钉-章节主页"
+    "green_mask": true,
+    "target": [
+      1186,
+      46,
+      0,
+      0
+    ],
+    "doc": "找到run-点击返回主页"
+  },
+  "PVP_HomePageHub2": {
+    "recognition": "TemplateMatch",
+    "action": "Click",
+    "next": [
+      "PVP_HomePageHub",
+      "PVP_HomePageHub2"
+    ],
+    "post_delay": 2000,
+    "focus": "G=1.页面非预期，点击返回按钮",
+    "roi": [
+      1,
+      1,
+      231,
+      124
+    ],
+    "template": [
+      "BackButGe.png",
+      "BackButGe2.png"
+    ],
+    "green_mask": true,
+    "replace": [],
+    "doc": "其他页面，返回按钮"
   },
   "PVP_BackHomePage": {
     "recognition": "TemplateMatch",
