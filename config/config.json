@@ -95,12 +95,12 @@
     {
       "name": "领取通行证奖励",
       "entry": "Pass_HomePage",
-      "check": true
+      "check": false
     },
     {
       "name": "领取邮件",
       "entry": "Mail_HomePage",
-      "check": true
+      "check": false
     },
     {
       "name": "结束游戏",
