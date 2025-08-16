@@ -79,6 +79,8 @@
     "on_error": [
       "Activities_Slip"
     ],
+    "post_delay": 1000,
+    "focus": "GA.搜寻活动",
     "roi": [
       229,
       131,
@@ -147,7 +149,7 @@
     "on_error": [
       "Activities_Slip"
     ],
-    "focus": "GA.发现活动",
+    "focus": "GA.发现骰子活动",
     "roi": [
       544,
       527,
@@ -211,7 +213,7 @@
       "Activities_Slip"
     ],
     "post_delay": 1000,
-    "focus": "GA.发现活动",
+    "focus": "GA.发现代币兑换活动",
     "roi": [
       531,
       515,
@@ -234,7 +236,7 @@
       "Activities_Slip"
     ],
     "post_delay": 1000,
-    "focus": "GA.发现活动",
+    "focus": "GA.代币兑换再确认",
     "roi": [
       665,
       403,
@@ -284,12 +286,11 @@
     ],
     "focus": "GA.滑动寻找活动",
     "roi": [
-      172,
+      165,
       12,
-      143,
-      63
+      347,
+      606
     ],
-    "threshold": 0.8,
     "expected": [
       "活动"
     ],
@@ -320,7 +321,6 @@
       174,
       102
     ],
-    "threshold": 0.9,
     "expected": [
       "登录加成",
       "登录活动"

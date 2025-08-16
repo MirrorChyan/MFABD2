@@ -217,8 +217,8 @@
     "next": [
       "Gacha_5X",
       "Gacha_5X2",
-      "Gacha_GachaResultBack",
-      "Gacha_TouchGachaConfirm2"
+      "Gacha_TouchGachaConfirm2",
+      "Gacha_GachaResultBack"
     ],
     "post_delay": 5000,
     "roi": [

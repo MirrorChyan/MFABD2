@@ -3,7 +3,8 @@
     "recognition": "TemplateMatch",
     "next": [
       "PVP_PVPStart",
-      "PVP_BackHomePage"
+      "PVP_BackHomePage",
+      "PVP_HomePage"
     ],
     "focus": "PM.箱庭确认Old",
     "roi": [
@@ -134,10 +135,10 @@
     ],
     "focus": "PM.PVP.防守分结算",
     "roi": [
-      614,
-      642,
-      49,
-      35
+      603,
+      644,
+      73,
+      32
     ],
     "expected": [
       "确认"

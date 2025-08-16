@@ -341,7 +341,8 @@
     "recognition": "TemplateMatch",
     "action": "Click",
     "next": [
-      "Equip_EquipDecSelect"
+      "Equip_EquipDecSelect",
+      "Equip_EquipDecSelectN"
     ],
     "post_delay": 1000,
     "roi": [
@@ -353,7 +354,6 @@
     "template": [
       "N.png"
     ],
-    "threshold": 0.99,
     "doc": "点击N"
   },
   "Equip_EquipDecSelect": {
@@ -443,7 +443,8 @@
     "recognition": "TemplateMatch",
     "action": "Click",
     "next": [
-      "Equip_filter+9"
+      "Equip_filter+9",
+      "Equip_filterSR"
     ],
     "post_delay": 1000,
     "focus": "EM.装备精炼.稀有度",
@@ -463,15 +464,16 @@
     "recognition": "TemplateMatch",
     "action": "Click",
     "next": [
-      "Equip_filterON"
+      "Equip_filterON",
+      "Equip_filter+9"
     ],
     "post_delay": 1000,
     "focus": "EM.装备精炼.+9",
     "roi": [
-      918,
-      214,
-      97,
-      31
+      928,
+      213,
+      84,
+      33
     ],
     "template": [
       "+9.png"
