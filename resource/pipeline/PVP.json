@@ -1,20 +1,23 @@
 {
   "PVP_HomePage": {
     "next": [
+      "PVP_PVPStart",
       "PVP_HomePageHub",
-      "PVP_HomePageHub2"
+      "PVP_HomePageHub2",
+      "PVP_HomePageHub1"
     ]
   },
   "PVP_HomePageHub": {
     "recognition": "TemplateMatch",
     "action": "Click",
     "next": [
-      "PVP_PVPStart",
-      "PVP_BackHomePage",
-      "PVP_HomePageHub"
+      "PVP_HomePage2",
+      "PVP_PVPBook",
+      "PVP_HomePageHub",
+      "PVP_HomePageHub1"
     ],
     "post_delay": 2000,
-    "focus": "G=0.页面预期内，普通启动",
+    "focus": "G=0.页面预期内，普通启动。M.箱庭地图run已确认",
     "roi": [
       1047,
       516,
@@ -33,11 +36,33 @@
     ],
     "doc": "找到run-点击返回主页"
   },
+  "PVP_HomePageHub1": {
+    "recognition": "TemplateMatch",
+    "next": [
+      "PVP_HomePage2",
+      "PVP_PVPBook",
+      "PVP_HomePageHub",
+      "PVP_HomePageHub1"
+    ],
+    "post_delay": 2000,
+    "focus": "G=0.页面预期内，普通启动。BM.箱庭地图pin已确认",
+    "roi": [
+      1108,
+      637,
+      65,
+      57
+    ],
+    "template": [
+      "pin.png"
+    ]
+  },
   "PVP_HomePageHub2": {
     "recognition": "TemplateMatch",
     "action": "Click",
     "next": [
+    	"PVP_PVPStart",
       "PVP_HomePageHub",
+      "PVP_HomePageHub1",
       "PVP_HomePageHub2"
     ],
     "post_delay": 2000,
@@ -78,7 +103,7 @@
       0,
       0
     ],
-    "doc": "找到图钉-点击返回主页"
+    "doc": "找到图钉-点击返回主页(弃用)"
   },
   "PVP_HomePage2": {
     "recognition": "OCR",

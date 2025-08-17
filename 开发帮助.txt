@@ -1,43 +1,71 @@
-﻿"Gacha_HomePage": {
-    "recognition": "TemplateMatch",
+﻿  "Mail_HomePage": {
     "next": [
-      "Gacha_HomePageHub2",
-      "Gacha_HomePageHub"
-    ],
-    "doc": "识别右下图钉-章节主页"
+      "Mail_HomePageHub",
+      "Mail_HomePageHub1",
+      "Mail_HomePageHub2"
+    ]
   },
-  "Gacha_HomePageHub": {
+  "Mail_HomePageHub": {
     "recognition": "TemplateMatch",
     "action": "Click",
     "next": [
-      "Gacha_EnterGacha",
-      "Gacha_HomePageHub"
+      "Mail_EnterMail",
+      "Mail_HomePageHub",
+      "Mail_HomePageHub1"
     ],
     "post_delay": 2000,
-    "focus": "G=0.页面预期内，普通启动",
+    "focus": "G=0.页面预期内，普通启动。M.箱庭地图run已确认",
     "roi": [
-      1122,
-      646,
-      40,
-      38
+      1047,
+      516,
+      107,
+      110
     ],
     "template": [
-      "pin.png"
+      "Run.png"
     ],
+    "green_mask": true,
     "target": [
       1186,
       46,
       0,
       0
     ],
-    "doc": "找到图钉-点击返回主页"
+    "doc": "找到run-点击返回主页"
   },
-  "Gacha_HomePageHub2": {
+  "Mail_HomePageHub1": {
     "recognition": "TemplateMatch",
     "action": "Click",
     "next": [
-      "Gacha_HomePageHub",
-      "Gacha_HomePageHub2"
+      "Mail_EnterMail",
+      "Mail_HomePageHub",
+      "Mail_HomePageHub1"
+    ],
+    "post_delay": 2000,
+    "focus": "G=0.页面预期内，普通启动。BM.箱庭地图pin已确认",
+    "target": [
+      1186,
+      46,
+      0,
+      0
+    ],
+    "roi": [
+      1108,
+      637,
+      65,
+      57
+    ],
+    "template": [
+      "pin.png"
+    ]
+  },
+  "Mail_HomePageHub2": {
+    "recognition": "TemplateMatch",
+    "action": "Click",
+    "next": [
+      "Mail_HomePageHub",
+      "Mail_HomePageHub1",
+      "Mail_HomePageHub2"
     ],
     "post_delay": 2000,
     "focus": "G=1.页面非预期，点击返回按钮",
@@ -56,7 +84,7 @@
     "doc": "其他页面，返回按钮"
   },
   
-  Collect_ChapterSelection1
+  GetReward_ChapterSelection1
   
   流程可视化：
   https://yamaape.codax.site/
@@ -68,13 +96,13 @@
   135,40,0,0 圆形返回按钮
   470,390,0,0, min
   800,390,0,0, max
-  PVP竞技场,预先调整倍数、其他开关
+  GetReward竞技场,预先调整倍数、其他开关
   派遣需要采集、扫荡，至少选一个
   实现商店程序更新，不包括翻墙
   510,535,0,0 经验本 462,496,100,72 经验本按钮范围
   343,560,0,0 金钱本 305,521,74,66 金钱本按钮范围
   1047,516,107,110 Run.png "green_mask": true,
-  狩猎场选择有两处：Battle_CollectMapShouLie、Battle_CollectMapShouLieR2。
+  狩猎场选择有两处：GetReward_GetRewardMapShouLie、GetReward_GetRewardMapShouLieR2。
   
   区域略图请探测完
   %=已完成 x=失败 xa=失败且有反省记录

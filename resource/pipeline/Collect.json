@@ -1,17 +1,15 @@
 {
   "Collect_StartGame_HomePage": {
     "next": [
+      "Collect_HomePageHub2",
       "Collect_PerPetTask",
-      "Collect_HomePageHub",
-      "Collect_HomePageHub2"
+      "Collect_HomePageHub"
     ]
   },
   "Collect_HomePageHub": {
     "recognition": "TemplateMatch",
-    "action": "Click",
     "next": [
       "Collect_PerPetTask",
-      "Collect_HomePageHub",
       "Collect_PVEChapterIden2#"
     ],
     "interrupt": [

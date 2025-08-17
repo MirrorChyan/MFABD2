@@ -2,6 +2,7 @@
   "GetReward_HomePage": {
     "next": [
       "GetReward_HomePageHub",
+      "GetReward_HomePageHub1",
       "GetReward_HomePageHub2"
     ]
   },
@@ -10,7 +11,8 @@
     "action": "Click",
     "next": [
       "GetReward_EnterUnion",
-      "GetReward_HomePageHub"
+      "GetReward_HomePageHub",
+      "GetReward_HomePageHub1"
     ],
     "post_delay": 2000,
     "focus": "G=0.页面预期内，普通启动",
@@ -32,11 +34,31 @@
     ],
     "doc": "找到run-点击返回主页"
   },
+  "GetReward_HomePageHub1": {
+    "recognition": "TemplateMatch",
+    "next": [
+      "GetReward_EnterUnion",
+      "GetReward_HomePageHub",
+      "GetReward_HomePageHub1"
+    ],
+    "post_delay": 2000,
+    "focus": "G=0.页面预期内，普通启动。BM.箱庭地图pin已确认",
+    "roi": [
+      1108,
+      637,
+      65,
+      57
+    ],
+    "template": [
+      "pin.png"
+    ]
+  },
   "GetReward_HomePageHub2": {
     "recognition": "TemplateMatch",
     "action": "Click",
     "next": [
       "GetReward_HomePageHub",
+      "GetReward_HomePageHub1",
       "GetReward_HomePageHub2"
     ],
     "post_delay": 2000,
@@ -353,6 +375,7 @@
     "next": [
       "GetReward_DailyReward"
     ],
+    "post_delay": 1000,
     "focus": "GM.卡带复位成功",
     "roi": [
       1122,
@@ -380,13 +403,19 @@
     "post_delay": 1000,
     "focus": "GM.‘任务’奖励领取",
     "roi": [
-      536,
-      615,
-      69,
-      82
+      520,
+      658,
+      52,
+      32
     ],
     "expected": [
       "任务"
+    ],
+    "target_offset": [
+      4,
+      -4,
+      0,
+      0
     ],
     "doc": "识别点击任务"
   },

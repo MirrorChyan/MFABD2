@@ -41,7 +41,7 @@
     },
     {
       "name": "白嫖抽卡",
-      "entry": "Gacha_BackHomePage"
+      "entry": "Gacha_HomePage"
     },
     {
       "name": "竞技场",
@@ -405,19 +405,23 @@
         {
           "name": "公会开",
           "pipeline_override": {
-            "GetReward_HomePage": {
-              "next": [
-                "GetReward_BackHomePage"
-              ]
-            }
           }
         },
         {
           "name": "公会关",
           "pipeline_override": {
-            "GetReward_BackHomePage": {
+            "GetReward_EnterUnion": {
               "next": [
-                "GetReward_DailyReward"
+                "GetReward_BusinReward"
+              ],
+              "roi": [
+                98,
+                656,
+                66,
+                32
+              ],
+              "expected": [
+                "抽抽乐"
               ]
             }
           }

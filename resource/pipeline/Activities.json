@@ -2,6 +2,7 @@
   "Activities_HomePage": {
     "next": [
       "Activities_HomePageHub",
+      "Activities_HomePageHub1",
       "Activities_HomePageHub2"
     ],
     "doc": "起始节点-分流"
@@ -12,19 +13,21 @@
     "next": [
       "Activities_InIndex",
       "Activities_BackMapPage",
-      "Activities_HomePageHub"
+      "Activities_HomePageHub",
+      "Activities_HomePageHub1"
     ],
     "post_delay": 2000,
-    "focus": "G=0.页面预期内，普通启动",
+    "focus": "G=0.页面预期内，普通启动。M.箱庭地图run已确认",
     "roi": [
-      1122,
-      646,
-      40,
-      38
+      1047,
+      516,
+      107,
+      110
     ],
     "template": [
-      "pin.png"
+      "Run.png"
     ],
+    "green_mask": true,
     "target": [
       1186,
       46,
@@ -33,11 +36,33 @@
     ],
     "doc": "找到图钉-点击返回主页"
   },
+  "Activities_HomePageHub1": {
+    "recognition": "TemplateMatch",
+    "action": "Click",
+    "next": [
+      "Activities_InIndex",
+      "Activities_BackMapPage",
+      "Activities_HomePageHub",
+      "Activities_HomePageHub1"
+    ],
+    "post_delay": 2000,
+    "focus": "G=0.页面预期内，普通启动。M.箱庭地图pin已确认",
+    "roi": [
+      1108,
+      637,
+      65,
+      57
+    ],
+    "template": [
+      "pin.png"
+    ]
+  },
   "Activities_HomePageHub2": {
     "recognition": "TemplateMatch",
     "action": "Click",
     "next": [
       "Activities_HomePageHub",
+      "Activities_HomePageHub1",
       "Activities_HomePageHub2"
     ],
     "post_delay": 2000,
@@ -137,7 +162,7 @@
     "action": "Click",
     "next": [
       "Activities_GetAllRe",
-      "Activities_FindActive"
+      "Activities_Index"
     ],
     "on_error": [
       "Activities_Slip"
@@ -159,8 +184,9 @@
     "recognition": "OCR",
     "action": "Click",
     "next": [
-      "Activities_FindActive"
+      "Activities_Index"
     ],
+    "post_delay": 2000,
     "roi": [
       457,
       607,
@@ -239,7 +265,7 @@
     "action": "Click",
     "next": [
       "Activities_GetBorn2",
-      "Activities_FindActive"
+      "Activities_Index"
     ],
     "on_error": [
       "Activities_Slip"
@@ -262,12 +288,12 @@
     "action": "Click",
     "next": [
       "Activities_GetAllRe",
-      "Activities_FindActive"
+      "Activities_Index"
     ],
     "on_error": [
       "Activities_Slip"
     ],
-    "post_delay": 1000,
+    "post_delay": 5000,
     "focus": "GA.代币兑换再确认",
     "roi": [
       665,
