@@ -294,7 +294,7 @@
   "GetReward_Busin_GiftGet": {
     "action": "Click",
     "next": [
-      "GetReward_Busin_Back"
+      "GetReward_Busin_BackPVEPage"
     ],
     "post_delay": 3000,
     "target": [
@@ -318,7 +318,7 @@
       0,
       0
     ],
-    "doc": "返回主页面，之后流程结束。"
+    "doc": "返回主页面，之后流程结束。(废弃，入口已删除。暂留存观察）"
   },
   "GetReward_Busin_ChapterMenu": {
     "recognition": "OCR",
@@ -373,7 +373,8 @@
     "recognition": "TemplateMatch",
     "action": "Click",
     "next": [
-      "GetReward_DailyReward"
+      "GetReward_DailyReward",
+      "GetReward_Busin_BackHomePage"
     ],
     "post_delay": 1000,
     "focus": "GM.卡带复位成功",
@@ -596,5 +597,120 @@
       0,
       0
     ]
+  },
+  "GetReward_Busin_BackPVEPage": {
+    "recognition": "OCR",
+    "action": "Click",
+    "next": [
+      "GetReward_Busin_BackHomePage2",
+      "GetReward_Busin_BackPVEPage"
+    ],
+    "focus": "PM.开始离开GetReward卡带",
+    "roi": [
+      91,
+      633,
+      197,
+      81
+    ],
+    "expected": [
+      "员工"
+    ],
+    "target": [
+      1186,
+      46,
+      0,
+      0
+    ],
+    "doc": "找到图钉-点击返回主页"
+  },
+  "GetReward_Busin_BackHomePage2": {
+    "recognition": "OCR",
+    "action": "Click",
+    "next": [
+      "GetReward_Busin_PVEBookSwipe",
+      "GetReward_Busin_BackHomePage2"
+    ],
+    "roi": [
+      89,
+      655,
+      77,
+      37
+    ],
+    "expected": [
+      "抽抽乐"
+    ],
+    "target": [
+      1111,
+      650,
+      0,
+      0
+    ],
+    "doc": "识别左下抽抽乐-主页-点击选择章节"
+  },
+  "GetReward_Busin_PVEBookSwipe": {
+    "recognition": "OCR",
+    "action": "Swipe",
+    "next": [
+      "GetReward_Busin_TouchPVEBook"
+    ],
+    "roi": [
+      118,
+      505,
+      95,
+      42
+    ],
+    "expected": [
+      "活动游戏卡"
+    ],
+    "begin": [
+      1400,
+      300,
+      0,
+      0
+    ],
+    "end": [
+      1400,
+      700,
+      0,
+      0
+    ],
+    "doc": "识别活动游戏卡-上划"
+  },
+  "GetReward_Busin_TouchPVEBook": {
+    "recognition": "TemplateMatch",
+    "action": "Click",
+    "next": [
+      "GetReward_Busin_FinBackMapPage",
+      "GetReward_Busin_TouchPVEBook"
+    ],
+    "post_delay": 5000,
+    "focus": "PM.复位用卡带已找到",
+    "roi": [
+      405,
+      157,
+      78,
+      38
+    ],
+    "template": [
+      "pve2.png"
+    ],
+    "doc": "点击PVE本子2"
+  },
+  "GetReward_Busin_FinBackMapPage": {
+    "recognition": "TemplateMatch",
+    "next": [
+      "GetReward_Busin_BackHomePage"
+    ],
+    "focus": "PM.GetReward复位完成，结束~",
+    "roi": [
+      1122,
+      646,
+      40,
+      38
+    ],
+    "template": [
+      "pin.png"
+    ],
+    "doc": "识别右下图钉-章节主页"
   }
 }
