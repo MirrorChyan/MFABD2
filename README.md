@@ -18,19 +18,42 @@
 
 ## 获取
 
-### 部署：选择合适位置使用`Git` or `Powershell`，会自行创建子文件夹：
+### 版本区分
+
+**目前决定分两个版本。**
+
++ **[MFABD2]** `快速版`: [github.com/sunyink/MFABD2](https://github.com/sunyink/MFABD2)
+
+  快速版，平时随用随开发随上传，**使用git更新**，可以选择比较稳定的提交来用。
+  
+
++ **[MFABD2-Resource]** 暂定位为`发布版`或`稳定版`: https://github.com/sunyink/MFABD2-Resource
+
+  “稳定版”，如果某个快速版表现较好，会考虑镜像过去做一个发布版。发布版参照正规MFA模板发布，**直接在releases下载包**，体验十分接近MAA。框架是新界面，UI与快速版不同。
+
+<br>
+
+### ◆快速版部署
++ 部署：选择合适位置使用`Git` or `Powershell`，会自行创建子文件夹：
 
   1.`shift` + `右键` ,单击`在此处打开powershell窗口`。
   
   2.在弹出窗口中运行`git clone https://github.com/sunyink/MFABD2.git`
 
-### 更新：在根目录`pull`:
++ 更新：在根目录`pull`:
 
   1.在程序`根目录`中`shift` + `右键` ,单击`在此处打开powershell窗口`。
   
   2.在弹出窗口中运行`git pull`
 
-**注意，不要开启、使用GUI界面本身的更新功能，本项目目前仅进行GitHub Code更新同步。**
+**注意，快速版不要开启、使用GUI界面本身的更新功能，本版本目前仅进行GitHub Code更新同步。**
+
+<br>
+
+### ◆稳定版部署
++ 进入 **[MFABD2-Resource]发行版页** : [https://github.com/sunyink/MFABD2-Resource](https://github.com/sunyink/MFABD2-Resource/releases)  ，下载对应平台压缩包，解压即用。
+  
+
 
 ## 使用方式 （仅支持模拟器使用）
 
@@ -102,6 +125,7 @@
 - [MaaPracticeBoilerplate](https://github.com/MaaXYZ/MaaPracticeBoilerplate) MaaFramework项目模板
 
 - [MFAWPF](https://github.com/SweetSmellFox/MFAWPF) Pipeline协议项目的通用GUI
+- [MFAAvalonia](https://github.com/SweetSmellFox/MFAAvalonia) 基于Avalonia的MAAFramework通用GUI项目
 - [MFATools](https://github.com/SweetSmellFox/MFATools) 开发工具
 - [maa-support-extension](https://github.com/neko-para/maa-support-extension) VSCode扩展
 ### 规范
