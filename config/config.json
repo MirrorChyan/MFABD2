@@ -105,7 +105,7 @@
     {
       "name": "结束游戏",
       "entry": "Close_HomePage",
-      "check": true
+      "check": false
     },
     {
       "name": "Test",
@@ -126,7 +126,7 @@
   "RetryOnDisconnected": true,
   "AllowAdbRestart": false,
   "AllowAdbHardRestart": false,
-  "AfterTask": "CloseMFA",
+  "AfterTask": "None",
   "SoftwarePath": "C:\\Program Files\\Netease\\MuMuPlayerGlobal-12.0\\shell\\MuMuPlayer.exe",
   "EmulatorConfig": "-v 1",
   "ExternalNotificationEnabled": ""

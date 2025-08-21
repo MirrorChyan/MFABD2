@@ -399,7 +399,7 @@
       "Gacha_BackMapPage",
       "Gacha_FinGacha"
     ],
-    "post_delay": 1000,
+    "post_delay": 3000,
     "focus": "GA.退出抽卡",
     "roi": [
       957,
@@ -408,7 +408,7 @@
       110
     ],
     "expected": [
-      "查看概率"
+      "概率"
     ],
     "target": [
       120,
@@ -425,7 +425,7 @@
       "Gacha_FinBackMapPage",
       "Gacha_BackMapPage"
     ],
-    "post_delay": 500,
+    "post_delay": 1000,
     "roi": [
       98,
       656,
