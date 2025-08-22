@@ -1,0 +1,187 @@
+{
+  "More_HomePage": {
+    "next": [
+      "More_MoreStart",
+      "More_HomePageHub",
+      "More_HomePageHub2",
+      "More_HomePageHub1"
+    ]
+  },
+  "More_HomePageHub": {
+    "recognition": "TemplateMatch",
+    "action": "Click",
+    "next": [
+      "More_HomePage2",
+      "More_MoreBook",
+      "More_HomePageHub",
+      "More_HomePageHub1"
+    ],
+    "post_delay": 2000,
+    "focus": "G=0.页面预期内，普通启动。M.箱庭地图run已确认",
+    "roi": [
+      1047,
+      516,
+      107,
+      110
+    ],
+    "template": [
+      "Run.png"
+    ],
+    "green_mask": true,
+    "target": [
+      1186,
+      46,
+      0,
+      0
+    ],
+    "doc": "找到run-点击返回主页"
+  },
+  "More_HomePageHub1": {
+    "recognition": "TemplateMatch",
+    "next": [
+      "More_HomePage2",
+      "More_MoreBook",
+      "More_HomePageHub",
+      "More_HomePageHub1"
+    ],
+    "post_delay": 2000,
+    "focus": "G=0.页面预期内，普通启动。BM.箱庭地图pin已确认",
+    "roi": [
+      1108,
+      637,
+      65,
+      57
+    ],
+    "template": [
+      "pin.png"
+    ]
+  },
+  "More_HomePageHub2": {
+    "recognition": "TemplateMatch",
+    "action": "Click",
+    "next": [
+      "More_MoreStart",
+      "More_HomePageHub",
+      "More_HomePageHub1",
+      "More_HomePageHub2"
+    ],
+    "post_delay": 2000,
+    "focus": "G=1.页面非预期，点击返回按钮",
+    "roi": [
+      1,
+      1,
+      231,
+      124
+    ],
+    "template": [
+      "BackButGe.png",
+      "BackButGe2.png"
+    ],
+    "green_mask": true,
+    "replace": [],
+    "doc": "其他页面，返回按钮"
+  },
+  "More_BackHomePage": {
+    "recognition": "TemplateMatch",
+    "action": "Click",
+    "next": [
+      "More_MoreBook",
+      "More_HomePage2"
+    ],
+    "roi": [
+      1122,
+      646,
+      40,
+      38
+    ],
+    "template": [
+      "pin.png"
+    ],
+    "target": [
+      1186,
+      46,
+      0,
+      0
+    ],
+    "doc": "找到图钉-点击返回主页(弃用)"
+  },
+  "More_HomePage2": {
+    "recognition": "OCR",
+    "action": "Click",
+    "next": [
+      "More_MoreBook",
+      "More_HomePageSwipe"
+    ],
+    "focus": "PM.主页面",
+    "roi": [
+      98,
+      656,
+      66,
+      32
+    ],
+    "expected": [
+      "抽抽乐"
+    ],
+    "target": [
+      1111,
+      650,
+      0,
+      0
+    ],
+    "doc": "识别左下抽抽乐-主页-点击选择章节"
+  },
+  "More_HomePageSwipe": {
+    "recognition": "OCR",
+    "action": "Swipe",
+    "next": [
+      "More_MoreBook_Evil"
+    ],
+    "pre_delay": 1000,
+    "focus": "PM.卡带界面垂直复位(一次性)",
+    "roi": [
+      99,
+      78,
+      212,
+      630
+    ],
+    "expected": [
+      "角色游戏卡"
+    ],
+    "begin": [
+      70,
+      640,
+      0,
+      0
+    ],
+    "end": [
+      70,
+      270,
+      0,
+      0
+    ],
+    "duration": 500
+  },
+  "More_MoreBook_Evil": {
+    "recognition": "OCR",
+    "action": "Click",
+    "post_delay": 5000,
+    "focus": "PM.More卡带",
+    "roi": [
+      392,
+      469,
+      98,
+      40
+    ],
+    "threshold": 0.9,
+    "expected": [
+      "挑战"
+    ],
+    "target_offset": [
+      0,
+      -100,
+      0,
+      0
+    ],
+    "doc": "点击More本子"
+  }
+}

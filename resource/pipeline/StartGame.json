@@ -38,9 +38,10 @@
       "StartGame_Update",
       "StartGame_UpdateDate",
       "StartGame_PayFaild",
-      "StartGame_TouchStart"
+      "StartGame_TouchStart",
+      "StartGame_LoadingPage"
     ],
-    "post_delay": 50000,
+    "post_delay": 10000,
     "pre_wait_freezes": 3000,
     "focus": "SM.main",
     "roi": [
@@ -314,12 +315,12 @@
     "focus": "SM.TO Touch",
     "roi": [
       780,
-      394,
+      390,
       420,
-      187
+      67
     ],
     "expected": [
-      "TO"
+      "OUCH"
     ],
     "target": [
       490,
