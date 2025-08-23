@@ -1,7 +1,6 @@
 {
   "More_HomePage": {
     "next": [
-      "More_MoreStart",
       "More_HomePageHub",
       "More_HomePageHub2",
       "More_HomePageHub1"
@@ -12,7 +11,6 @@
     "action": "Click",
     "next": [
       "More_HomePage2",
-      "More_MoreBook",
       "More_HomePageHub",
       "More_HomePageHub1"
     ],
@@ -40,7 +38,6 @@
     "recognition": "TemplateMatch",
     "next": [
       "More_HomePage2",
-      "More_MoreBook",
       "More_HomePageHub",
       "More_HomePageHub1"
     ],
@@ -60,7 +57,6 @@
     "recognition": "TemplateMatch",
     "action": "Click",
     "next": [
-      "More_MoreStart",
       "More_HomePageHub",
       "More_HomePageHub1",
       "More_HomePageHub2"
@@ -81,35 +77,11 @@
     "replace": [],
     "doc": "其他页面，返回按钮"
   },
-  "More_BackHomePage": {
-    "recognition": "TemplateMatch",
-    "action": "Click",
-    "next": [
-      "More_MoreBook",
-      "More_HomePage2"
-    ],
-    "roi": [
-      1122,
-      646,
-      40,
-      38
-    ],
-    "template": [
-      "pin.png"
-    ],
-    "target": [
-      1186,
-      46,
-      0,
-      0
-    ],
-    "doc": "找到图钉-点击返回主页(弃用)"
-  },
   "More_HomePage2": {
     "recognition": "OCR",
     "action": "Click",
     "next": [
-      "More_MoreBook",
+      "More_MoreBook_Evil",
       "More_HomePageSwipe"
     ],
     "focus": "PM.主页面",
@@ -164,7 +136,10 @@
   "More_MoreBook_Evil": {
     "recognition": "OCR",
     "action": "Click",
-    "post_delay": 5000,
+    "next": [
+      "More_Evil_Move"
+    ],
+    "post_delay": 8000,
     "focus": "PM.More卡带",
     "roi": [
       392,
@@ -183,5 +158,25 @@
       0
     ],
     "doc": "点击More本子"
+  },
+  "More_Evil_Move": {
+    "action": "Click",
+    "focus": "MM.向上行走。BM.箱庭地图pin确认",
+    "roi": [
+      1108,
+      637,
+      65,
+      57
+    ],
+    "template": [
+      "pin.png"
+    ],
+    "target": [
+      336,
+      218,
+      0,
+      0
+    ],
+    "duration": 5000
   }
 }

@@ -48,12 +48,12 @@
     {
       "name": "白嫖抽卡",
       "entry": "Gacha_HomePage",
-      "check": false
+      "check": true
     },
     {
       "name": "竞技场",
       "entry": "PVP_HomePage",
-      "check": false,
+      "check": true,
       "option": [
         {
           "name": "竞技场战斗次数",
@@ -101,6 +101,11 @@
       "name": "领取邮件",
       "entry": "Mail_HomePage",
       "check": true
+    },
+    {
+      "name": "扩展操作",
+      "entry": "More_HomePage",
+      "check": false
     },
     {
       "name": "结束游戏",

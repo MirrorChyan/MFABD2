@@ -78,6 +78,10 @@
       "entry": "Mail_HomePage"
     },
     {
+      "name": "扩展操作",
+      "entry": "More_HomePage"
+    },
+    {
       "name": "结束游戏",
       "entry": "Close_HomePage"
     },
