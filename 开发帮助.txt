@@ -1,17 +1,17 @@
-﻿  "Mail_HomePage": {
+﻿  "Collect_HomePage": {
     "next": [
-      "Mail_HomePageHub",
-      "Mail_HomePageHub1",
-      "Mail_HomePageHub2"
+      "Collect_HomePageHub",
+      "Collect_HomePageHub1",
+      "Collect_HomePageHub2"
     ]
   },
-  "Mail_HomePageHub": {
+  "Collect_HomePageHub": {
     "recognition": "TemplateMatch",
     "action": "Click",
     "next": [
-      "Mail_EnterMail",
-      "Mail_HomePageHub",
-      "Mail_HomePageHub1"
+      "Collect_EnterCollect",
+      "Collect_HomePageHub",
+      "Collect_HomePageHub1"
     ],
     "post_delay": 2000,
     "focus": "G=0.页面预期内，普通启动。M.箱庭地图run已确认",
@@ -33,13 +33,13 @@
     ],
     "doc": "找到run-点击返回主页"
   },
-  "Mail_HomePageHub1": {
+  "Collect_HomePageHub1": {
     "recognition": "TemplateMatch",
     "action": "Click",
     "next": [
-      "Mail_EnterMail",
-      "Mail_HomePageHub",
-      "Mail_HomePageHub1"
+      "Collect_EnterCollect",
+      "Collect_HomePageHub",
+      "Collect_HomePageHub1"
     ],
     "post_delay": 2000,
     "focus": "G=0.页面预期内，普通启动。BM.箱庭地图pin已确认",
@@ -59,13 +59,13 @@
       "pin.png"
     ]
   },
-  "Mail_HomePageHub2": {
+  "Collect_HomePageHub2": {
     "recognition": "TemplateMatch",
     "action": "Click",
     "next": [
-      "Mail_HomePageHub",
-      "Mail_HomePageHub1",
-      "Mail_HomePageHub2"
+      "Collect_HomePageHub",
+      "Collect_HomePageHub1",
+      "Collect_HomePageHub2"
     ],
     "post_delay": 2000,
     "focus": "G=1.页面非预期，点击返回按钮",

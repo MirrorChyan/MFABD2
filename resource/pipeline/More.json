@@ -160,7 +160,10 @@
     "doc": "点击More本子"
   },
   "More_Evil_Move": {
-    "action": "Click",
+    "action": "LongPress",
+    "next": [
+      "More_Evil_Redemption_Start"
+    ],
     "focus": "MM.向上行走。BM.箱庭地图pin确认",
     "roi": [
       1108,
@@ -172,11 +175,277 @@
       "pin.png"
     ],
     "target": [
-      336,
-      218,
+      651,
+      171,
       0,
       0
     ],
     "duration": 5000
+  },
+  "More_Evil_Redemption_Start": {
+    "next": [
+      "More_Evil_Redemption_In"
+    ]
+  },
+  "More_Evil_Redemption_In": {
+    "recognition": "OCR",
+    "action": "Click",
+    "next": [
+      "More_Evil_Redemption_SelLv",
+      "More_Evil_Redemption_In"
+    ],
+    "post_delay": 3000,
+    "roi": [
+      524,
+      391,
+      190,
+      78
+    ],
+    "expected": [
+      "救赎之塔"
+    ]
+  },
+  "More_Evil_Redemption_SelLv": {
+    "recognition": "TemplateMatch",
+    "action": "Click",
+    "next": [
+      "More_Evil_Redemption_QuickBattUnable",
+      "More_Evil_Redemption_QuickBatt"
+    ],
+    "post_delay": 3000,
+    "roi": [
+      175,
+      69,
+      176,
+      650
+    ],
+    "template": [
+      "LV.png"
+    ],
+    "green_mask": true,
+    "target_offset": [
+      20,
+      -90,
+      0,
+      0
+    ]
+  },
+  "More_Evil_Redemption_QuickBatt": {
+    "recognition": "OCR",
+    "action": "Click",
+    "next": [
+      "More_Evil_Redemption_MAX"
+    ],
+    "roi": [
+      832,
+      621,
+      134,
+      46
+    ],
+    "expected": [
+      "快速战斗"
+    ]
+  },
+  "More_Evil_Redemption_QuickBattUnable": {
+    "next": [
+      "More_Evil_Redemption_PageBackHub"
+    ],
+    "roi": [
+      773,
+      415,
+      0,
+      0
+    ],
+    "lower": [
+      56,
+      61,
+      66
+    ],
+    "upper": [
+      56,
+      61,
+      66
+    ]
+  },
+  "More_Evil_Redemption_MAX": {
+    "recognition": "OCR",
+    "action": "Click",
+    "next": [
+      "More_Evil_Redemption_On"
+    ],
+    "roi": [
+      769,
+      340,
+      85,
+      47
+    ],
+    "expected": [
+      "MAX"
+    ]
+  },
+  "More_Evil_Redemption_On": {
+    "recognition": "OCR",
+    "action": "Click",
+    "next": [
+      "More_Evil_Redemption_Result",
+      "More_Evil_Redemption_On"
+    ],
+    "post_delay": 5000,
+    "roi": [
+      618,
+      566,
+      176,
+      29
+    ],
+    "expected": [
+      "战斗"
+    ]
+  },
+  "More_Evil_Redemption_Result": {
+    "recognition": "OCR",
+    "action": "Click",
+    "roi": [
+      864,
+      562,
+      399,
+      146
+    ],
+    "expected": [
+      "点击画面继续"
+    ]
+  },
+  "More_Evil_Redemption_PageBackHub": {
+    "recognition": "TemplateMatch",
+    "action": "Click",
+    "next": [
+      "More_Evil_Redemption_PageBackHub"
+    ],
+    "post_delay": 2000,
+    "focus": "G=1.页面非预期，点击返回按钮",
+    "roi": [
+      1,
+      1,
+      231,
+      124
+    ],
+    "template": [
+      "BackButGe.png",
+      "BackButGe2.png"
+    ],
+    "green_mask": true,
+    "replace": [],
+    "doc": "其他页面，返回按钮"
+  },
+  "More_Evil_Redemption_End": {},
+  "More_Evil_SemiautoTower_Start": {},
+  "More_Evil_SemiautoTower_On": {
+    "recognition": "OCR",
+    "action": "Click",
+    "roi": [
+      1043,
+      636,
+      118,
+      38
+    ],
+    "expected": [
+      "进入第"
+    ]
+  },
+  "More_Evil_SemiautoTower_OnCk": {
+    "recognition": "OCR",
+    "action": "Click",
+    "next": [
+      "More_Evil_SemiautoTower_OnCk"
+    ],
+    "post_delay": 5000,
+    "roi": [
+      676,
+      403,
+      93,
+      39
+    ],
+    "expected": [
+      "确认"
+    ]
+  },
+  "识别到手动": {
+    "recognition": "OCR",
+    "action": "Click",
+    "roi": [
+      1035,
+      624,
+      81,
+      45
+    ],
+    "expected": [
+      "URN"
+    ],
+    "target": [
+      1017,
+      43,
+      0,
+      0
+    ]
+  },
+  "识别自动": {
+    "recognition": "OCR",
+    "post_delay": 10000,
+    "roi": [
+      50,
+      582,
+      139,
+      54
+    ],
+    "expected": [
+      "自动战斗中"
+    ]
+  },
+  "结束去下一次": {
+    "recognition": "OCR",
+    "roi": [
+      1054,
+      654,
+      133,
+      36
+    ],
+    "expected": [
+      "前往下一层"
+    ]
+  },
+  "More_Evil_SemiautoTower_OnCk2": {
+    "recognition": "OCR",
+    "action": "Click",
+    "next": [
+      "More_Evil_SemiautoTower_OnCk"
+    ],
+    "post_delay": 5000,
+    "roi": [
+      676,
+      403,
+      93,
+      39
+    ],
+    "expected": [
+      "确认"
+    ]
+  },
+  "失败界面": {
+    "recognition": "OCR",
+    "action": "Click",
+    "roi": [
+      680,
+      632,
+      93,
+      42
+    ],
+    "expected": [
+      "重新挑战"
+    ],
+    "target": [
+      569,
+      650,
+      0,
+      0
+    ]
   }
 }
