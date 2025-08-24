@@ -10,9 +10,7 @@
     "recognition": "TemplateMatch",
     "next": [
       "Collect_PerPetTask",
-      "Collect_PVEChapterIden2#",
-      "Collect_HomePageHub",
-      "Collect_HomePageHub1"
+      "Collect_PVEChapterIden2#"
     ],
     "interrupt": [
       "Collect_HomePageSwipeInitialize_BackHomePage"
@@ -39,21 +37,15 @@
   },
   "Collect_HomePageHub1": {
     "recognition": "TemplateMatch",
-    "action": "Click",
     "next": [
       "Collect_PerPetTask",
-      "Collect_PVEChapterIden2#",
-      "Collect_HomePageHub",
-      "Collect_HomePageHub1"
+      "Collect_PVEChapterIden2#"
+    ],
+    "interrupt": [
+      "Collect_HomePageSwipeInitialize_BackHomePage"
     ],
     "post_delay": 2000,
     "focus": "G=0.页面预期内。BM.箱庭地图pin已确认",
-    "target": [
-      1186,
-      46,
-      0,
-      0
-    ],
     "roi": [
       1108,
       637,
@@ -62,6 +54,12 @@
     ],
     "template": [
       "pin.png"
+    ],
+    "target": [
+      1186,
+      46,
+      0,
+      0
     ]
   },
   "Collect_HomePageHub2": {
@@ -152,6 +150,7 @@
     "template": [
       "pve2.png"
     ],
+    "threshold": 0.95,
     "doc": "点击PVE本子2"
   },
   "Collect_HomePageSwipeInitialize_BackHomePage": {
