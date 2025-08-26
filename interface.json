@@ -78,8 +78,12 @@
       "entry": "Mail_HomePage"
     },
     {
-      "name": "扩展操作",
-      "entry": "More_HomePage"
+      "name": "肉鸽塔每日快速战斗",
+      "entry": "Redemption_HomePage",
+      "option": [
+        "关闭",
+        "开启"
+      ]
     },
     {
       "name": "结束游戏",
@@ -401,6 +405,24 @@
                   ]
             }
           }
+        }
+      ]
+    },
+    "肉鸽塔快速战斗": {
+      "cases": [
+        {
+          "name": "关闭",
+          "pipeline_override": {
+          	"Redemption_HomePage": {
+               "next": [
+                "Redemption_Evil_Redemption_End"
+                ]
+            }
+          }
+        },
+        {
+          "name": "开启",
+          "pipeline_override": {}
         }
       ]
     },
