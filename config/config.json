@@ -108,11 +108,7 @@
       "check": true,
       "option": [
         {
-          "name": "关闭",
-          "index": 0
-        },
-        {
-          "name": "开启",
+          "name": "肉鸽塔快速战斗",
           "index": 0
         }
       ]

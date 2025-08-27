@@ -281,7 +281,7 @@
     "template": [
       "N.png"
     ],
-    "threshold": 0.99,
+    "threshold": 0.9,
     "doc": "点击N"
   },
   "Equip_EquipUpSelect": {
