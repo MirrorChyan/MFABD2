@@ -4,6 +4,7 @@
     "next": [
       "StartGame_Logo",
       "StartGame_LinkError",
+      "StartGame_Error_API",
       "StartGame_LoadingPage"
     ],
     "post_delay": 8000,
@@ -795,6 +796,30 @@
     ],
     "expected": [
       "确认"
+    ]
+  },
+  "StartGame_Error_API": {
+    "recognition": "OCR",
+    "focus": "ERROR：API。特殊错误，请检查。",
+    "action": "Click",
+    "next": [
+      "StartGame_LoadingPage"
+    ],
+    "roi": [
+      452,
+      250,
+      375,
+      218
+    ],
+    "expected": [
+      "API服务器连线发生错误",
+      "登录失败"
+    ],
+    "target": [
+      640,
+      429,
+      0,
+      0
     ]
   }
 }
