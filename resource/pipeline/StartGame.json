@@ -311,7 +311,10 @@
       "StartGame_TouchStart",
       "StartGame_MapPage",
       "StartGame_PVPSet",
-      "StartGame_BackMapPage"
+      "StartGame_Special",
+      "StartGame_BackMapPage",
+      "StartGame_NewChar",
+      "StartGame_DaliyBanner"
     ],
     "pre_delay": 5000,
     "post_delay": 20000,
@@ -832,6 +835,18 @@
       "无法连接和使用游戏",
       "定期维护和更新",
       "公告事项"
+    ]
+  },
+  "StartGame_Special": {
+    "recognition": "OCR",
+    "focus": "特殊页面，尝试消除。",
+    "action": "Click",
+    "next": [
+      "StartGame_MapPage"
+    ],
+    "expected": [
+      "赛季奖励",
+      "奖励已发放至"
     ]
   }
 }
