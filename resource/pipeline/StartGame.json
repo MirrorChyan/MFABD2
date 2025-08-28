@@ -5,6 +5,7 @@
       "StartGame_Logo",
       "StartGame_LinkError",
       "StartGame_Error_API",
+      "StartGame_Error_AM",
       "StartGame_LoadingPage"
     ],
     "post_delay": 8000,
@@ -40,7 +41,9 @@
       "StartGame_UpdateDate",
       "StartGame_PayFaild",
       "StartGame_TouchStart",
-      "StartGame_LoadingPage"
+      "StartGame_LoadingPage",
+      "StartGame_Error_API",
+      "StartGame_Error_AM"
     ],
     "post_delay": 10000,
     "pre_wait_freezes": 3000,
@@ -800,11 +803,11 @@
   },
   "StartGame_Error_API": {
     "recognition": "OCR",
-    "focus": "ERROR：API。特殊错误，请检查。",
     "action": "Click",
     "next": [
       "StartGame_LoadingPage"
     ],
+    "focus": "ERROR：API。特殊错误，请检查。",
     "roi": [
       452,
       250,
@@ -820,6 +823,15 @@
       429,
       0,
       0
+    ]
+  },
+  "StartGame_Error_AM": {
+    "recognition": "OCR",
+    "focus": "ERROR：服务端停机公告。特殊错误，请检查。",
+    "expected": [
+      "无法连接和使用游戏",
+      "定期维护和更新",
+      "公告事项"
     ]
   }
 }
