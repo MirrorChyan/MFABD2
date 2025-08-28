@@ -85,6 +85,13 @@
       ]
     },
     {
+      "name": "每周独立周常",
+      "entry": "Weekly_HomePage",
+      "option": [
+        "末日之书"
+      ]
+    },
+    {
       "name": "结束游戏",
       "entry": "Close_HomePage"
     },
@@ -415,6 +422,24 @@
           	"Redemption_HomePage": {
                "next": [
                 "Redemption_Evil_Redemption_End"
+                ]
+            }
+          }
+        },
+        {
+          "name": "开启",
+          "pipeline_override": {}
+        }
+      ]
+    },
+    "末日之书": {
+      "cases": [
+        {
+          "name": "关闭",
+          "pipeline_override": {
+          	"Weekly_LastNight_Start": {
+               "next": [
+                "Weekly_LastNight_End"
                 ]
             }
           }

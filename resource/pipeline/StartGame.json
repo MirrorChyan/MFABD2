@@ -839,11 +839,12 @@
   },
   "StartGame_Special": {
     "recognition": "OCR",
-    "focus": "特殊页面，尝试消除。",
     "action": "Click",
     "next": [
-      "StartGame_MapPage"
+      "StartGame_MapPage",
+      "StartGame_Special"
     ],
+    "focus": "特殊页面，尝试消除。",
     "expected": [
       "赛季奖励",
       "奖励已发放至"

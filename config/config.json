@@ -114,9 +114,20 @@
       ]
     },
     {
+      "name": "每周独立周常",
+      "entry": "Weekly_HomePage",
+      "check": true,
+      "option": [
+        {
+          "name": "末日之书",
+          "index": 0
+        }
+      ]
+    },
+    {
       "name": "结束游戏",
       "entry": "Close_HomePage",
-      "check": false
+      "check": true
     },
     {
       "name": "Test",
