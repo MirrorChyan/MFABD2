@@ -7,30 +7,31 @@
   },
   "Weekly_WeeklySelector": {
     "next": [
-      "Weekly_LastNight_Start"
+      "Weekly_TotalStart"
     ]
   },
   "Weekly_Freselector": {
     "next": [
+      "Weekly_TotalStart"
+    ]
+  },
+  "Weekly_TotalStart": {
+    "next": [
       "Weekly_LastNight_Start"
     ]
   },
-  "Weekly_LastNight_Start": {
+  "Weekly_HomePageHub0": {
+    "recognition": "TemplateMatch",
     "next": [
-      "Weekly_LastNight_Ind",
       "Weekly_HomePageHub",
-      "Weekly_HomePageHub2",
-      "Weekly_HomePageHub1"
-    ]
+      "Weekly_HomePageHub1",
+      "Weekly_HomePageHub2"
+    ],
+    "focus": "WB.恢复到主界面"
   },
   "Weekly_HomePageHub": {
     "recognition": "TemplateMatch",
     "action": "Click",
-    "next": [
-      "Weekly_HomePage2",
-      "Weekly_HomePageHub",
-      "Weekly_HomePageHub1"
-    ],
     "post_delay": 2000,
     "focus": "G=0.页面预期内，普通启动。M.箱庭地图run已确认",
     "roi": [
@@ -53,11 +54,6 @@
   },
   "Weekly_HomePageHub1": {
     "recognition": "TemplateMatch",
-    "next": [
-      "Weekly_HomePage2",
-      "Weekly_HomePageHub",
-      "Weekly_HomePageHub1"
-    ],
     "post_delay": 2000,
     "focus": "G=0.页面预期内，普通启动。BM.箱庭地图pin已确认",
     "roi": [
@@ -73,11 +69,6 @@
   "Weekly_HomePageHub2": {
     "recognition": "TemplateMatch",
     "action": "Click",
-    "next": [
-      "Weekly_HomePageHub",
-      "Weekly_HomePageHub1",
-      "Weekly_HomePageHub2"
-    ],
     "post_delay": 2000,
     "focus": "G=1.页面非预期，点击返回按钮",
     "roi": [
@@ -94,12 +85,23 @@
     "replace": [],
     "doc": "其他页面，返回按钮"
   },
-  "Weekly_HomePage2": {
+  "Weekly_LastNight_Start": {
+    "next": [
+      "Weekly_LastNight_Ind",
+      "Weekly_LastNight_HomePage"
+    ],
+    "interrupt": [
+      "Weekly_HomePageHub",
+      "Weekly_HomePageHub2",
+      "Weekly_HomePageHub1"
+    ]
+  },
+  "Weekly_LastNight_HomePage": {
     "recognition": "OCR",
     "action": "Click",
     "next": [
       "Weekly_MoreBook_LastNight",
-      "Weekly_HomePageSwipe"
+      "Weekly_LastNight_HomePageSwipe"
     ],
     "focus": "PM.主页面",
     "roi": [
@@ -119,12 +121,12 @@
     ],
     "doc": "识别左下抽抽乐-主页-点击选择章节"
   },
-  "Weekly_HomePageSwipe": {
+  "Weekly_LastNight_HomePageSwipe": {
     "recognition": "OCR",
     "action": "Swipe",
     "next": [
       "Weekly_MoreBook_LastNight",
-      "Weekly_HomePageSwipe"
+      "Weekly_LastNight_HomePageSwipe"
     ],
     "pre_delay": 1000,
     "focus": "PM.卡带界面垂直复位(一次性)",
@@ -477,5 +479,371 @@
     ],
     "doc": "识别右下图钉-章节主页"
   },
-  "Weekly_LastNight_End": {}
+  "Weekly_LastNight_End": {
+    "next": [
+      "Weekly_VisitCabin_Start"
+    ]
+  },
+  "Weekly_VisitCabin_Start": {
+    "next": [
+      "Weekly_VisitCabin_HomePage"
+    ],
+    "interrupt": [
+      "Weekly_HomePageHub",
+      "Weekly_HomePageHub2",
+      "Weekly_HomePageHub1"
+    ]
+  },
+  "Weekly_VisitCabin_HomePage": {
+    "recognition": "OCR",
+    "next": [
+      "Weekly_VisitCabin_GoIn",
+      "Weekly_VisitCabin_HomePage"
+    ],
+    "roi": [
+      98,
+      656,
+      66,
+      32
+    ],
+    "expected": [
+      "抽抽乐"
+    ]
+  },
+  "Weekly_VisitCabin_GoIn": {
+    "recognition": "OCR",
+    "action": "Click",
+    "next": [
+      "Weekly_VisitCabin_TabChg",
+      "Weekly_VisitCabin_GoIn"
+    ],
+    "post_delay": 8000,
+    "roi": [
+      16,
+      84,
+      455,
+      275
+    ],
+    "expected": [
+      "我的小屋"
+    ],
+    "target_offset": [
+      5,
+      -45,
+      0,
+      0
+    ]
+  },
+  "Weekly_VisitCabin_TabChg": {
+    "recognition": "OCR",
+    "action": "Click",
+    "next": [
+      "Weekly_VisitCabin_ModChg",
+      "Weekly_VisitCabin_TabChg"
+    ],
+    "post_delay": 8000,
+    "roi": [
+      154,
+      0,
+      305,
+      125
+    ],
+    "expected": [
+      "我的小屋"
+    ],
+    "target": [
+      136,
+      200,
+      0,
+      0
+    ]
+  },
+  "Weekly_VisitCabin_ModChg": {
+    "recognition": "OCR",
+    "action": "Click",
+    "next": [
+      "Weekly_VisitCabin_Like1",
+      "Weekly_VisitCabin_ModChg"
+    ],
+    "roi": [
+      149,
+      0,
+      259,
+      111
+    ],
+    "threshold": 0.6,
+    "expected": [
+      "参观"
+    ],
+    "target": [
+      212,
+      175,
+      0,
+      0
+    ]
+  },
+  "Weekly_VisitCabin_Like1": {
+    "recognition": "OCR",
+    "action": "Click",
+    "next": [
+      "Weekly_VisitCabin_Like1Chg"
+    ],
+    "post_delay": 2000,
+    "roi": [
+      946,
+      597,
+      263,
+      106
+    ],
+    "expected": [
+      "再次探查"
+    ],
+    "target": [
+      1144,
+      94,
+      0,
+      0
+    ]
+  },
+  "Weekly_VisitCabin_Like1Chg": {
+    "action": "Click",
+    "next": [
+      "Weekly_VisitCabin_Like2"
+    ],
+    "post_delay": 8000,
+    "roi": [
+      946,
+      597,
+      263,
+      106
+    ],
+    "expected": [
+      "再次探查"
+    ],
+    "target": [
+      850,
+      658,
+      0,
+      0
+    ]
+  },
+  "Weekly_VisitCabin_Like2": {
+    "recognition": "OCR",
+    "action": "Click",
+    "next": [
+      "Weekly_VisitCabin_Like2Chg"
+    ],
+    "post_delay": 2000,
+    "roi": [
+      946,
+      597,
+      263,
+      106
+    ],
+    "expected": [
+      "再次探查"
+    ],
+    "target": [
+      1144,
+      94,
+      0,
+      0
+    ]
+  },
+  "Weekly_VisitCabin_Like2Chg": {
+    "action": "Click",
+    "next": [
+      "Weekly_VisitCabin_Like3"
+    ],
+    "post_delay": 8000,
+    "roi": [
+      946,
+      597,
+      263,
+      106
+    ],
+    "expected": [
+      "再次探查"
+    ],
+    "target": [
+      850,
+      658,
+      0,
+      0
+    ]
+  },
+  "Weekly_VisitCabin_Like3": {
+    "recognition": "OCR",
+    "action": "Click",
+    "next": [
+      "Weekly_VisitCabin_Like3Chg"
+    ],
+    "post_delay": 2000,
+    "roi": [
+      946,
+      597,
+      263,
+      106
+    ],
+    "expected": [
+      "再次探查"
+    ],
+    "target": [
+      1144,
+      94,
+      0,
+      0
+    ]
+  },
+  "Weekly_VisitCabin_Like3Chg": {
+    "action": "Click",
+    "next": [
+      "Weekly_VisitCabin_Like4"
+    ],
+    "post_delay": 8000,
+    "roi": [
+      946,
+      597,
+      263,
+      106
+    ],
+    "expected": [
+      "再次探查"
+    ],
+    "target": [
+      850,
+      658,
+      0,
+      0
+    ]
+  },
+  "Weekly_VisitCabin_Like4": {
+    "recognition": "OCR",
+    "action": "Click",
+    "next": [
+      "Weekly_VisitCabin_LeavToHomePage"
+    ],
+    "interrupt": [
+      "Weekly_HomePageHub",
+      "Weekly_HomePageHub1",
+      "Weekly_HomePageHub2"
+    ],
+    "post_delay": 2000,
+    "roi": [
+      946,
+      597,
+      263,
+      106
+    ],
+    "expected": [
+      "再次探查"
+    ],
+    "target": [
+      1144,
+      94,
+      0,
+      0
+    ]
+  },
+  "Weekly_VisitCabin_LeavToHomePage": {
+    "recognition": "TemplateMatch",
+    "next": [
+      "Weekly_VisitCabin_End"
+    ],
+    "roi": [
+      1047,
+      516,
+      107,
+      110
+    ],
+    "template": [
+      "Run.png"
+    ],
+    "green_mask": true
+  },
+  "Weekly_VisitCabin_End": {
+    "next": [
+      "Weekly_Arcade_Start"
+    ]
+  },
+  "Weekly_Arcade_Start": {
+    "next": [
+      "Weekly_Arcade_HomePage"
+    ],
+    "interrupt": [
+      "Weekly_HomePageHub",
+      "Weekly_HomePageHub1",
+      "Weekly_HomePageHub2"
+    ]
+  },
+  "Weekly_Arcade_HomePage": {
+    "recognition": "OCR",
+    "next": [
+      "Weekly_Arcade_GoIn"
+    ],
+    "roi": [
+      98,
+      656,
+      66,
+      32
+    ],
+    "expected": [
+      "抽抽乐"
+    ]
+  },
+  "Weekly_Arcade_GoIn": {
+    "recognition": "OCR",
+    "action": "Click",
+    "next": [
+      "Weekly_Arcade_InCk",
+      "Weekly_Arcade_GoIn"
+    ],
+    "roi": "Weekly_VisitCabin_GoIn",
+    "expected": [
+      "街机游戏"
+    ],
+    "target_offset": [
+      5,
+      -45,
+      0,
+      0
+    ]
+  },
+  "Weekly_Arcade_InCk": {
+    "recognition": "OCR",
+    "next": [
+      "Weekly_Arcade_LeavToHomePage"
+    ],
+    "interrupt": [
+      "Weekly_HomePageHub",
+      "Weekly_HomePageHub1",
+      "Weekly_HomePageHub2"
+    ],
+    "roi": [
+      171,
+      12,
+      222,
+      68
+    ],
+    "expected": [
+      "街机游戏"
+    ]
+  },
+  "Weekly_Arcade_LeavToHomePage": {
+    "recognition": "TemplateMatch",
+    "next": [
+      "Weekly_Arcade_End"
+    ],
+    "roi": [
+      1047,
+      516,
+      107,
+      110
+    ],
+    "template": [
+      "Run.png"
+    ],
+    "green_mask": true
+  },
+  "Weekly_Arcade_End": {}
 }
