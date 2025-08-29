@@ -96,6 +96,14 @@
       "entry": "Close_HomePage"
     },
     {
+      "name": "半自动操作（常闭！单开！）",
+      "entry": "SemiAuto_HomePage",
+      "option": [
+        "半自动爬塔(从选层数界面开始)",
+        "半自动末日之书(从‘去战斗’页面开始)"
+      ]
+    },
+    {
       "name": "Test",
       "entry": "Test_HomePage"
     }
@@ -440,6 +448,42 @@
           	"Weekly_LastNight_Start": {
                "next": [
                 "Weekly_LastNight_End"
+                ]
+            }
+          }
+        },
+        {
+          "name": "开启",
+          "pipeline_override": {}
+        }
+      ]
+    },
+    "半自动爬塔(从选层数界面开始)": {
+      "cases": [
+        {
+          "name": "关闭",
+          "pipeline_override": {
+          	"SemiAuto_Evil_SemiautoTower_Start": {
+               "next": [
+                "SemiAuto_Evil_SemiautoTower_End"
+                ]
+            }
+          }
+        },
+        {
+          "name": "开启",
+          "pipeline_override": {}
+        }
+      ]
+    },
+    "半自动末日之书(从‘去战斗’页面开始)": {
+      "cases": [
+        {
+          "name": "关闭",
+          "pipeline_override": {
+          	"SemiAuto_LastNight_Start": {
+               "next": [
+                "SemiAuto_LastNight_End"
                 ]
             }
           }

@@ -130,6 +130,21 @@
       "check": true
     },
     {
+      "name": "半自动操作（常闭！单开！）",
+      "entry": "SemiAuto_HomePage",
+      "check": false,
+      "option": [
+        {
+          "name": "半自动爬塔(从选层数界面开始)",
+          "index": 0
+        },
+        {
+          "name": "半自动末日之书(从‘去战斗’页面开始)",
+          "index": 0
+        }
+      ]
+    },
+    {
       "name": "Test",
       "entry": "Test_HomePage",
       "check": false
