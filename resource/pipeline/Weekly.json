@@ -371,8 +371,10 @@
     "recognition": "TemplateMatch",
     "action": "Click",
     "next": [
-      "Weekly_LastNight_BackHomePage2"
+      "Weekly_LastNight_BackHomePage2",
+      "Weekly_LastNight_BackPVEPage"
     ],
+    "post_delay": 2000,
     "focus": "PM.开始离开PVP卡带",
     "roi": [
       1122,
@@ -395,8 +397,10 @@
     "recognition": "OCR",
     "action": "Click",
     "next": [
-      "Weekly_LastNight_PVEBookSwipe"
+      "Weekly_LastNight_PVEBookSwipe",
+      "Weekly_LastNight_BackHomePage2"
     ],
+    "post_delay": 2000,
     "roi": [
       98,
       656,
@@ -447,7 +451,8 @@
     "recognition": "TemplateMatch",
     "action": "Click",
     "next": [
-      "Weekly_LastNight_FinBackMapPage"
+      "Weekly_LastNight_FinBackMapPage",
+      "Weekly_LastNight_TouchPVEBook"
     ],
     "post_delay": 5000,
     "focus": "PM.复位用卡带已找到",
