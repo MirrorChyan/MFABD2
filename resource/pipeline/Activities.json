@@ -149,6 +149,7 @@
       "ActivePeerGe.png",
       "ActiveGe.png"
     ],
+    "threshold": 0.9,
     "green_mask": true,
     "target_offset": [
       -50,
