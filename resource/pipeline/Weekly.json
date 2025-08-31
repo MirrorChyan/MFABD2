@@ -173,7 +173,8 @@
     "recognition": "OCR",
     "action": "Click",
     "next": [
-      "Weekly_LastNight_Move"
+      "Weekly_LastNight_Move",
+      "Weekly_MoreBook_LastNight"
     ],
     "post_delay": 8000,
     "focus": "PM.More卡带",
