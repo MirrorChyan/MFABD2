@@ -1,12 +1,36 @@
 {
   "Test_HomePage": {
     "recognition": "TemplateMatch",
-    "focus": "测试",
-    "template": [
-      "RglikeGouGe.png"
+    "next": [
+      "Test_Action"
     ],
-    "green_mask": true,
-    "connected": false,
-    "doc": "PVE点击技能1。next暴力修改：因无物品可吸取不会消耗次数，故两个吸取技能连续使用；且缩减延迟。"
+    "focus": "测试1",
+    "roi": [
+      663,
+      576,
+      616,
+      143
+    ],
+    "template": [
+      "debug.png"
+    ],
+    "method": 1,
+    "doc": "。"
+  },
+  "Test_Action": {
+    "recognition": "TemplateMatch",
+    "focus": "测试2",
+    "roi": [
+      663,
+      576,
+      616,
+      143
+    ],
+    "template": [
+      "debug.png"
+    ],
+    "order_by": "Score",
+    "method": 1,
+    "doc": ""
   }
 }

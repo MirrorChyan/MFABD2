@@ -94,6 +94,8 @@
 
   https://github.com/MaaXYZ/MaaDebugger
   
+  "index" 此参数若设定不等于0时，不能用interface回写到0。请反过来写。
+  
   75,100,300,580 ，界面左侧，抽卡池子表，范围
   393,390,872,293 ，免费一次范围（扩大）
   1160,47,0,0 ，抽中5*的跳过
@@ -166,3 +168,157 @@
   战斗I	贫民区
   战斗II	盗贼据点
   安全	罗戴夫旅馆
+  
+  
+  快速卡带-类：36,527,1104,63
+  最近
+  剧情游戏卡
+  角色游戏卡
+  玩法游戏卡带
+  活动游戏卡
+  
+  bk:
+  ,
+        {
+          "name": "快速卡带-自定义前三图：剧情-剧情-角色",
+          "pipeline_override": {
+            "Collect_HomePageHub": {
+              "next": [
+              	"Collect_QuickCart_QC1Sort"
+                ],
+              "interrupt": [
+              	"Collect_QuickCart_FastIcons"
+                ]
+            },
+            "Collect_HomePageHub1": {
+              "next": [
+              	"Collect_QuickCart_QC1Sort"
+                ],
+              "interrupt": [
+              	"Collect_QuickCart_FastIcons"
+                ]
+            },
+            "Collect_StartGameType2": {
+              "next": [
+              	"Collect_QuickCart_QC1Sort"
+                ],
+              "interrupt": [
+              	"Collect_QuickCart_FastIcons"
+                ]
+            },
+            "Collect_TargetMap3": {
+              "next": [
+              	"Collect_QuickCart_TargetMapEnd"
+                ]
+            },
+            "Collect_QuickCart_QC3Sort": {
+              "expected": [
+              	"角色游戏卡"
+                ]
+            },
+            "Collect_QuickCart_QC3": {
+                "index": 0
+            }
+          }
+        },
+        {
+          "name": "快速卡带-自定义前三图：剧情-角色-角色",
+          "pipeline_override": {
+            "Collect_HomePageHub": {
+              "next": [
+              	"Collect_QuickCart_QC1Sort"
+                ],
+              "interrupt": [
+              	"Collect_QuickCart_FastIcons"
+                ]
+            },
+            "Collect_HomePageHub1": {
+              "next": [
+              	"Collect_QuickCart_QC1Sort"
+                ],
+              "interrupt": [
+              	"Collect_QuickCart_FastIcons"
+                ]
+            },
+            "Collect_StartGameType2": {
+              "next": [
+              	"Collect_QuickCart_QC1Sort"
+                ],
+              "interrupt": [
+              	"Collect_QuickCart_FastIcons"
+                ]
+            },
+            "Collect_TargetMap3": {
+              "next": [
+              	"Collect_QuickCart_TargetMapEnd"
+                ]
+            },
+            "Collect_QuickCart_QC2Sort": {
+              "expected": [
+              	"角色游戏卡"
+                ]
+            },
+            "Collect_QuickCart_QC2": {
+                "index": 0,
+                "doc": "000"
+            },
+            "Collect_QuickCart_QC3Sort": {
+              "expected": [
+              	"角色游戏卡"
+                ]
+            },
+            "Collect_QuickCart_QC3": {
+                "index": 1,
+                "doc": "000"
+            }
+          }
+        },
+        {
+          "name": "快速卡带-自定义前三图：角色-角色-角色",
+          "pipeline_override": {
+            "Collect_HomePageHub": {
+              "next": [
+              	"Collect_QuickCart_QC1Sort"
+                ],
+              "interrupt": [
+              	"Collect_QuickCart_FastIcons"
+                ]
+            },
+            "Collect_HomePageHub1": {
+              "next": [
+              	"Collect_QuickCart_QC1Sort"
+                ],
+              "interrupt": [
+              	"Collect_QuickCart_FastIcons"
+                ]
+            },
+            "Collect_StartGameType2": {
+              "next": [
+              	"Collect_QuickCart_QC1Sort"
+                ],
+              "interrupt": [
+              	"Collect_QuickCart_FastIcons"
+                ]
+            },
+            "Collect_TargetMap3": {
+              "next": [
+              	"Collect_QuickCart_TargetMapEnd"
+                ]
+            },
+            "Collect_QuickCart_QC1Sort": {
+              "expected": [
+              	"角色游戏卡"
+                ]
+            },
+            "Collect_QuickCart_QC2Sort": {
+              "expected": [
+              	"角色游戏卡"
+                ]
+            },
+            "Collect_QuickCart_QC3Sort": {
+              "expected": [
+              	"角色游戏卡"
+                ]
+            }
+          }
+        }

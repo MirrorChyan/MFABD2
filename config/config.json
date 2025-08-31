@@ -7,17 +7,28 @@
       "check": true
     },
     {
+      "name": "地图采集",
+      "entry": "Collect_StartGame_HomePage",
+      "check": true,
+      "option": [
+        {
+          "name": "采集方案",
+          "index": 2
+        }
+      ]
+    },
+    {
       "name": "地图扫荡",
       "entry": "Battle_StartGame_HomePage",
       "check": true,
       "option": [
         {
           "name": "狩猎场-章节图策略",
-          "index": 1
+          "index": 0
         },
         {
           "name": "冒险航线-双倍图策略",
-          "index": 1
+          "index": 0
         },
         {
           "name": "战斗次数分配",
@@ -25,17 +36,6 @@
         },
         {
           "name": "冒险航线-圣石洞穴属性",
-          "index": 4
-        }
-      ]
-    },
-    {
-      "name": "地图采集",
-      "entry": "Collect_StartGame_HomePage",
-      "check": true,
-      "option": [
-        {
-          "name": "采集方案",
           "index": 0
         }
       ]
@@ -57,7 +57,7 @@
       "option": [
         {
           "name": "竞技场战斗次数",
-          "index": 1
+          "index": 0
         }
       ]
     },
@@ -68,11 +68,11 @@
       "option": [
         {
           "name": "活动图小游戏扫荡",
-          "index": 1
+          "index": 0
         },
         {
           "name": "活动图快速战斗难度",
-          "index": 1
+          "index": 0
         }
       ]
     },
@@ -120,7 +120,7 @@
       "option": [
         {
           "name": "末日之书",
-          "index": 1
+          "index": 0
         }
       ]
     },
