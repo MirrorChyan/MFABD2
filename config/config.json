@@ -4,12 +4,12 @@
     {
       "name": "启动游戏",
       "entry": "StartGame_Start",
-      "check": false
+      "check": true
     },
     {
       "name": "地图扫荡",
       "entry": "Battle_StartGame_HomePage",
-      "check": false,
+      "check": true,
       "option": [
         {
           "name": "狩猎场-章节图策略",
@@ -32,7 +32,7 @@
     {
       "name": "地图采集",
       "entry": "Collect_StartGame_HomePage",
-      "check": false,
+      "check": true,
       "option": [
         {
           "name": "采集方案",
@@ -57,7 +57,7 @@
       "option": [
         {
           "name": "竞技场战斗次数",
-          "index": 0
+          "index": 1
         }
       ]
     },
@@ -68,11 +68,11 @@
       "option": [
         {
           "name": "活动图小游戏扫荡",
-          "index": 0
+          "index": 1
         },
         {
           "name": "活动图快速战斗难度",
-          "index": 0
+          "index": 1
         }
       ]
     },
@@ -120,14 +120,14 @@
       "option": [
         {
           "name": "末日之书",
-          "index": 0
+          "index": 1
         }
       ]
     },
     {
       "name": "结束游戏",
       "entry": "Close_HomePage",
-      "check": false
+      "check": true
     },
     {
       "name": "半自动操作（常闭！单开！）",
