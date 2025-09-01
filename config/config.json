@@ -4,31 +4,20 @@
     {
       "name": "启动游戏",
       "entry": "StartGame_Start",
-      "check": true
-    },
-    {
-      "name": "地图采集",
-      "entry": "Collect_StartGame_HomePage",
-      "check": true,
-      "option": [
-        {
-          "name": "采集方案",
-          "index": 2
-        }
-      ]
+      "check": false
     },
     {
       "name": "地图扫荡",
       "entry": "Battle_StartGame_HomePage",
-      "check": true,
+      "check": false,
       "option": [
         {
           "name": "狩猎场-章节图策略",
-          "index": 0
+          "index": 1
         },
         {
           "name": "冒险航线-双倍图策略",
-          "index": 0
+          "index": 1
         },
         {
           "name": "战斗次数分配",
@@ -36,7 +25,18 @@
         },
         {
           "name": "冒险航线-圣石洞穴属性",
-          "index": 0
+          "index": 4
+        }
+      ]
+    },
+    {
+      "name": "地图采集",
+      "entry": "Collect_StartGame_HomePage",
+      "check": false,
+      "option": [
+        {
+          "name": "采集方案",
+          "index": 2
         }
       ]
     },
@@ -127,7 +127,7 @@
     {
       "name": "结束游戏",
       "entry": "Close_HomePage",
-      "check": true
+      "check": false
     },
     {
       "name": "半自动操作（常闭！单开！）",

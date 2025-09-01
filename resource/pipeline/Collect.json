@@ -1141,6 +1141,9 @@
     "next": [
       "Collect_QuickCart_QC2Sort"
     ],
+    "interrupt": [
+      "Collect_OperationsMain_Sandplay"
+    ],
     "post_delay": 3000,
     "focus": "QCM.快速卡带-1",
     "roi": [
@@ -1187,6 +1190,9 @@
     "action": "Click",
     "next": [
       "Collect_QuickCart_QC3Sort"
+    ],
+    "interrupt": [
+      "Collect_OperationsMain_Sandplay"
     ],
     "post_delay": 3000,
     "focus": "QCM.快速卡带-2",
