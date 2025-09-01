@@ -37,7 +37,10 @@
 		},
 		{
 			"name": "装备制作强化分解炼制",
-			"entry": "Equip_HomePage"
+			"entry": "Equip_HomePage",
+			"option": [
+				"精炼装备阶级"
+			]
 		},
 		{
 			"name": "白嫖抽卡",
@@ -523,6 +526,31 @@
 								0
 							]
 						}
+					}
+				}
+			]
+		},
+		"精炼装备阶级": {
+			"cases": [
+				{
+					"name": "UR",
+					"pipeline_override": {
+						"Equip_filterSR": {
+							"template": [
+							  "filterUR.png"
+							   ],
+							"roi": [
+								548,
+								399,
+								55,
+								34
+							]
+						}
+					}
+				},
+				{
+					"name": "SR",
+					"pipeline_override": {
 					}
 				}
 			]

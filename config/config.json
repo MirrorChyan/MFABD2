@@ -43,7 +43,13 @@
     {
       "name": "装备制作强化分解炼制",
       "entry": "Equip_HomePage",
-      "check": true
+      "check": true,
+      "option": [
+        {
+          "name": "精炼装备阶级",
+          "index": 0
+        }
+      ]
     },
     {
       "name": "白嫖抽卡",
