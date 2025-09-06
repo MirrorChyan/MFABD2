@@ -376,7 +376,7 @@
       "Weekly_LastNight_BackPVEPage"
     ],
     "post_delay": 2000,
-    "focus": "PM.开始离开PVP卡带",
+    "focus": "WLM.开始离开卡带",
     "roi": [
       1122,
       646,
@@ -473,7 +473,7 @@
     "next": [
       "Weekly_LastNight_End"
     ],
-    "focus": "PM.PVP复位完成，结束~",
+    "focus": "WLM.卡带复位完成，结束~",
     "roi": [
       1122,
       646,
