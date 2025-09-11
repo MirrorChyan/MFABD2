@@ -79,10 +79,13 @@
  4.一些配置如下，配置一次就可以了
 
  > 装备请保留并锁定一件 SR +9的装备用来精炼
+ >
+>   PVP战斗和分解装备的设置如图，请手动设置一次即可（技能位置与装备强化等设置为模拟器本地保存，不会影响其他端游戏；强化设置老登可以自行适度上强度；PVP设置10倍也是可以的。）
+
 >
-  PVP战斗和分解装备的设置如图，请手动设置一次即可（技能位置与装备强化等设置为模拟器本地保存，不会影响其他端游戏；强化设置老登可以自行适度上强度；PVP设置10倍也是可以的。）
->
-> 人物技能请按图中设置
+> 可以关闭技能动画，加快速度
+> 
+- 人物技能请按图中设置
 
  > <img alt="LOGO" src="https://github.com/sunyink/MFABD2/blob/main/ReadMe/IT.png"  width="600px"/>
  > <img alt="LOGO" src="https://github.com/sunyink/MFABD2/blob/main/ReadMe/3.png"  width="400px"/>
