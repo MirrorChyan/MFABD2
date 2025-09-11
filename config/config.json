@@ -115,18 +115,18 @@
       "option": [
         {
           "name": "肉鸽塔快速战斗",
-          "index": 1
+          "index": 0
         }
       ]
     },
     {
       "name": "每周独立周常",
       "entry": "Weekly_HomePage",
-      "check": false,
+      "check": true,
       "option": [
         {
           "name": "末日之书",
-          "index": 1
+          "index": 0
         }
       ]
     },
@@ -159,10 +159,10 @@
   "AdbDevice": {
     "Name": "MuMuPlayer12",
     "AdbPath": "C:/Program Files/Netease/MuMu Player 12/shell/adb.exe",
-    "AdbSerial": "127.0.0.1:16384",
-    "ScreencapMethods": 64,
-    "InputMethods": 18446744073709551607,
-    "Config": "{\"extras\":{\"mumu\":{\"enable\":true,\"index\":0,\"path\":\"C:/Program Files/Netease/MuMu Player 12\"}}}"
+    "AdbSerial": "127.0.0.1:16416",
+    "ScreencapMethods": 18446744073709551559,
+    "InputMethods": 2,
+    "Config": ""
   },
   "EnableEdit": true,
   "EnableCheckVersion": false,
