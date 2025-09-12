@@ -413,11 +413,11 @@
     ],
     "target": [
       230,
-      350,
+      120,
       0,
       0
     ],
-    "doc": "寻找火之洞穴，点击属性图_暗"
+    "doc": "寻找火之洞穴，点击属性图_火"
   },
   "Battle_FastBattleMAXTouchDongXue": {
     "recognition": "OCR",
@@ -466,6 +466,7 @@
     "next": [
       "Battle_FastBattleReward"
     ],
+    "timeout": 8000,
     "on_error": [
       "Battle_CollectMapInitializeE"
     ],
@@ -556,6 +557,7 @@
   },
   "Battle_FinBackMapPage": {
     "recognition": "TemplateMatch",
+    "action": "StopTask",
     "next": [],
     "focus": "BM.流程结束成功",
     "roi": [
@@ -569,5 +571,192 @@
     ],
     "green_mask": true,
     "doc": "识别右下run-章节主页"
+  },
+  "Battle_TurnCharact_Start": {
+    "next": [
+      "Battle_TurnCharact_End"
+    ],
+    "interrupt": [
+      "Battle_TurnCharact_QuickBattleButton"
+    ],
+    "focus": "BTM.洞穴均衡打取圣石开始"
+  },
+  "Battle_TurnCharact_QuickBattleButton": {
+    "recognition": "OCR",
+    "action": "Click",
+    "next": [
+      "Battle_TurnCharact_NoAP",
+      "Battle_TurnCharact_TurnDuo"
+    ],
+    "interrupt": [
+      "Battle_TurnCharact_TurnDuo_Int"
+    ],
+    "post_delay": 1500,
+    "focus": "BTM.快速狩猎-菜单！",
+    "roi": [
+      1006,
+      630,
+      138,
+      39
+    ],
+    "expected": [
+      "快速狩猎"
+    ],
+    "doc": "寻找快速狩猎，点击"
+  },
+  "Battle_TurnCharact_NoAP": {
+    "recognition": "ColorMatch",
+    "next": [
+      "Battle_TurnCharact_CollectMapInitializeE"
+    ],
+    "roi": [
+      649,
+      532,
+      133,
+      31
+    ],
+    "lower": [
+      226,
+      201,
+      192
+    ],
+    "upper": [
+      226,
+      201,
+      192
+    ]
+  },
+  "Battle_TurnCharact_TurnDuo": {
+    "recognition": "OCR",
+    "next": [
+      "Battle_TurnCharact_BattleStart"
+    ],
+    "focus": "BTM.次数=2次",
+    "roi": [
+      643,
+      530,
+      147,
+      38
+    ],
+    "expected": [
+      "12"
+    ]
+  },
+  "Battle_TurnCharact_TurnDuo_Int": {
+    "action": "Click",
+    "post_delay": 500,
+    "focus": "BTM.刷取次数调整",
+    "target": [
+      848,
+      451,
+      0,
+      0
+    ]
+  },
+  "Battle_TurnCharact_BattleStart": {
+    "recognition": "OCR",
+    "action": "Click",
+    "next": [
+      "Battle_TurnCharact_FastBattleReward"
+    ],
+    "on_error": [
+      "Battle_CollectMapInitializeE"
+    ],
+    "post_delay": 5000,
+    "focus": "BTM.快速狩猎-启动！",
+    "roi": [
+      643,
+      532,
+      96,
+      31
+    ],
+    "expected": [
+      "狩猎"
+    ]
+  },
+  "Battle_TurnCharact_FastBattleReward": {
+    "recognition": "OCR",
+    "action": "Click",
+    "next": [
+      "Battle_TurnCharact"
+    ],
+    "post_delay": 3000,
+    "focus": "BTM.结算-战利品页面返回",
+    "roi": [
+      551,
+      623,
+      168,
+      51
+    ],
+    "expected": [
+      "点击画面即可返回"
+    ],
+    "doc": "狩猎Reward"
+  },
+  "Battle_TurnCharact": {
+    "recognition": "ColorMatch",
+    "action": "Click",
+    "post_delay": 1000,
+    "focus": "BTM.调整属性",
+    "roi": [
+      176,
+      92,
+      133,
+      285
+    ],
+    "count": 25,
+    "lower": [
+      [
+        255,
+        255,
+        255
+      ]
+    ],
+    "upper": [
+      [
+        255,
+        255,
+        255
+      ]
+    ],
+    "target_offset": [
+      0,
+      58,
+      0,
+      0
+    ]
+  },
+  "Battle_TurnCharact_CollectMapInitializeE": {
+    "action": "Click",
+    "next": [
+      "Battle_BackHomePage"
+    ],
+    "post_delay": 3000,
+    "focus": "BTBM.AP-异常",
+    "target": [
+      140,
+      120,
+      0,
+      0
+    ]
+  },
+  "Battle_TurnCharact_End": {
+    "recognition": "TemplateMatch",
+    "next": [
+      "Battle_FastBattleMAXTouchDongXue"
+    ],
+    "interrupt": [
+      "Battle_QuickBattleButton"
+    ],
+    "focus": "BTM.退出BTM分支。BM.准备刷最后一项",
+    "roi": [
+      419,
+      606,
+      95,
+      88
+    ],
+    "template": [
+      "CharactDurk.png"
+    ]
   }
 }

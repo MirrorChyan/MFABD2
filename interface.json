@@ -527,6 +527,16 @@
 							]
 						}
 					}
+				},
+				{
+					"name": "均衡",
+					"pipeline_override": {
+						"Battle_FastBattleTouch_StoneSelect": {
+							"next": [
+								"Battle_TurnCharact_Start"
+							]
+						}
+					}
 				}
 			]
 		},
@@ -734,5 +744,5 @@
 	},
 	"name": "MFABD2",
 	"url": "https://github.com/sunyink/MFABD2-Resource",
-	"version": "v1.2.0"
+	"version": "v1.2.1"
 }
