@@ -4,12 +4,12 @@
     {
       "name": "启动游戏",
       "entry": "StartGame_Start",
-      "check": false
+      "check": true
     },
     {
       "name": "快速狩猎扫荡",
       "entry": "Battle_StartGame_HomePage",
-      "check": false,
+      "check": true,
       "option": [
         {
           "name": "狩猎场-章节图策略",
@@ -32,7 +32,7 @@
     {
       "name": "地图采集",
       "entry": "Collect_StartGame_HomePage",
-      "check": false,
+      "check": true,
       "option": [
         {
           "name": "采集方案",
@@ -43,7 +43,7 @@
     {
       "name": "装备制作强化分解炼制",
       "entry": "Equip_HomePage",
-      "check": false,
+      "check": true,
       "option": [
         {
           "name": "精炼装备阶级",
@@ -54,12 +54,12 @@
     {
       "name": "白嫖抽卡",
       "entry": "Gacha_HomePage",
-      "check": false
+      "check": true
     },
     {
       "name": "竞技场",
       "entry": "PVP_HomePage",
-      "check": false,
+      "check": true,
       "option": [
         {
           "name": "竞技场战斗次数",
@@ -70,7 +70,7 @@
     {
       "name": "活动图扫荡",
       "entry": "Event_HomePage",
-      "check": false,
+      "check": true,
       "option": [
         {
           "name": "活动图小游戏扫荡",
@@ -85,7 +85,7 @@
     {
       "name": "领取日常奖励",
       "entry": "GetReward_HomePage",
-      "check": false,
+      "check": true,
       "option": [
         {
           "name": "公会奖励",
@@ -96,22 +96,22 @@
     {
       "name": "领取常规活动奖励",
       "entry": "Activities_HomePage",
-      "check": false
+      "check": true
     },
     {
       "name": "领取通行证奖励",
       "entry": "Pass_HomePage",
-      "check": false
+      "check": true
     },
     {
       "name": "领取邮件",
       "entry": "Mail_HomePage",
-      "check": false
+      "check": true
     },
     {
       "name": "肉鸽塔每日快速战斗",
       "entry": "Redemption_HomePage",
-      "check": false,
+      "check": true,
       "option": [
         {
           "name": "肉鸽塔快速战斗",
@@ -122,7 +122,7 @@
     {
       "name": "每周独立周常",
       "entry": "Weekly_HomePage",
-      "check": false,
+      "check": true,
       "option": [
         {
           "name": "末日之书",
@@ -133,7 +133,7 @@
     {
       "name": "结束游戏",
       "entry": "Close_HomePage",
-      "check": false
+      "check": true
     },
     {
       "name": "半自动操作（常闭！单开！）",

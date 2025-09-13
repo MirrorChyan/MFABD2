@@ -347,6 +347,55 @@
 							]
 						}
 					}
+				},
+				{
+					"name": "矿石-章节7",
+					"pipeline_override": {
+						"Battle_CollectMap": {
+							"interrupt": [
+								"Battle_CollectMap_SwipLeft"
+							]
+						},
+						"Battle_CollectMapHangXianDoubleCk2No": {
+							"interrupt": [
+								"Battle_CollectMap_SwipLeft"
+							]
+						},
+						"Battle_CollectMapShouLie": {
+							"expected": [
+								"蜥蜴人祭坛"
+							],
+							"roi": [
+								255,
+								318,
+								423,
+								238
+							],
+							"target_offset": [
+								5,
+								-3,
+								0,
+								0
+							]
+						},
+						"Battle_CollectMapShouLieR2": {
+							"expected": [
+								"蜥蜴人祭坛"
+							],
+							"roi": [
+								255,
+								318,
+								423,
+								238
+							],
+							"target_offset": [
+								5,
+								-3,
+								0,
+								0
+							]
+						}
+					}
 				}
 			]
 		},
