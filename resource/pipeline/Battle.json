@@ -376,7 +376,8 @@
     "recognition": "OCR",
     "action": "Click",
     "next": [
-      "Battle_FastBattleTouch_StoneSelect"
+      "Battle_CollectMapDongXueCK",
+      "Battle_CollectMapDongXue"
     ],
     "timeout": 3000,
     "focus": "BM.圣石洞穴",
@@ -390,6 +391,21 @@
       "火之洞穴"
     ],
     "doc": "A-3.选择圣石洞穴"
+  },
+  "Battle_CollectMapDongXueCK": {
+    "recognition": "TemplateMatch",
+    "next": [
+      "Battle_FastBattleTouch_StoneSelect"
+    ],
+    "roi": [
+      426,
+      622,
+      70,
+      60
+    ],
+    "template": [
+      "CharactFirepng.png"
+    ]
   },
   "Battle_FastBattleTouch_StoneSelect": {
     "recognition": "OCR",
