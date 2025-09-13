@@ -7,7 +7,7 @@
       "check": false
     },
     {
-      "name": "地图扫荡",
+      "name": "快速狩猎扫荡",
       "entry": "Battle_StartGame_HomePage",
       "check": false,
       "option": [

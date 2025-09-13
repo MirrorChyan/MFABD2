@@ -480,7 +480,8 @@
     "recognition": "OCR",
     "action": "Click",
     "next": [
-      "Battle_FastBattleReward"
+      "Battle_FastBattleReward",
+      "Battle_NoAP"
     ],
     "timeout": 8000,
     "on_error": [
@@ -500,6 +501,29 @@
       "狩猎"
     ],
     "doc": "快速狩猎界面，点击狩猎"
+  },
+  "Battle_NoAP": {
+    "recognition": "ColorMatch",
+    "focus": "BB.免费AP不足",
+    "next": [
+      "Battle_CollectMapInitialize"
+    ],
+    "roi": [
+      649,
+      532,
+      133,
+      31
+    ],
+    "lower": [
+      226,
+      201,
+      192
+    ],
+    "upper": [
+      226,
+      201,
+      192
+    ]
   },
   "Battle_FastBattleReward": {
     "recognition": "OCR",

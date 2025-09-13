@@ -26,7 +26,7 @@
 			]
 		},
 		{
-			"name": "地图扫荡",
+			"name": "快速狩猎扫荡",
 			"entry": "Battle_StartGame_HomePage",
 			"option": [
 				"狩猎场-章节图策略",
@@ -744,5 +744,5 @@
 	},
 	"name": "MFABD2",
 	"url": "https://github.com/sunyink/MFABD2-Resource",
-	"version": "v1.2.1"
+	"version": "v1.2.2"
 }
