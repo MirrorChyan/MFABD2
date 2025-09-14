@@ -642,14 +642,10 @@
     "recognition": "OCR",
     "action": "Click",
     "next": [
-      "Battle_TurnCharact_NoAP",
-      "Battle_TurnCharact_TurnDuo"
-    ],
-    "interrupt": [
-      "Battle_TurnCharact_TurnDuo_Int"
+      "Battle_TurnCharact_QuickBattleMenu"
     ],
     "post_delay": 1500,
-    "focus": "BTM.快速狩猎-菜单！",
+    "focus": "BTM.快速狩猎-按钮！",
     "roi": [
       1006,
       630,
@@ -660,6 +656,29 @@
       "快速狩猎"
     ],
     "doc": "寻找快速狩猎，点击"
+  },
+  "Battle_TurnCharact_QuickBattleMenu": {
+    "recognition": "OCR",
+    "action": "Click",
+    "next": [
+      "Battle_TurnCharact_NoAP",
+      "Battle_TurnCharact_TurnDuo"
+    ],
+    "interrupt": [
+      "Battle_TurnCharact_TurnDuo_Int"
+    ],
+    "post_delay": 1500,
+    "focus": "BTM.快速狩猎-菜单！",
+    "roi": [
+      643,
+      530,
+      147,
+      38
+    ],
+    "expected": [
+      "狩猎"
+    ],
+    "doc": "确认快速狩猎菜单"
   },
   "Battle_TurnCharact_NoAP": {
     "recognition": "ColorMatch",
@@ -714,12 +733,13 @@
     "recognition": "OCR",
     "action": "Click",
     "next": [
-      "Battle_TurnCharact_FastBattleReward"
+      "Battle_TurnCharact_FastBattleReward",
+      "Battle_TurnCharact_BattleStart"
     ],
     "on_error": [
       "Battle_CollectMapInitializeE"
     ],
-    "post_delay": 5000,
+    "post_delay": 4000,
     "focus": "BTM.快速狩猎-启动！",
     "roi": [
       643,
@@ -735,6 +755,7 @@
     "recognition": "OCR",
     "action": "Click",
     "next": [
+      "Battle_TurnCharact_FastBattleReward",
       "Battle_TurnCharact"
     ],
     "post_delay": 3000,
