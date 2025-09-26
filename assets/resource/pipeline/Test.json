@@ -1,150 +1,42 @@
 {
   "Test_HomePage": {
     "next": [
-      "Test_filterSR"
+      "Check_Weekly_Task"
     ],
-    "focus": "测试1",
-    "template": [
-      "debug.png"
+    "on_error": [
+      "errer"
     ],
-    "method": 1,
-    "doc": "。"
+    "focus": "G=0.流程启动",
+    "doc": "开始周任务检测流程"
   },
-  "Test_filterSR": {
-    "recognition": "TemplateMatch",
-    "action": "Click",
+  "Check_Weekly_Task": {
     "next": [
-      "Test_filter+9"
+      "Execute_Weekly_Task",
+      "Skip_Weekly_Task"
     ],
-    "post_delay": 1000,
-    "focus": "EM.装备精炼.稀有度",
-    "roi": [
-      232,
-      371,
-      411,
-      81
+    "on_error": [
+      "errer2"
     ],
-    "template": [
-      "filterSR.png"
-    ],
-    "method": 1,
-    "doc": "点击筛选"
+    "focus": "G=0. 周任务检查开始。",
+    "doc": "使用自定义识别判断本周是否已执行"
   },
-  "Test_filter+9": {
-    "recognition": "OCR",
-    "action": "Click",
-    "next": [],
-    "post_delay": 1000,
-    "focus": "EM.装备精炼.+9",
-    "roi": [
-      236,
-      161,
-      817,
-      284
-    ],
-    "method": 4,
-    "count": 12,
-    "lower": [
-      56,
-      55,
-      84
-    ],
-    "upper": [
-      222,
-      172,
-      255
-    ],
-    "target": [
-      966,
-      228,
-      0,
-      0
-    ]
+  "Execute_Weekly_Task": {
+    "recognition": "Custom",
+    "custom_recognition": "test_execute_weekly.TestExecuteWeekly",
+    "focus": "G=0. 周任务检查开始。T",
+    "action": "DoNothing",
+    "doc": "本周任务未执行，现在开始执行"
   },
-  "Test_ccc": {
-    "recognition": "ColorMatch",
-    "action": "Click",
-    "roi": [
-      451,
-      396,
-      67,
-      39
-    ],
-    "count": 50,
-    "lower": [
-      [
-        85,
-        64,
-        85
-      ]
-    ],
-    "upper": [
-      [
-        229,
-        172,
-        255
-      ]
-    ]
+
+  "Skip_Weekly_Task": {
+    "recognition": "Custom",
+    "custom_recognition": "test_skip_weekly.TestSkipWeekly",
+    "focus": "G=0. 周任务检查开始。F",
+    "action": "DoNothing",
+    "doc": "本周任务已执行，跳过"
   },
-  "Test_ddd": {
-    "recognition": "ColorMatch",
-    "action": "Click",
-    "roi": [
-      556,
-      403,
-      38,
-      26
-    ],
-    "count": 500,
-    "lower": [
-      [
-        19,
-        41,
-        63
-      ]
-    ],
-    "upper": [
-      [
-        249,
-        255,
-        255
-      ]
-    ]
-  },
-  "Test_999": {
-    "recognition": "ColorMatch",
-    "action": "Click",
-    "roi": [
-      942,
-      216,
-      55,
-      28
-    ],
-    "count": 50,
-    "lower": [
-      [
-        102,
-        102,
-        122
-      ]
-    ],
-    "upper": [
-      [
-        160,
-        160,
-        160
-      ]
-    ]
-  },
-  "UR": {
-    "roi": [
-      548,
-      399,
-      55,
-      34
-    ],
-    "template": [
-      "filterUR.png"
-    ]
-  }
+  "errer": {
+  	"focus": "超时"},
+  	"errer2": {
+  	"focus": "超时2"}
 }

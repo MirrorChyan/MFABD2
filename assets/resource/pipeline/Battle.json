@@ -71,6 +71,7 @@
     "recognition": "TemplateMatch",
     "action": "Click",
     "next": [
+      "Battle_Unmask",
       "Battle_CollectMap",
       "Battle_TouchCollect"
     ],
@@ -91,6 +92,25 @@
       0
     ],
     "doc": "找到run-点击左上扫荡"
+  },
+  "Battle_Unmask": {
+    "recognition": "TemplateMatch",
+    "action": "Click",
+    "next": [
+      "Battle_Unmask",
+      "Battle_CollectMap",
+      "Battle_TouchCollect"
+    ],
+    "roi": [
+      1067,
+      130,
+      123,
+      256
+    ],
+    "template": [
+      "UnmaskGE.png"
+    ],
+    "green_mask": true
   },
   "Battle_CollectMap": {
     "recognition": "OCR",
@@ -659,7 +679,6 @@
   },
   "Battle_TurnCharact_QuickBattleMenu": {
     "recognition": "OCR",
-    "action": "Click",
     "next": [
       "Battle_TurnCharact_NoAP",
       "Battle_TurnCharact_TurnDuo"

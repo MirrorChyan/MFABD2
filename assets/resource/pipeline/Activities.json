@@ -133,6 +133,8 @@
       "Activities_GetRoll",
       "Activities_GetPinTu",
       "Activities_GetBingo",
+      "Activities_Roulette",
+      "Activities_Roulette_Pay_CkIn",
       "Activities_NoFindAndInEnd"
     ],
     "on_error": [
@@ -352,6 +354,62 @@
     ],
     "expected": [
       "全部解锁"
+    ]
+  },
+  "Activities_Roulette": {
+    "recognition": "OCR",
+    "action": "Click",
+    "next": [
+      "Activities_GetAllRe"
+    ],
+    "post_delay": 4000,
+    "focus": "GA.发现活动-轮盘(免费抽) V.02509",
+    "expected": [
+      "1次免费"
+    ]
+  },
+  "Activities_Roulette_Pay_CkIn": {
+    "recognition": "OCR",
+    "next": [
+      "Activities_Roulette_Pay"
+    ],
+    "roi": [
+      966,
+      493,
+      170,
+      81
+    ],
+    "expected": [
+      "旋转"
+    ]
+  },
+  "Activities_Roulette_Pay": {
+    "recognition": "ColorMatch",
+    "action": "Click",
+    "next": [
+      "Activities_GetAllRe"
+    ],
+    "post_delay": 4000,
+    "focus": "GA.发现活动-轮盘(代币抽) V.02509",
+    "roi": [
+      1000,
+      524,
+      126,
+      39
+    ],
+    "lower": [
+      [
+        187,
+        187,
+        187
+      ]
+    ],
+    "upper": [
+      [
+        187,
+        187,
+        187
+      ]
     ]
   },
   "Activities_ResultBack": {
