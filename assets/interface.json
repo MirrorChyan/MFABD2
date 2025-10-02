@@ -41,7 +41,7 @@
 			"entry": "Equip_HomePage",
 			"option": [
 				"精炼装备阶级",
-				"仅精炼<17",
+				"仅精炼<17 or <10",
 				"精炼按自定义标志排序"
 			]
 		},
@@ -617,15 +617,15 @@
 				}
 			]
 		},
-		"仅精炼<17": {
+		"仅精炼<17 or <10": {
 			"cases": [
 				{
-					"name": "No",
+					"name": "关闭",
 					"pipeline_override": {						
 					}
 				},
 				{
-					"name": "Yes",
+					"name": "CLv. < 17",
 					"pipeline_override": {
 						"Equip_+9ColorCk": {
 							"next": [
@@ -633,7 +633,26 @@
     ]
 						}
 					}
-				}
+				},
+				{
+					"name": "CLv. < 10",
+					"pipeline_override": {
+						"Equip_+9ColorCk": {
+							"next": [
+      "Equip_filter<C17"
+    ]
+						},
+						"Equip_filter<C17": {
+							"focus": "EM.装备精炼.<C10",
+							"target": [720,320,0,0],
+							"recognition": "DirectHit"
+  },
+  "Equip_filter<C17Ck": {
+							"focus": "EM.色核通过.<C10",
+							"roi" : [683,304,74,33]
+ }
+						}
+					}
 			]
 		},
 		"精炼按自定义标志排序": {
