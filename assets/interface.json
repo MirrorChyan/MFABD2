@@ -16,7 +16,8 @@
 	"task": [
 		{
 			"name": "启动游戏",
-			"entry": "StartGame_Start"
+			"entry": "StartGame_Start",
+			"doc": "**启动游戏**：\n\n自动启动游戏\n\n**注意：null**"
 		},
 		{
 			"name": "地图采集",
@@ -39,7 +40,9 @@
 			"name": "装备制作强化分解炼制",
 			"entry": "Equip_HomePage",
 			"option": [
-				"精炼装备阶级"
+				"精炼装备阶级",
+				"仅精炼<17",
+				"精炼按自定义标志排序"
 			]
 		},
 		{
@@ -614,6 +617,45 @@
 				}
 			]
 		},
+		"仅精炼<17": {
+			"cases": [
+				{
+					"name": "No",
+					"pipeline_override": {						
+					}
+				},
+				{
+					"name": "Yes",
+					"pipeline_override": {
+						"Equip_+9ColorCk": {
+							"next": [
+      "Equip_filter<C17"
+    ]
+						}
+					}
+				}
+			]
+		},
+		"精炼按自定义标志排序": {
+			"cases": [
+				{
+					"name": "No",
+					"pipeline_override": {						
+					}
+				},
+				{
+					"name": "Yes",
+					"pipeline_override": {
+						"Equip_filterON": {
+							"next": [
+      "Equip_Sequen_Menu",
+      "Equip_filterON"
+    ]
+						}
+					}
+				}
+			]
+		},
 		"竞技场战斗次数": {
 			"cases": [
 				{
@@ -694,7 +736,7 @@
 		"肉鸽塔快速战斗": {
 			"cases": [
 				{
-					"name": "关闭",
+					"name": "No",
 					"pipeline_override": {
 						"Redemption_HomePage": {
 							"next": [
@@ -704,7 +746,7 @@
 					}
 				},
 				{
-					"name": "开启",
+					"name": "Yes",
 					"pipeline_override": {}
 				}
 			]
@@ -712,7 +754,7 @@
 		"末日之书": {
 			"cases": [
 				{
-					"name": "关闭",
+					"name": "No",
 					"pipeline_override": {
 						"Weekly_LastNight_Start": {
 							"next": [
@@ -722,7 +764,7 @@
 					}
 				},
 				{
-					"name": "开启",
+					"name": "Yes",
 					"pipeline_override": {}
 				}
 			]
@@ -730,7 +772,7 @@
 		"半自动爬塔(从选层数界面开始)": {
 			"cases": [
 				{
-					"name": "关闭",
+					"name": "No",
 					"pipeline_override": {
 						"SemiAuto_Evil_SemiautoTower_Start": {
 							"next": [
@@ -740,15 +782,19 @@
 					}
 				},
 				{
-					"name": "开启",
+					"name": "Yes",
 					"pipeline_override": {}
 				}
 			]
 		},
 		"半自动末日之书(从‘去战斗’页面开始)": {
 			"cases": [
+								{
+					"name": "Yes",
+					"pipeline_override": {}
+				},
 				{
-					"name": "关闭",
+					"name": "No",
 					"pipeline_override": {
 						"SemiAuto_LastNight_Start": {
 							"next": [
@@ -756,21 +802,17 @@
 							]
 						}
 					}
-				},
-				{
-					"name": "开启",
-					"pipeline_override": {}
 				}
 			]
 		},
 		"公会奖励": {
 			"cases": [
 				{
-					"name": "公会开",
+					"name": "Yes",
 					"pipeline_override": {}
 				},
 				{
-					"name": "公会关",
+					"name": "No",
 					"pipeline_override": {
 						"GetReward_EnterUnion": {
 							"next": [
@@ -792,6 +834,7 @@
 		}
 	},
 	"name": "MFABD2",
+	"custom_title": "MFABD2 | 棕色尘埃2自动化助手(sunyink/MFABD2) | 游戏版本：20251001 (Starlight Child)",
 	"url": "https://github.com/sunyink/MFABD2",
-	"version": "v2.0.1"
+	"version": "v2.0.2"
 }

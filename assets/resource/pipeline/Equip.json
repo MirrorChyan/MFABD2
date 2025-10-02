@@ -287,13 +287,13 @@
   },
   "Equip_EquipUpSelect": {
     "recognition": "ColorMatch",
-    "focus": "EM.色核通过，强化N",
     "action": "Click",
     "next": [
       "Equip_EquipUpSelect2",
       "Equip_EquipUpSelect"
     ],
     "post_delay": 1500,
+    "focus": "EM.色核通过，强化N",
     "roi": [
       761,
       272,
@@ -421,13 +421,13 @@
   },
   "Equip_EquipDecSelect": {
     "recognition": "ColorMatch",
-    "focus": "EM.色核通过，分解N",
     "action": "Click",
     "next": [
       "Equip_EquipDecSelect2",
       "Equip_EquipDecSelect"
     ],
     "post_delay": 3000,
+    "focus": "EM.色核通过，分解N",
     "roi": [
       775,
       215,
@@ -622,6 +622,7 @@
     ]
   },
   "Equip_+9ColorCk": {
+    "recognition": "ColorMatch",
     "next": [
       "Equip_filterON"
     ],
@@ -631,6 +632,60 @@
       216,
       55,
       28
+    ],
+    "count": 50,
+    "lower": [
+      [
+        102,
+        102,
+        122
+      ]
+    ],
+    "upper": [
+      [
+        160,
+        160,
+        160
+      ]
+    ]
+  },
+  "Equip_filter<C17": {
+    "recognition": "TemplateMatch",
+    "action": "Click",
+    "next": [
+      "Equip_filter<C17Ck",
+      "Equip_filter<C17"
+    ],
+    "post_delay": 1500,
+    "focus": "EM.装备精炼.<C17",
+    "roi": [
+      802,
+      285,
+      82,
+      75
+    ],
+    "template": [
+      "filterC17.png"
+    ],
+    "count": 12,
+    "target": [
+      840,
+      320,
+      0,
+      0
+    ]
+  },
+  "Equip_filter<C17Ck": {
+    "recognition": "ColorMatch",
+    "next": [
+      "Equip_filterON"
+    ],
+    "focus": "EM.色核通过.<C17",
+    "roi": [
+      816,
+      308,
+      52,
+      26
     ],
     "count": 50,
     "lower": [
@@ -667,6 +722,120 @@
       "确认"
     ],
     "doc": "应用筛选"
+  },
+  "Equip_Sequen_Menu": {
+    "recognition": "TemplateMatch",
+    "action": "Click",
+    "next": [
+      "Equip_Sequen_MenuOpenCk",
+      "Equip_Sequen_Menu"
+    ],
+    "post_delay": 500,
+    "focus": "EM.自定义标志排序...",
+    "roi": [
+      1134,
+      55,
+      65,
+      51
+    ],
+    "template": [
+      "Sorting.png"
+    ],
+    "green_mask": true
+  },
+  "Equip_Sequen_MenuOpenCk": {
+    "recognition": "OCR",
+    "next": [
+      "Equip_Sequen_MenuFind"
+    ],
+    "interrupt": [
+      "Equip_Sequen_MenuSwipDown"
+    ],
+    "post_delay": 500,
+    "roi": [
+      918,
+      75,
+      207,
+      151
+    ],
+    "expected": [
+      "排序"
+    ]
+  },
+  "Equip_Sequen_MenuSwipDown": {
+    "action": "Swipe",
+    "post_wait_freezes": 2000,
+    "begin": [
+      1019,
+      312,
+      0,
+      0
+    ],
+    "end": [
+      1019,
+      99,
+      0,
+      0
+    ],
+    "duration": 250
+  },
+  "Equip_Sequen_MenuFind": {
+    "recognition": "OCR",
+    "action": "Click",
+    "next": [
+      "Equip_Sequen_CKAndExt",
+      "Equip_Sequen_MenuFind"
+    ],
+    "post_delay": 1500,
+    "roi": [
+      881,
+      243,
+      293,
+      101
+    ],
+    "expected": [
+      "自定义标记"
+    ]
+  },
+  "Equip_Sequen_CKAndExt": {
+    "recognition": "TemplateMatch",
+    "action": "Click",
+    "next": [
+      "Equip_Sequen_CKAndExt",
+      "Equip_FindRefining"
+    ],
+    "post_delay": 300,
+    "roi": [
+      1072,
+      247,
+      40,
+      93
+    ],
+    "template": [
+      "Sequen_DownGE.png"
+    ],
+    "green_mask": true,
+    "count": 50,
+    "lower": [
+      [
+        142,
+        117,
+        28
+      ]
+    ],
+    "upper": [
+      [
+        255,
+        194,
+        67
+      ]
+    ],
+    "target": [
+      450,
+      360,
+      0,
+      0
+    ]
   },
   "Equip_FindRefining": {
     "action": "Click",

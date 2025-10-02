@@ -360,7 +360,8 @@
     "recognition": "OCR",
     "action": "Click",
     "next": [
-      "Activities_GetAllRe"
+      "Activities_GetAllRe",
+      "Activities_Roulette"
     ],
     "post_delay": 4000,
     "focus": "GA.发现活动-轮盘(免费抽) V.02509",
@@ -387,7 +388,8 @@
     "recognition": "ColorMatch",
     "action": "Click",
     "next": [
-      "Activities_GetAllRe"
+      "Activities_GetAllRe",
+      "Activities_Roulette_Pay"
     ],
     "post_delay": 4000,
     "focus": "GA.发现活动-轮盘(代币抽) V.02509",

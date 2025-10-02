@@ -60,7 +60,7 @@
     "recognition": "TemplateMatch",
     "action": "Click",
     "next": [
-    	"PVP_PVPStart",
+      "PVP_PVPStart",
       "PVP_HomePageHub",
       "PVP_HomePageHub1",
       "PVP_HomePageHub2"
@@ -499,7 +499,8 @@
     "recognition": "OCR",
     "action": "Click",
     "next": [
-      "PVP_AutoBattle2"
+      "PVP_AutoBattle2",
+      "PVP_AutoBattleStart"
     ],
     "post_delay": 10000,
     "focus": "PM.PVP.PVP战斗开始",
