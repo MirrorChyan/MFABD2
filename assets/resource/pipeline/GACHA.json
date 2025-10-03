@@ -326,7 +326,7 @@
     "recognition": "OCR",
     "action": "Click",
     "next": [
-      "Gacha_GachaResultBack",
+      "Gacha_5XResuNew",
       "Gacha_5X"
     ],
     "focus": "GA.5☆角色！(✧◡✧)",
@@ -351,7 +351,7 @@
     "recognition": "OCR",
     "action": "Click",
     "next": [
-      "Gacha_GachaResultBack",
+      "Gacha_5XResuNew",
       "Gacha_5X2"
     ],
     "focus": "GA.5☆UR武器！(✧◡✧)",
@@ -371,6 +371,42 @@
       0
     ],
     "doc": "五星卡2"
+  },
+  "Gacha_5XResuNew": {
+    "recognition": "ColorMatch",
+    "action": "Click",
+    "next": [
+      "Gacha_GachaResultBack",
+      "Gacha_5XResuNew"
+    ],
+    "post_delay": 1000,
+    "roi": [
+      4,
+      6,
+      366,
+      361
+    ],
+    "count": 5000,
+    "lower": [
+      [
+        254,
+        133,
+        248
+      ]
+    ],
+    "upper": [
+      [
+        255,
+        176,
+        255
+      ]
+    ],
+    "target": [
+      1160,
+      46,
+      0,
+      0
+    ]
   },
   "Gacha_GachaResultBack": {
     "recognition": "OCR",
