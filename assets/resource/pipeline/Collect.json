@@ -399,6 +399,7 @@
       "Collect_ChapterSelection2"
     ],
     "interrupt": [
+      "Collect_PetTask",
       "Collect_OperationsMain_Sandplay"
     ],
     "timeout": 30000,
