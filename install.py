@@ -68,6 +68,14 @@ def install_chores():
         working_dir / "LICENSE",
         install_path,
     )
+    shutil.copy2(
+        working_dir / "LICENSE-APACHE",
+        install_path,
+    )
+    shutil.copy2(
+        working_dir / "LICENSE-MIT",
+        install_path,
+    )
 
 def install_agent():
     shutil.copytree(
