@@ -352,7 +352,8 @@
     "action": "Click",
     "next": [
       "Gacha_5XResuNew",
-      "Gacha_5X2"
+      "Gacha_5X2",
+      "Gacha_GachaResultBack"
     ],
     "focus": "GA.5☆UR武器！(✧◡✧)",
     "roi": [
