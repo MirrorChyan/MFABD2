@@ -28,36 +28,30 @@ jobs:
           fetch-depth: 0
       - id: set_tag
         run: |
-          is_release=${{ startsWith(github.ref, 'refs/tags/v') }}
-          tag=$(git describe --tags --match "v*" ${{ github.ref }} || true)
-          if [[ $tag != v* ]]; then
-            tag=$(curl -sX GET "https://api.github.com/repos/${{ github.repository }}/releases/latest" --header 'authorization: Bearer ${{ secrets.GITHUB_TOKEN }}' | awk '/tag_name/{print $4}' FS='["]')
-            if [[ $tag != v* ]]; then
-              tag="v0.0.0"
-            fi
-            tag=$(date "+$tag-%y%m%d-$(git rev-parse --short HEAD)")
-          fi
-          if ! $($is_release) ; then
-            prefix=${tag%-*-*}
-            suffix=${tag#$prefix-}
-            tag="$prefix-ci.$suffix"
+          # 简化版本：只保留必要判断
+          is_tag_push=${{ startsWith(github.ref, 'refs/tags/v') }}
+          
+          if $is_tag_push; then
+            # 标签推送：使用实际标签
+            tag="${github.ref#refs/tags/}"
+          else
+            # 非标签推送：生成开发版本号
+            latest_tag=$(git describe --tags --match "v*" --abbrev=0 2>/dev/null || echo "v0.0.0")
+            commit_short=$(git rev-parse --short HEAD)
+            date_suffix=$(date +"%y%m%d")
+            tag="${latest_tag}-ci.${date_suffix}-${commit_short}"
           fi
           
-          # 添加是否为开发版本的判断
-          is_dev_version=true
-          if [[ $tag == *-ci.* ]]; then
-            is_dev_version=true
-          else
-            is_dev_version=false
-          fi
+          # 直接设置开发版本标识
+          is_dev_version=$([ "$is_tag_push" = "false" ] && echo "true" || echo "false")
 
-          echo tag=$tag | tee -a $GITHUB_OUTPUT
-          echo "is_release=$( [ "$is_release" = true ] && echo 'true' || echo 'false' )" | tee -a $GITHUB_OUTPUT
-          echo "is_dev_version=$( [ "$is_dev_version" = true ] && echo 'true' || echo 'false' )" | tee -a $GITHUB_OUTPUT
+          echo "tag=$tag" | tee -a $GITHUB_OUTPUT
+          echo "is_tag_push=$is_tag_push" | tee -a $GITHUB_OUTPUT
+          echo "is_dev_version=$is_dev_version" | tee -a $GITHUB_OUTPUT
     outputs:
       tag: ${{ steps.set_tag.outputs.tag }}
-      is_release: ${{ steps.set_tag.outputs.is_release }}
-      is_dev_version: ${{ steps.set_tag.outputs.is_dev_version }}  # 添加开发版本标识
+      is_tag_push: ${{ steps.set_tag.outputs.is_tag_push }}
+      is_dev_version: ${{ steps.set_tag.outputs.is_dev_version }}
 
   install:
     needs: meta
@@ -99,7 +93,6 @@ jobs:
         run: |
           ARCHIVE_FILE_PATH="${{ fromJson(steps.download_mfa.outputs.downloaded_files)[0] }}"
           rm -f "${ARCHIVE_FILE_PATH}"
-          echo "Archive cleanup command executed for MFAAvalonia."
 
       - name: Install
         shell: bash
@@ -108,14 +101,9 @@ jobs:
 
           if [[ "${{ matrix.os }}" != "android" ]]; then
             if [ -d "MFA" ]; then
-              echo "Copying MFA files to install directory..."
               mkdir -p install
               rsync -av --ignore-existing MFA/ install/
-            else
-              echo "MFA directory not found, skipping copy."
             fi
-          else
-            echo "Skipping copy MFA for Android."
           fi
 
       - uses: actions/upload-artifact@v4
@@ -145,32 +133,44 @@ jobs:
           GITHUB_REPO: ${{ github.repository }}
 
   release:
-    # 修改条件：允许开发版本发布
-    if: ${{ needs.meta.outputs.is_release == 'true' || needs.meta.outputs.is_dev_version == 'true' || github.event_name == 'workflow_dispatch' }}
+    # 修复条件表达式格式
+    if: (needs.meta.outputs.is_tag_push == 'true') || (github.event_name == 'workflow_dispatch' && needs.meta.outputs.is_dev_version == 'true')
     needs: [meta, install, changelog]
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-latest  # 添加缺失的runs-on
     steps:
+      - name: Get current timestamp
+        id: get_time
+        run: echo "time=$(date -u +'%Y-%m-%dT%H:%M:%SZ')" >> $GITHUB_OUTPUT
+      
       - uses: actions/download-artifact@v4
         with:
-          path: assets
-
-      - run: |
-          cd assets
-          for f in *; do
-            # 使用正确的版本号命名压缩包
-            zip_name="${f}-${{ needs.meta.outputs.tag }}.zip"
-            (cd $f && zip -r "../$zip_name" .)
+          path: artifacts
+          
+      - name: Package release assets
+        run: |
+          cd artifacts
+          mkdir -p release_assets
+          for dir in *; do
+            # 提取平台信息
+            platform=${dir#MFABD2-}
+            zip_name="MFABD2-${{ needs.meta.outputs.tag }}-${platform}.zip"
+            
+            # 创建压缩包
+            (cd "$dir" && zip -r "../release_assets/$zip_name" .)
           done
           
-      - uses: softprops/action-gh-release@v2
+      - name: Create GitHub Release
+        uses: softprops/action-gh-release@v2
         with:
-          files: assets/*.zip
+          files: artifacts/release_assets/*.zip
           tag_name: ${{ needs.meta.outputs.tag }}
           name: "MFABD2 ${{ needs.meta.outputs.tag }}"
           body: |
-            ${{ needs.changelog.outputs.release_body }}
+            ${{ contains(needs.changelog.outputs.release_body, '## ') && needs.changelog.outputs.release_body || '### 无显著变更' }}
             
-            **版本信息**: `${{ needs.meta.outputs.tag }}`
+            **构建信息**:
+            - 版本: `${{ needs.meta.outputs.tag }}`
+            - 类型: ${{ needs.meta.outputs.is_tag_push == 'true' && '正式版' || '开发版' }}
+            - 构建时间: ${{ steps.get_time.outputs.time }}
           draft: false
-          # 如果是开发版本，设置为预发布
           prerelease: ${{ needs.meta.outputs.is_dev_version == 'true' }}
