@@ -135,7 +135,8 @@
     "recognition": "TemplateMatch",
     "action": "Click",
     "next": [
-      "Pass_SelectPassTask1"
+      "Pass_SelectPassTask1",
+      "Pass_GetAll"
     ],
     "post_delay": 1000,
     "roi": [
@@ -151,11 +152,29 @@
     "doc": "选择通行证"
   },
   "Pass_SelectPassTask1": {
+    "recognition": "ColorMatch",
     "action": "Click",
     "next": [
-      "Pass_GetAll"
+      "Pass_GetAll",
+      "Pass_SelectPassTask1"
     ],
     "post_delay": 1000,
+    "focus": "任务子项页色核检查",
+    "count": 100,
+    "lower": [
+      [
+        153,
+        151,
+        146
+      ]
+    ],
+    "upper": [
+      [
+        153,
+        151,
+        146
+      ]
+    ],
     "target": [
       1145,
       460,
