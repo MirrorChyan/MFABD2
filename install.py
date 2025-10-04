@@ -3,7 +3,7 @@ import shutil
 import sys
 import json
 import re
-import os  # 添加 os 模块用于文件遍历
+import os
 
 from configure import configure_ocr_model
 
@@ -48,8 +48,26 @@ def convert_line_endings(file_path):
         # 写回文件
         with open(file_path, 'w', encoding='utf-8', newline='\r\n') as f:
             f.write(content)
+        return True
     except Exception as e:
         print(f"转换换行符失败: {file_path} - {str(e)}")
+        return False
+
+def process_markdown_files(directory):
+    """递归处理目录中的所有 Markdown 文件"""
+    success = True
+    if directory.exists():
+        print(f"处理 Markdown 文件: {directory}")
+        # 遍历目录中的所有文件
+        for root, _, files in os.walk(directory):
+            for file in files:
+                file_path = Path(root) / file
+                if file_path.suffix.lower() == '.md':  # 只处理 Markdown 文件
+                    if convert_line_endings(file_path):
+                        print(f"已转换: {file_path}")
+                    else:
+                        success = False
+    return success
 
 def install_resource():
     configure_ocr_model()
@@ -61,17 +79,25 @@ def install_resource():
         dirs_exist_ok=True,
     )
     
-    # 专门处理公告文件夹中的文件
+    # 处理所有 Markdown 文件
+    all_success = True
+    
+    # 1. 处理公告文件夹
     announcement_dir = install_path / "resource" / "Announcement"
-    if announcement_dir.exists():
-        print(f"处理公告文件: {announcement_dir}")
-        # 遍历目录中的所有文件
-        for root, _, files in os.walk(announcement_dir):
-            for file in files:
-                file_path = Path(root) / file
-                if file_path.suffix.lower() == '.md':  # 只处理 Markdown 文件
-                    convert_line_endings(file_path)
-                    print(f"已转换: {file_path}")
+    if not process_markdown_files(announcement_dir):
+        all_success = False
+    
+    # 2. 处理 Changelog.md 文件（放在更合理的位置）
+    changelog_path = install_path / "resource" / "Changelog.md"
+    if changelog_path.exists():
+        print(f"处理更新日志文件: {changelog_path}")
+        if not convert_line_endings(changelog_path):
+            all_success = False
+    else:
+        print(f"注意: 未找到更新日志文件 {changelog_path}，跳过处理")
+    
+    if not all_success:
+        print("警告: 部分文件换行符转换失败")
 
     # 复制并更新 interface.json
     shutil.copy2(
