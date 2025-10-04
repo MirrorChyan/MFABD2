@@ -42,12 +42,22 @@ jobs:
             suffix=${tag#$prefix-}
             tag="$prefix-ci.$suffix"
           fi
+          
+          # 添加是否为开发版本的判断
+          is_dev_version=true
+          if [[ $tag == *-ci.* ]]; then
+            is_dev_version=true
+          else
+            is_dev_version=false
+          fi
 
           echo tag=$tag | tee -a $GITHUB_OUTPUT
-          echo is_release=$is_release | tee -a $GITHUB_OUTPUT
+          echo "is_release=$( [ "$is_release" = true ] && echo 'true' || echo 'false' )" | tee -a $GITHUB_OUTPUT
+          echo "is_dev_version=$( [ "$is_dev_version" = true ] && echo 'true' || echo 'false' )" | tee -a $GITHUB_OUTPUT
     outputs:
       tag: ${{ steps.set_tag.outputs.tag }}
       is_release: ${{ steps.set_tag.outputs.is_release }}
+      is_dev_version: ${{ steps.set_tag.outputs.is_dev_version }}  # 添加开发版本标识
 
   install:
     needs: meta
@@ -135,7 +145,8 @@ jobs:
           GITHUB_REPO: ${{ github.repository }}
 
   release:
-    if: ${{ needs.meta.outputs.is_release == 'true' }}
+    # 修改条件：允许开发版本发布
+    if: ${{ needs.meta.outputs.is_release == 'true' || needs.meta.outputs.is_dev_version == 'true' || github.event_name == 'workflow_dispatch' }}
     needs: [meta, install, changelog]
     runs-on: ubuntu-latest
     steps:
@@ -146,13 +157,20 @@ jobs:
       - run: |
           cd assets
           for f in *; do
-            (cd $f && zip -r ../$f-${{ needs.meta.outputs.tag }}.zip .)
+            # 使用正确的版本号命名压缩包
+            zip_name="${f}-${{ needs.meta.outputs.tag }}.zip"
+            (cd $f && zip -r "../$zip_name" .)
           done
           
       - uses: softprops/action-gh-release@v2
         with:
-          files: assets/*
+          files: assets/*.zip
           tag_name: ${{ needs.meta.outputs.tag }}
-          body: ${{ needs.changelog.outputs.release_body }}
+          name: "MFABD2 ${{ needs.meta.outputs.tag }}"
+          body: |
+            ${{ needs.changelog.outputs.release_body }}
+            
+            **版本信息**: `${{ needs.meta.outputs.tag }}`
           draft: false
-          prerelease: ${{ needs.meta.outputs.is_prerelease == 'true' }}
+          # 如果是开发版本，设置为预发布
+          prerelease: ${{ needs.meta.outputs.is_dev_version == 'true' }}
