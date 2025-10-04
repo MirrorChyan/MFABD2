@@ -28,12 +28,15 @@ jobs:
           fetch-depth: 0
       - id: set_tag
         run: |
-          # 简化版本：只保留必要判断
-          is_tag_push=${{ startsWith(github.ref, 'refs/tags/v') }}
+          # 使用环境变量获取引用信息
+          is_tag_push=false
+          if [[ "$GITHUB_REF" == refs/tags/v* ]]; then
+            is_tag_push=true
+          fi
           
-          if $is_tag_push; then
-            # 标签推送：使用实际标签
-            tag="${github.ref#refs/tags/}"
+          if [ "$is_tag_push" = true ]; then
+            # 从环境变量提取标签名
+            tag="${GITHUB_REF#refs/tags/}"
           else
             # 非标签推送：生成开发版本号
             latest_tag=$(git describe --tags --match "v*" --abbrev=0 2>/dev/null || echo "v0.0.0")
@@ -42,9 +45,14 @@ jobs:
             tag="${latest_tag}-ci.${date_suffix}-${commit_short}"
           fi
           
-          # 直接设置开发版本标识
-          is_dev_version=$([ "$is_tag_push" = "false" ] && echo "true" || echo "false")
+          # 设置开发版本标识
+          if [ "$is_tag_push" = true ]; then
+            is_dev_version=false
+          else
+            is_dev_version=true
+          fi
 
+          # 输出变量
           echo "tag=$tag" | tee -a $GITHUB_OUTPUT
           echo "is_tag_push=$is_tag_push" | tee -a $GITHUB_OUTPUT
           echo "is_dev_version=$is_dev_version" | tee -a $GITHUB_OUTPUT
@@ -133,10 +141,9 @@ jobs:
           GITHUB_REPO: ${{ github.repository }}
 
   release:
-    # 修复条件表达式格式
     if: (needs.meta.outputs.is_tag_push == 'true') || (github.event_name == 'workflow_dispatch' && needs.meta.outputs.is_dev_version == 'true')
     needs: [meta, install, changelog]
-    runs-on: ubuntu-latest  # 添加缺失的runs-on
+    runs-on: ubuntu-latest
     steps:
       - name: Get current timestamp
         id: get_time
