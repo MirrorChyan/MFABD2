@@ -171,7 +171,7 @@ jobs:
         with:
           files: artifacts/release_assets/*.zip
           tag_name: ${{ needs.meta.outputs.tag }}
-          name: "MFABD2 ${{ needs.meta.outputs.tag }}"
+          name: "${{ needs.meta.outputs.tag }}"
           body: |
             ${{ contains(needs.changelog.outputs.release_body, '## ') && needs.changelog.outputs.release_body || '### 无显著变更' }}
             
