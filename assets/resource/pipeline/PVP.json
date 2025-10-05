@@ -78,7 +78,6 @@
       "BackButGe2.png"
     ],
     "green_mask": true,
-    "replace": [],
     "doc": "其他页面，返回按钮"
   },
   "PVP_BackHomePage": {
@@ -177,7 +176,7 @@
       179,
       62
     ],
-    "template": [
+    "expected": [
       "PvP"
     ],
     "threshold": 0.9,
@@ -311,7 +310,7 @@
       124,
       73
     ],
-    "template": [
+    "expected": [
       "自动战斗"
     ],
     "target_offset": [

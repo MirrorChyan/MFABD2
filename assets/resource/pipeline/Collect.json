@@ -83,7 +83,6 @@
       "BackButGe2.png"
     ],
     "green_mask": true,
-    "replace": [],
     "doc": "其他页面，返回按钮"
   },
   "Collect_PerPetTask": {
@@ -565,7 +564,7 @@
       249,
       53
     ],
-    "template": [
+    "expected": [
       "移动魔法阵"
     ],
     "doc": "找到图钉，进入区域地图"
@@ -865,7 +864,7 @@
       329,
       55
     ],
-    "template": [
+    "expected": [
       "移动魔法阵"
     ],
     "doc": "找到图钉 ，进入区域地图"
@@ -1319,7 +1318,6 @@
       "BackButGe2.png"
     ],
     "green_mask": true,
-    "replace": [],
     "doc": "其他页面，返回按钮"
   },
   "Collect_QuickCart_End": {}
