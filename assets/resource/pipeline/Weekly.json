@@ -21,7 +21,6 @@
     ]
   },
   "Weekly_HomePageHub0": {
-    "recognition": "TemplateMatch",
     "next": [
       "Weekly_HomePageHub",
       "Weekly_HomePageHub1",
@@ -82,7 +81,6 @@
       "BackButGe2.png"
     ],
     "green_mask": true,
-    "replace": [],
     "doc": "其他页面，返回按钮"
   },
   "Weekly_LastNight_Start": {
@@ -365,7 +363,6 @@
       "BackButGe2.png"
     ],
     "green_mask": true,
-    "replace": [],
     "doc": "其他页面，返回按钮"
   },
   "Weekly_LastNight_BackPVEPage": {
