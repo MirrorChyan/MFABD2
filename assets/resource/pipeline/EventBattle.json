@@ -81,7 +81,6 @@
       "BackButGe2.png"
     ],
     "green_mask": true,
-    "replace": [],
     "doc": "其他页面，返回按钮"
   },
   "Event_BackHomePage": {
@@ -485,7 +484,6 @@
       "BackButGe2.png"
     ],
     "green_mask": true,
-    "replace": [],
     "doc": "其他页面，返回按钮"
   },
   "Event_LeaveEvent2": {
