@@ -51,8 +51,14 @@
 		{
 			"name": "白嫖抽卡",
 			"entry": "Gacha_HomePage",
-			"doc": "**白嫖抽卡：**每日免费一次的`角色`、`专属装备`抽取。\n\n[未放出开发中...→]对自定义填写名称匹配的卡池，进行每日90付费钻一抽，不填写卡池名称表示则匹配表为空，多个卡池列表似乎用空格分隔（待确认）——虽限定卡池名降低了风险，但这仍然是**危险功能！！** \n\n **此功能务必仔细确认，默认关闭。脚本协议不承担其影响责任！** \n\n **打开此总开关，则是你知晓并自行承担相关风险的意思表示！** "			
-			},
+			"option": [
+				"付费钻-总开关"
+			],
+			"advanced": [
+				"90付费抽目标卡池"
+			],
+			"doc": "**白嫖抽卡：**每日免费一次的`角色`、`专属装备`抽取。\n\n[测试中...→]当抽取免费抽后，可顺便**用90付费钻，对指定卡池每日优惠一抽：**启用方法如下，注意选项卡右上，\n\n①基本页，打开`总开关`,\n\n②高级页，修改填入抽卡页面人工读到的目标卡池名称，一行一个，最多追踪4个卡池**（事后及时清除）**。类似默认值的内容就不会被`OCR`识别通过。\n\n**同时**完成以上2个设置才会有效。虽限定卡池名降低了风险，但这仍然是**危险功能！！** \n\n **务必仔细确认，平时常闭。脚本协议不承担其使用责任！** \n\n **打开此`总开关`，则是你知晓并自行承担相关风险的意思表示！** "
+		},
 		{
 			"name": "竞技场",
 			"entry": "PVP_HomePage",
@@ -132,7 +138,8 @@
 		"采集方案": {
 			"cases": [
 				{
-					"name": "固定:木&金-章节9+7+8"
+					"name": "固定:木&金-章节9+7+8",
+					"pipeline_override": {}
 				},
 				{
 					"name": "固定:低练度-章节2",
@@ -336,7 +343,8 @@
 		"狩猎场-章节图策略": {
 			"cases": [
 				{
-					"name": "低练度-章节2"
+					"name": "低练度-章节2",
+					"pipeline_override": {}
 				},
 				{
 					"name": "木材-章节9",
@@ -613,8 +621,8 @@
 					"pipeline_override": {
 						"Equip_filterSR": {
 							"template": [
-							  "filterUR.png"
-							   ],
+								"filterUR.png"
+							],
 							"roi": [
 								548,
 								399,
@@ -626,8 +634,7 @@
 				},
 				{
 					"name": "SR",
-					"pipeline_override": {
-					}
+					"pipeline_override": {}
 				}
 			]
 		},
@@ -635,16 +642,15 @@
 			"cases": [
 				{
 					"name": "关闭",
-					"pipeline_override": {						
-					}
+					"pipeline_override": {}
 				},
 				{
 					"name": "CLv. < 17",
 					"pipeline_override": {
 						"Equip_+9ColorCk": {
 							"next": [
-      "Equip_filter<C17"
-    ]
+								"Equip_filter<C17"
+							]
 						}
 					}
 				},
@@ -653,20 +659,30 @@
 					"pipeline_override": {
 						"Equip_+9ColorCk": {
 							"next": [
-      "Equip_filter<C17"
-    ]
+								"Equip_filter<C17"
+							]
 						},
 						"Equip_filter<C17": {
 							"focus": "EM.装备精炼.<C10",
-							"target": [720,320,0,0],
+							"target": [
+								720,
+								320,
+								0,
+								0
+							],
 							"recognition": "DirectHit"
-  },
-  "Equip_filter<C17Ck": {
+						},
+						"Equip_filter<C17Ck": {
 							"focus": "EM.色核通过.<C10",
-							"roi" : [683,304,74,33]
- }
+							"roi": [
+								683,
+								304,
+								74,
+								33
+							]
 						}
 					}
+				}
 			]
 		},
 		"精炼按自定义标志排序": {
@@ -674,17 +690,16 @@
 			"cases": [
 				{
 					"name": "No",
-					"pipeline_override": {						
-					}
+					"pipeline_override": {}
 				},
 				{
 					"name": "Yes",
 					"pipeline_override": {
 						"Equip_filterON": {
 							"next": [
-      "Equip_Sequen_Menu",
-      "Equip_filterON"
-    ]
+								"Equip_Sequen_Menu",
+								"Equip_filterON"
+							]
 						}
 					}
 				}
@@ -742,7 +757,6 @@
 					"name": "Yes",
 					"pipeline_override": {}
 				}
-				
 			]
 		},
 		"活动图快速战斗难度": {
@@ -825,7 +839,7 @@
 		},
 		"半自动末日之书(从‘去战斗’页面开始)": {
 			"cases": [
-								{
+				{
 					"name": "Yes",
 					"pipeline_override": {}
 				},
@@ -867,6 +881,60 @@
 					}
 				}
 			]
+		},
+		"付费钻-总开关": {
+			"doc": "【危险功能】\n\n基本页：每日90钻1抽总闸。\n\n必须配合后高级页，指定卡池名才会实际抽取。\n\n检查：无念想时不应意外打开。",
+			"cases": [
+				{
+					"name": "No",
+					"pipeline_override": {}
+				},
+				{
+					"name": "Yes",
+					"pipeline_override": {
+						"Gacha_FindFreeGacha": {
+							"next": [
+								"Gacha_TouchGacha",
+								"Gacha_PaidDiamond_CustomField",
+								"Gacha_FindFreeGacha"
+							]
+						}
+					}
+				}
+			]
+		}
+	},
+	"advanced": {
+		"90付费抽目标卡池": {
+			"doc": "【危险功能】若无特别执念，保留默认即可。\n\n一框只填写一个卡池名。\n\n留意错字，少字可通配，但或发生意外情况",
+			"field": [
+				"目标池1",
+				"目标池2",
+				"目标池3",
+				"目标池4"
+			],
+			"type": [
+				"string",
+				"string",
+				"string",
+				"string"
+			],
+			"default": [
+				"xxx1",
+				"xxx2",
+				"xxx3",
+				"xxx4"
+			],
+			"pipeline_override": {
+				"Gacha_PaidDiamond_CustomField": {
+					"expected": [
+						"{目标池1}",
+						"{目标池2}",
+						"{目标池3}",
+						"{目标池4}"
+					]
+				}
+			}
 		}
 	},
 	"name": "MFABD2",

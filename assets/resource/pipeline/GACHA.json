@@ -261,6 +261,118 @@
     ],
     "doc": "寻找免费抽卡"
   },
+  "Gacha_PaidDiamond_Start": {
+    "next": [
+      "Gacha_PaidDiamond_CustomField"
+    ],
+    "focus": "GB.90.**[高危-付费抽]**总开关启动！"
+  },
+  "Gacha_PaidDiamond_CustomField": {
+    "recognition": "OCR",
+    "next": [
+      "Gacha_PaidDiamond_90LotFind_Tp1"
+    ],
+    "on_error": [
+      "Gacha_Slip"
+    ],
+    "roi": [
+      358,
+      135,
+      839,
+      540
+    ],
+    "focus": {
+      "succeeded": "GB.90.**[高危-付费抽]**付费抽卡池匹配成功",
+      "failed": "GB.90.付费抽卡池未匹配到"
+    },
+    "expected": [
+      "付费抽目标卡池"
+    ],
+    "doc": "输入卡池名称.原expected只做占位符，无用"
+  },
+  "Gacha_PaidDiamond_90LotFind_Tp1": {
+    "recognition": "OCR",
+    "next": [
+      "Gacha_PaidDiamond_90LotFind_Tp2"
+    ],
+    "on_error": [
+      "Gacha_Slip"
+    ],
+    "focus": "GB.90.**[高危-付费抽]**tp1/3-日限付费找到",
+    "roi": [
+      624,
+      554,
+      188,
+      107
+    ],
+    "expected": [
+      "1日限1次"
+    ]
+  },
+  "Gacha_PaidDiamond_90LotFind_Tp2": {
+    "recognition": "OCR",
+    "next": [
+      "Gacha_PaidDiamond_90LotFind_Tp3"
+    ],
+    "focus": "GB.90.**[高危-付费抽]**tp2/3-费用90已确认",
+    "on_error": [
+      "Gacha_Slip"
+    ],
+    "roi": [
+      624,
+      554,
+      188,
+      107
+    ],
+    "expected": [
+      "90"
+    ]
+  },
+  "Gacha_PaidDiamond_90LotFind_Tp3": {
+    "recognition": "OCR",
+    "action": "Click",
+    "focus": "GB.90.**[高危-付费抽]**tp3/3-付费抽类型可确认",
+    "next": [
+      "Gacha_PaidDiamond_90LotFind_Pay"
+    ],
+    "on_error": [
+      "Gacha_Slip"
+    ],
+    "post_delay": 1000,
+    "roi": [
+      624,
+      554,
+      188,
+      107
+    ],
+    "expected": [
+      "付费抽抽乐"
+    ]
+  },
+  "Gacha_PaidDiamond_90LotFind_Pay": {
+    "recognition": "OCR",
+    "action": "Click",
+    "focus": "GB.90.**[高危-付费抽]**点击购买",
+    "next": [
+      "Gacha_5X",
+      "Gacha_5X2",
+      "Gacha_GachaResultBack",
+      "Gacha_PaidDiamond_90LotFind_Pay"
+    ],
+    "on_error": [
+      "Gacha_Slip"
+    ],
+    "post_delay": 1000,
+    "roi": [
+      668,
+      491,
+      124,
+      51
+    ],
+    "expected": [
+      "购买"
+    ]
+  },
   "Gacha_TouchGacha": {
     "recognition": "OCR",
     "action": "Click",
