@@ -6,9 +6,11 @@
 # MaaBD2-棕色尘埃2自动化助手
 [![License](https://img.shields.io/badge/License-MIT%2FApache--2.0-blue)](./LICENSE)
 [![.NET Version](https://img.shields.io/badge/.NET-≥%208-512BD4?logo=csharp)](https://dotnet.microsoft.com/download/dotnet/8.0)
-<a href="https://github.com/sunyink/MFABD2" target="_blank">
-  <img alt="MFABD2 Stars" src="https://img.shields.io/github/stars/sunyink/MFABD2?style=social&label=给项目点赞">
-</a>
+[![月提交](https://img.shields.io/github/commit-activity/m/sunyink/MFABD2?label=开发活跃度&color=blue)](https://github.com/sunyink/MFABD2/commits/main)
+[![给项目点赞](https://img.shields.io/github/stars/sunyink/MFABD2?style=social&label=给项目点赞)](https://github.com/sunyink/MFABD2)
+<br>
+[![构建状态](https://img.shields.io/badge/构建状态-通过-success?logo=githubactions)](https://github.com/sunyink/MFABD2/actions)
+[![最新版本](https://img.shields.io/github/v/release/sunyink/MFABD2?label=最新版本&logo=github&color=green)](https://github.com/sunyink/MFABD2/releases)
 </div>
 
 本项目基于 [MaaFramework](https://github.com/MaaXYZ/MaaFramework) 所提供的项目模板进行开发的棕色尘埃2自动化助手。
