@@ -112,6 +112,7 @@
     "next": [
       "Pass_SelectPass"
     ],
+    "focus": "PM.尝试进入通行证页面",
     "post_delay": 1000,
     "roi": [
       98,
@@ -188,6 +189,7 @@
     "next": [
       "Pass_GetAllBack"
     ],
+    "focus": "PM.点击领取",
     "post_delay": 1000,
     "roi": [
       757,
@@ -244,6 +246,7 @@
       "Pass_SelectPass",
       "Pass_Back"
     ],
+    "focus": "PM.点击领取",
     "post_delay": 5000,
     "roi": [
       981,
