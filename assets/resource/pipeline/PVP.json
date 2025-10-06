@@ -274,19 +274,43 @@
     "recognition": "OCR",
     "action": "Click",
     "next": [
-      "PVP_JustUseFree"
+      "PVP_AutoBattle_SucCK",
+      "PVP_AutoBattle"
     ],
     "pre_delay": 1000,
     "post_delay": 1000,
-    "focus": "PM.PVP.自动战斗点击(关键节点)",
+    "focus": "PM.PVP.自动战斗-点击(关键节点)",
     "roi": [
-      917,
-      658,
-      85,
-      33
+      918,
+      622,
+      87,
+      71
     ],
     "expected": [
       "自动战斗"
+    ],
+    "target_offset": [
+      -5,
+      -45,
+      0,
+      0
+    ],
+    "doc": "点击自动战斗"
+  },
+  "PVP_AutoBattle_SucCK": {
+    "recognition": "OCR",
+    "next": [
+      "PVP_JustUseFree"
+    ],
+    "focus": "PM.PVP.自动战斗(关键节点)-菜单ck",
+    "roi": [
+      327,
+      165,
+      417,
+      156
+    ],
+    "expected": [
+      "鲜血鸡尾酒"
     ],
     "target_offset": [
       -5,
