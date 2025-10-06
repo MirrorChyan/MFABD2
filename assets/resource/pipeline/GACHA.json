@@ -276,6 +276,26 @@
       "Gacha_Slip"
     ],
     "roi": [
+      624,
+      554,
+      188,
+      107
+    ],
+    "expected": [
+      "1日限1次"
+    ],
+    "focus": "GB.90.**[高危-付费抽]**日限付费找到",
+    "doc": "输入卡池名称.原expected只做占位符，无用"
+  },
+  "Gacha_PaidDiamond_90LotFind_Tp1": {
+    "recognition": "OCR",
+    "next": [
+      "Gacha_PaidDiamond_90LotFind_Tp2"
+    ],
+    "on_error": [
+      "Gacha_Slip"
+    ],
+    "roi": [
       358,
       135,
       839,
@@ -287,26 +307,6 @@
     },
     "expected": [
       "付费抽目标卡池"
-    ],
-    "doc": "输入卡池名称.原expected只做占位符，无用"
-  },
-  "Gacha_PaidDiamond_90LotFind_Tp1": {
-    "recognition": "OCR",
-    "next": [
-      "Gacha_PaidDiamond_90LotFind_Tp2"
-    ],
-    "on_error": [
-      "Gacha_Slip"
-    ],
-    "focus": "GB.90.**[高危-付费抽]**tp1/3-日限付费找到",
-    "roi": [
-      624,
-      554,
-      188,
-      107
-    ],
-    "expected": [
-      "1日限1次"
     ]
   },
   "Gacha_PaidDiamond_90LotFind_Tp2": {

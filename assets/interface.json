@@ -894,9 +894,16 @@
 					"pipeline_override": {
 						"Gacha_FindFreeGacha": {
 							"next": [
-								"Gacha_TouchGacha",
 								"Gacha_PaidDiamond_CustomField",
+								"Gacha_TouchGacha",
 								"Gacha_FindFreeGacha"
+							]
+						},
+						"Gacha_GachaResultBack": {
+							"next": [
+								"Gacha_PaidDiamond_CustomField",
+								"Gacha_GachaPage",
+								"Gacha_GachaResultBack"
 							]
 						}
 					}
@@ -931,7 +938,7 @@
 				"xxx4"
 			],
 			"pipeline_override": {
-				"Gacha_PaidDiamond_CustomField": {
+				"Gacha_PaidDiamond_90LotFind_Tp1": {
 					"expected": [
 						"{目标池1}",
 						"{目标池2}",
