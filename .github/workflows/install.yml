@@ -39,7 +39,7 @@ jobs:
             tag="${GITHUB_REF#refs/tags/}"
           else
             # 非标签推送：生成开发版本号
-            latest_tag=$(git describe --tags --match "v*" --abbrev=0 2>/dev/null || echo "v0.0.0")
+            latest_tag=$(git describe --tags --极速下载match "v*" --abbrev=0 2>/dev/null || echo "v0.0.0")
             commit_short=$(git rev-parse --short HEAD)
             date_suffix=$(date +"%y%m%d")
             tag="${latest_tag}-ci.${date_suffix}-${commit_short}"
@@ -171,7 +171,7 @@ jobs:
         with:
           files: artifacts/release_assets/*.zip
           tag_name: ${{ needs.meta.outputs.tag }}
-          name: "${{ needs.meta.outputs.tag }}"
+          name: "MFABD2 ${{ needs.meta.outputs.tag }}"
           body: |
             ${{ contains(needs.changelog.outputs.release_body, '## ') && needs.changelog.outputs.release_body || '### 无显著变更' }}
             
@@ -181,3 +181,5 @@ jobs:
             - 构建时间: ${{ steps.get_time.outputs.time }}
           draft: false
           prerelease: ${{ needs.meta.outputs.is_dev_version == 'true' }}
+        env:  # 添加环境变量以支持高限额API调用
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
