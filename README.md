@@ -21,12 +21,21 @@
 本项目继承 [JZPPP/MaaBD2](https://github.com/JZPPP/MaaBD2)衣钵 继续跟进游戏版本更新，主攻任务流程的优化强化。（任务流程基本重做，以前经验不再适用。）
 
 > 向[JZPPP/MaaBD2]的开发和支持者致敬，在前人肩膀上起步事半功倍。
+# 
 
-## 获取
+
 
 ### 版本区分
 
-**目前决定分两个版本。**
+> **目前决定分两个版本。**
+  
+#### 稳定版
+
++ **[MFABD2-Main分支]** 暂定位为`发布版`或`稳定版`: [github.com/sunyink/MFABD2-Main](https://github.com/sunyink/MFABD2/releases)
+
+  ``稳定版``，如果某个快速版表现较好，会考虑镜像过去做一个发布版。发布版参照正规MFA模板发布，**直接在releases下载包**，支持软件UI内资源版本升级，体验十分接近MAA。框架是新界面，UI与快速版不同。
+  
+#### 快速版
 <details>
   <summary>   快速版 </summary>
   
@@ -35,11 +44,6 @@
 
   快速版，平时随用随开发随上传，**使用git更新**，可以选择比较稳定的提交来用。
   </details>
-
-+ **[MFABD2-Main分支]** 暂定位为`发布版`或`稳定版`: [github.com/sunyink/MFABD2-Main](https://github.com/sunyink/MFABD2/releases)
-
-  ``稳定版``，如果某个快速版表现较好，会考虑镜像过去做一个发布版。发布版参照正规MFA模板发布，**直接在releases下载包**，支持软件UI内资源版本升级，体验十分接近MAA。框架是新界面，UI与快速版不同。
-
 <br>
 
 
@@ -57,6 +61,12 @@
 </details>
 
 <br>
+
+## 获取&部署
+
+### ◆稳定版部署
++ 进入 **[MFABD2-Resource]发行版页** : [github.com/sunyink/MFABD2-Resource](https://github.com/sunyink/MFABD2-Resource/releases)，下载对应平台压缩包，解压即用。
+  
 
 
 ### ◆快速版部署
@@ -88,10 +98,6 @@
 **注意，快速版不要开启、使用GUI界面本身的更新功能，此版本应仅进行GitHub Code更新同步。** _重组改版后，逻辑上可以点Gui更新，但快速版一般都领先于发行版，所以行为没有意义。_
 
 <br>
-
-### ◆稳定版部署
-+ 进入 **[MFABD2-Resource]发行版页** : [github.com/sunyink/MFABD2-Resource](https://github.com/sunyink/MFABD2-Resource/releases)，下载对应平台压缩包，解压即用。
-  
 
 
 ## 使用方式 （仅支持模拟器使用）
